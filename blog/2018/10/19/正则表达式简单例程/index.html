@@ -5,15 +5,19 @@
   
 
   
-  <title>Archives | 耀民的博客</title>
+  <title>正则表达式简单例程 | 耀民的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="耀民的博客">
-<meta property="og:url" content="http://yoursite.com/archives/index.html">
+  <meta name="description" content="从字符串 str 中提取数字部分的内容(匹配一次)： var str = “abc123def”; var patt1 = /0-9+/; document.write(str.match(patt1)); ^ 为匹配输入字符串的开始位置。0-9+匹配多个数字， 0-9 匹配单个数字，+ 匹配一个或者多个。abc$匹配字母 abc 并以 abc 结尾，$ 为匹配输入字符串的结束位置。runoo+b">
+<meta property="og:type" content="article">
+<meta property="og:title" content="正则表达式简单例程">
+<meta property="og:url" content="http://yoursite.com/2018/10/19/正则表达式简单例程/index.html">
 <meta property="og:site_name" content="耀民的博客">
+<meta property="og:description" content="从字符串 str 中提取数字部分的内容(匹配一次)： var str = “abc123def”; var patt1 = /0-9+/; document.write(str.match(patt1)); ^ 为匹配输入字符串的开始位置。0-9+匹配多个数字， 0-9 匹配单个数字，+ 匹配一个或者多个。abc$匹配字母 abc 并以 abc 结尾，$ 为匹配输入字符串的结束位置。runoo+b">
 <meta property="og:locale" content="cn">
+<meta property="og:updated_time" content="2019-10-14T02:53:37.632Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="耀民的博客">
+<meta name="twitter:title" content="正则表达式简单例程">
+<meta name="twitter:description" content="从字符串 str 中提取数字部分的内容(匹配一次)： var str = “abc123def”; var patt1 = /0-9+/; document.write(str.match(patt1)); ^ 为匹配输入字符串的开始位置。0-9+匹配多个数字， 0-9 匹配单个数字，+ 匹配一个或者多个。abc$匹配字母 abc 并以 abc 结尾，$ 为匹配输入字符串的结束位置。runoo+b">
   
     <link rel="alternate" href="/blog/atom.xml" title="耀民的博客" type="application/atom+xml">
   
@@ -60,107 +64,60 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/blog/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/blog/2019/10/14/测试/" class="archive-article-date">
-  <time datetime="2019-10-13T16:01:53.000Z" itemprop="datePublished">Oct 14</time>
+        <section id="main"><article id="post-正则表达式简单例程" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/2018/10/19/正则表达式简单例程/" class="article-date">
+  <time datetime="2018-10-19T02:49:51.000Z" itemprop="datePublished">2018-10-19</time>
 </a>
-      
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/blog/2019/10/14/测试/">搭建好了基于hexo的blog</a>
+    <h1 class="article-title" itemprop="name">
+      正则表达式简单例程
     </h1>
   
 
-    </header>
-  </div>
-</article>
-  
+      </header>
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/blog/2019/10/13/hello-world/" class="archive-article-date">
-  <time datetime="2019-10-13T15:53:04.712Z" itemprop="datePublished">Oct 13</time>
-</a>
+    <div class="article-entry" itemprop="articleBody">
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/blog/2019/10/13/hello-world/">Hello World</a>
-    </h1>
-  
+        <p>从字符串 str 中提取数字部分的内容(匹配一次)：</p>
+<p>var str = “abc123def”;</p>
+<p>var patt1 = /<a href>0-9</a>+/;</p>
+<p>document.write(str.match(patt1));</p>
+<p>^ 为匹配输入字符串的开始位置。<br><a href>0-9</a>+匹配多个数字， <a href>0-9</a> 匹配单个数字，+ 匹配一个或者多个。<br>abc$匹配字母 abc 并以 abc 结尾，$ 为匹配输入字符串的结束位置。<br>runoo+b，可以匹配 runoob、runooob、runoooooob 等，+ 号代表前面的字符必须至少出现一次（1次或多次）。<br>runoo<em>b，可以匹配 runob、runoob、runoooooob 等，</em> 号代表字符可以不出现，也可以出现一次或者多次（0次、或1次、或多次）。<br>colou?r 可以匹配 color 或者 colour，? 问号代表前面的字符最多只可以出现一次（0次、或1次）</p>
 
-    </header>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/10/19/正则表达式简单例程/" data-id="ck1ptuns900021t6wr3t0dooa" class="article-share-link">Share</a>
+      
+      
+    </footer>
   </div>
-</article>
   
     
-    
-      
-        </div></section>
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/blog/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/blog/2018/10/29/python-二维字典的使用/" class="archive-article-date">
-  <time datetime="2018-10-29T02:54:05.000Z" itemprop="datePublished">Oct 29</time>
-</a>
-      
+<nav id="article-nav">
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/blog/2018/10/29/python-二维字典的使用/">python 二维字典的使用</a>
-    </h1>
+    <a href="/blog/2018/10/29/python-二维字典的使用/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          python 二维字典的使用
+        
+      </div>
+    </a>
   
+  
+</nav>
 
-    </header>
-  </div>
+  
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/blog/2018/10/19/正则表达式简单例程/" class="archive-article-date">
-  <time datetime="2018-10-19T02:49:51.000Z" itemprop="datePublished">Oct 19</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/blog/2018/10/19/正则表达式简单例程/">正则表达式简单例程</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
 
 </section>
         
