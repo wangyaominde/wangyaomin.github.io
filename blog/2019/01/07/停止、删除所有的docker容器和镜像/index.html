@@ -5,15 +5,20 @@
   
 
   
-  <title>Archives: 2019/10 | 耀民的博客</title>
+  <title>停止、删除所有的docker容器和镜像 | 耀民的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="耀民的博客">
-<meta property="og:url" content="http://yoursite.com/archives/2019/10/index.html">
+  <meta name="description" content="列出所有的容器 ID 1docker ps -aq  停止所有的容器 1docker stop $(docker ps -aq)  删除所有的容器 1docker rm $(docker ps -aq)  删除所有的镜像 1docker rmi $(docker images -q)  复制文件 12docker cp mycontainer:/opt/file.txt /opt/local/do">
+<meta name="keywords" content="Docker">
+<meta property="og:type" content="article">
+<meta property="og:title" content="停止、删除所有的docker容器和镜像">
+<meta property="og:url" content="http://yoursite.com/2019/01/07/停止、删除所有的docker容器和镜像/index.html">
 <meta property="og:site_name" content="耀民的博客">
+<meta property="og:description" content="列出所有的容器 ID 1docker ps -aq  停止所有的容器 1docker stop $(docker ps -aq)  删除所有的容器 1docker rm $(docker ps -aq)  删除所有的镜像 1docker rmi $(docker images -q)  复制文件 12docker cp mycontainer:/opt/file.txt /opt/local/do">
 <meta property="og:locale" content="cn">
+<meta property="og:updated_time" content="2019-10-14T12:08:49.994Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="耀民的博客">
+<meta name="twitter:title" content="停止、删除所有的docker容器和镜像">
+<meta name="twitter:description" content="列出所有的容器 ID 1docker ps -aq  停止所有的容器 1docker stop $(docker ps -aq)  删除所有的容器 1docker rm $(docker ps -aq)  删除所有的镜像 1docker rmi $(docker images -q)  复制文件 12docker cp mycontainer:/opt/file.txt /opt/local/do">
   
     <link rel="alternate" href="/blog/atom.xml" title="耀民的博客" type="application/atom+xml">
   
@@ -60,40 +65,78 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/blog/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/blog/2019/10/14/测试/" class="archive-article-date">
-  <time datetime="2019-10-13T16:01:53.000Z" itemprop="datePublished">Oct 14</time>
+        <section id="main"><article id="post-停止、删除所有的docker容器和镜像" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/2019/01/07/停止、删除所有的docker容器和镜像/" class="article-date">
+  <time datetime="2019-01-07T12:04:56.000Z" itemprop="datePublished">2019-01-07</time>
 </a>
-      
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/blog/2019/10/14/测试/">搭建好了基于hexo的blog</a>
+    <h1 class="article-title" itemprop="name">
+      停止、删除所有的docker容器和镜像
     </h1>
   
 
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>列出所有的容器 ID</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker ps -aq</span><br></pre></td></tr></table></figure>
 
+<p>停止所有的容器</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker stop $(docker ps -aq)</span><br></pre></td></tr></table></figure>
+
+<p>删除所有的容器</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker rm $(docker ps -aq)</span><br></pre></td></tr></table></figure>
+
+<p>删除所有的镜像</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker rmi $(docker images -q)</span><br></pre></td></tr></table></figure>
+
+<p>复制文件</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">docker cp mycontainer:/opt/file.txt /opt/<span class="built_in">local</span>/</span><br><span class="line">docker cp /opt/<span class="built_in">local</span>/file.txt mycontainer:/opt/</span><br></pre></td></tr></table></figure>
+
+<p><code>docker image prune --force --all或者docker image prune -f -a</code> : 删除所有不使用的镜像<br><code>docker container prune -f</code>: 删除所有停止的容器</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/01/07/停止、删除所有的docker容器和镜像/" data-id="ck1qdxy0f000khyf65apm1jrp" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Docker/">Docker</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/blog/2019/01/15/docker-国内镜像更换/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          docker 国内镜像更换
+        
+      </div>
+    </a>
+  
+  
+    <a href="/blog/2018/12/10/atom简单配置/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">atom简单配置</div>
+    </a>
+  
+</nav>
+
+  
+</article>
 
 </section>
         

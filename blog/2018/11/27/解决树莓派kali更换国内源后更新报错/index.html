@@ -5,15 +5,22 @@
   
 
   
-  <title>Archives: 2019/10 | 耀民的博客</title>
+  <title>解决树莓派kali更换国内源后更新报错 | 耀民的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="耀民的博客">
-<meta property="og:url" content="http://yoursite.com/archives/2019/10/index.html">
+  <meta name="description" content="在更新时发现报错如下： 12345dpkg: error processing package raspi3-firmware (--configure): installed raspi3-firmware package post-installation script subprocess returned error exit status 1Errors were encountered">
+<meta name="keywords" content="炼丹手册">
+<meta property="og:type" content="article">
+<meta property="og:title" content="解决树莓派kali更换国内源后更新报错">
+<meta property="og:url" content="http://yoursite.com/2018/11/27/解决树莓派kali更换国内源后更新报错/index.html">
 <meta property="og:site_name" content="耀民的博客">
+<meta property="og:description" content="在更新时发现报错如下： 12345dpkg: error processing package raspi3-firmware (--configure): installed raspi3-firmware package post-installation script subprocess returned error exit status 1Errors were encountered">
 <meta property="og:locale" content="cn">
+<meta property="og:image" content="https://i.loli.net/2019/10/14/Trsj7BZcSOkmp39.jpg">
+<meta property="og:updated_time" content="2019-10-14T03:25:47.484Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="耀民的博客">
+<meta name="twitter:title" content="解决树莓派kali更换国内源后更新报错">
+<meta name="twitter:description" content="在更新时发现报错如下： 12345dpkg: error processing package raspi3-firmware (--configure): installed raspi3-firmware package post-installation script subprocess returned error exit status 1Errors were encountered">
+<meta name="twitter:image" content="https://i.loli.net/2019/10/14/Trsj7BZcSOkmp39.jpg">
   
     <link rel="alternate" href="/blog/atom.xml" title="耀民的博客" type="application/atom+xml">
   
@@ -60,40 +67,66 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/blog/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/blog/2019/10/14/测试/" class="archive-article-date">
-  <time datetime="2019-10-13T16:01:53.000Z" itemprop="datePublished">Oct 14</time>
+        <section id="main"><article id="post-解决树莓派kali更换国内源后更新报错" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/2018/11/27/解决树莓派kali更换国内源后更新报错/" class="article-date">
+  <time datetime="2018-11-27T03:16:36.000Z" itemprop="datePublished">2018-11-27</time>
 </a>
-      
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/blog/2019/10/14/测试/">搭建好了基于hexo的blog</a>
+    <h1 class="article-title" itemprop="name">
+      解决树莓派kali更换国内源后更新报错
     </h1>
   
 
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>在更新时发现报错如下：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">dpkg: error processing package raspi3-firmware (--configure):</span><br><span class="line"> installed raspi3-firmware package post-installation script subprocess returned error <span class="built_in">exit</span> status 1</span><br><span class="line">Errors were encountered <span class="keyword">while</span> processing:</span><br><span class="line"> raspi3-firmware</span><br><span class="line">E: Sub-process /usr/bin/dpkg returned an error code (1)</span><br></pre></td></tr></table></figure>
 
+<p>此时，进入/usr/bin/dpkg删除info文件夹后再新建一个即可，具体原因还在查 大家可以使用kali的64位arm包，这样不会报错<br><img src="https://i.loli.net/2019/10/14/Trsj7BZcSOkmp39.jpg" alt="64bit kali of raspberry"></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/11/27/解决树莓派kali更换国内源后更新报错/" data-id="ck1qdxy0j000uhyf6wcj5ryos" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/炼丹手册/">炼丹手册</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/blog/2018/11/29/python子线程中WMI报错-2147221020解决/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          python子线程中WMI报错-2147221020解决
+        
+      </div>
+    </a>
+  
+  
+    <a href="/blog/2018/11/12/PyQt5-简单教程/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">PyQt5 简单教程</div>
+    </a>
+  
+</nav>
+
+  
+</article>
 
 </section>
         

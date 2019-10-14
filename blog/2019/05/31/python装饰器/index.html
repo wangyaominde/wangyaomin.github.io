@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>python装饰器  | 耀民的博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="最近在使用python编程的时候发现了装饰器这个神奇的东西，在不破坏整个代码的结构和用法的同时将新功能套在旧的代码上，不影响原来代码的结构性和功能性，需要的时候加上，不需要的时候删掉即可。但是这玩意儿到底是啥呢？ 先来看一段代码 123456789def a(func):    print(&quot;this is func one&quot;)    func()def b():    print(&quot;this i">
+<meta name="keywords" content="炼丹手册">
+<meta property="og:type" content="article">
+<meta property="og:title" content="python装饰器 ">
+<meta property="og:url" content="http://yoursite.com/2019/05/31/python装饰器/index.html">
+<meta property="og:site_name" content="耀民的博客">
+<meta property="og:description" content="最近在使用python编程的时候发现了装饰器这个神奇的东西，在不破坏整个代码的结构和用法的同时将新功能套在旧的代码上，不影响原来代码的结构性和功能性，需要的时候加上，不需要的时候删掉即可。但是这玩意儿到底是啥呢？ 先来看一段代码 123456789def a(func):    print(&quot;this is func one&quot;)    func()def b():    print(&quot;this i">
+<meta property="og:locale" content="cn">
+<meta property="og:image" content="https://i.loli.net/2019/10/14/mJ39wBl7DQzrdhu.jpg">
+<meta property="og:updated_time" content="2019-10-14T12:18:40.925Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="python装饰器 ">
+<meta name="twitter:description" content="最近在使用python编程的时候发现了装饰器这个神奇的东西，在不破坏整个代码的结构和用法的同时将新功能套在旧的代码上，不影响原来代码的结构性和功能性，需要的时候加上，不需要的时候删掉即可。但是这玩意儿到底是啥呢？ 先来看一段代码 123456789def a(func):    print(&quot;this is func one&quot;)    func()def b():    print(&quot;this i">
+<meta name="twitter:image" content="https://i.loli.net/2019/10/14/mJ39wBl7DQzrdhu.jpg">
+  
+    <link rel="alternate" href="/blog/atom.xml" title="耀民的博客" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/blog/css/style.css">
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/blog/" id="logo">耀民的博客</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/blog/">Home</a>
+        
+          <a class="main-nav-link" href="/blog/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/blog/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-python装饰器" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/2019/05/31/python装饰器/" class="article-date">
+  <time datetime="2019-05-31T12:16:16.000Z" itemprop="datePublished">2019-05-31</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      python装饰器 
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>最近在使用python编程的时候发现了装饰器这个神奇的东西，在不破坏整个代码的结构和用法的同时将新功能套在旧的代码上，不影响原来代码的结构性和功能性，需要的时候加上，不需要的时候删掉即可。但是这玩意儿到底是啥呢？</p>
+<p>先来看一段代码</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">a</span><span class="params">(func)</span>:</span></span><br><span class="line">    print(<span class="string">"this is func one"</span>)</span><br><span class="line">    func()</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">b</span><span class="params">()</span>:</span></span><br><span class="line">    print(<span class="string">"this is func two"</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">a(b)</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://i.loli.net/2019/10/14/mJ39wBl7DQzrdhu.jpg" alt="代码运行结果"><br>众所周知，python函数也是可以被当成一个参数传递的，所以在这里，我们是把b当为一个参数传递给了a，当我们需要调用b的时候呢？这也被破坏了，所以这里我们需要</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">a</span><span class="params">(func)</span>:</span></span><br><span class="line">    print(<span class="string">"this is func one"</span>)</span><br><span class="line">    func()</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">b</span><span class="params">()</span>:</span></span><br><span class="line">    print(<span class="string">"this is func two"</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">b=a(b)</span><br><span class="line">b</span><br></pre></td></tr></table></figure>
+
+<p>在这里，我们的b=a(b)就解决了结构问题。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">a</span><span class="params">(func)</span>:</span></span><br><span class="line">    print(<span class="string">"this is func one"</span>)</span><br><span class="line">    func()</span><br><span class="line"></span><br><span class="line"><span class="meta">@a</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">b</span><span class="params">()</span>:</span></span><br><span class="line">    print(<span class="string">"this is func two"</span>)</span><br><span class="line"></span><br><span class="line">b</span><br></pre></td></tr></table></figure>
+
+<p>当然，我们用@也可以等效<br>b=a(b )</p>
+<p>像这种@的可以传参数，也可以多次嵌套,但是这样就需要修改一下啦</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">a</span><span class="params">(func)</span>:</span></span><br><span class="line">    print(<span class="string">"this is func one"</span>)</span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">abc</span><span class="params">()</span>:</span></span><br><span class="line">        func()</span><br><span class="line">    <span class="keyword">return</span> abc</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">c</span><span class="params">(func)</span>:</span></span><br><span class="line">    print(<span class="string">"this is func three"</span>)</span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">abc</span><span class="params">()</span>:</span></span><br><span class="line">        func()</span><br><span class="line">    <span class="keyword">return</span> abc</span><br><span class="line"></span><br><span class="line"><span class="meta">@c</span></span><br><span class="line"><span class="meta">@a</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">b</span><span class="params">()</span>:</span></span><br><span class="line">    print(<span class="string">"this is func two"</span>)</span><br><span class="line"></span><br><span class="line">b()</span><br></pre></td></tr></table></figure>
+
+<p>这样就将函数传递过去并且执行了，之前的直接传递的是函数变量</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/05/31/python装饰器/" data-id="ck1qdxy0d000ihyf6xy517yp1" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/炼丹手册/">炼丹手册</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/blog/2019/08/20/manjaro-签名无效解决方案/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          manjaro 签名无效解决方案
+        
+      </div>
+    </a>
+  
+  
+    <a href="/blog/2019/01/15/解决mysql-mariaDB-“ERROR-2002-HY000-Can’t-connect-to-local-MySQL-server-through/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">解决mysql/mariaDB “ERROR 2002 (HY000):Can’t connect to local MySQL server through socket ‘/tmp/mysql.sock’ (111)”</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Docker/">Docker</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/炼丹手册/">炼丹手册</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/blog/tags/Docker/" style="font-size: 10px;">Docker</a> <a href="/blog/tags/炼丹手册/" style="font-size: 20px;">炼丹手册</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/12/">December 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/10/">October 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/08/">August 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/05/">May 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/01/">January 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2018/12/">December 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2018/11/">November 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2018/10/">October 2018</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/blog/2019/12/19/报错-Error-rpmdb-open-failed-的解决/">报错 Error: rpmdb open failed 的解决</a>
+          </li>
+        
+          <li>
+            <a href="/blog/2019/10/14/测试/">搭建好了基于hexo的blog</a>
+          </li>
+        
+          <li>
+            <a href="/blog/2019/08/20/manjaro-签名无效解决方案/">manjaro 签名无效解决方案</a>
+          </li>
+        
+          <li>
+            <a href="/blog/2019/05/31/python装饰器/">python装饰器 </a>
+          </li>
+        
+          <li>
+            <a href="/blog/2019/01/15/解决mysql-mariaDB-“ERROR-2002-HY000-Can’t-connect-to-local-MySQL-server-through/">解决mysql/mariaDB “ERROR 2002 (HY000):Can’t connect to local MySQL server through socket ‘/tmp/mysql.sock’ (111)”</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 wangyaominde<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/blog/" class="mobile-nav-link">Home</a>
+  
+    <a href="/blog/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/blog/fancybox/jquery.fancybox.css">
+  <script src="/blog/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/blog/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>

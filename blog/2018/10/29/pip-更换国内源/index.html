@@ -5,15 +5,20 @@
   
 
   
-  <title>Archives: 2019/10 | 耀民的博客</title>
+  <title>pip 更换国内源 | 耀民的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="耀民的博客">
-<meta property="og:url" content="http://yoursite.com/archives/2019/10/index.html">
+  <meta name="description" content="在使用pip安装东西的过程中，会发现速度十分缓慢。这时，我们可以将pip的下载源变为国内的镜像源，这样会提升下载速度。 linux下，修改 ~/.pip/pip.conf (没有就创建一个)，windows下，直接在user目录中创建一个pip目录，如：C:\Users\xx\pip，新建文件pip.ini，内容如下（清华源） 1234[global]index-url = https://pyp">
+<meta name="keywords" content="炼丹手册">
+<meta property="og:type" content="article">
+<meta property="og:title" content="pip 更换国内源">
+<meta property="og:url" content="http://yoursite.com/2018/10/29/pip-更换国内源/index.html">
 <meta property="og:site_name" content="耀民的博客">
+<meta property="og:description" content="在使用pip安装东西的过程中，会发现速度十分缓慢。这时，我们可以将pip的下载源变为国内的镜像源，这样会提升下载速度。 linux下，修改 ~/.pip/pip.conf (没有就创建一个)，windows下，直接在user目录中创建一个pip目录，如：C:\Users\xx\pip，新建文件pip.ini，内容如下（清华源） 1234[global]index-url = https://pyp">
 <meta property="og:locale" content="cn">
+<meta property="og:updated_time" content="2019-10-14T03:26:05.556Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="耀民的博客">
+<meta name="twitter:title" content="pip 更换国内源">
+<meta name="twitter:description" content="在使用pip安装东西的过程中，会发现速度十分缓慢。这时，我们可以将pip的下载源变为国内的镜像源，这样会提升下载速度。 linux下，修改 ~/.pip/pip.conf (没有就创建一个)，windows下，直接在user目录中创建一个pip目录，如：C:\Users\xx\pip，新建文件pip.ini，内容如下（清华源） 1234[global]index-url = https://pyp">
   
     <link rel="alternate" href="/blog/atom.xml" title="耀民的博客" type="application/atom+xml">
   
@@ -60,40 +65,69 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/blog/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/blog/2019/10/14/测试/" class="archive-article-date">
-  <time datetime="2019-10-13T16:01:53.000Z" itemprop="datePublished">Oct 14</time>
+        <section id="main"><article id="post-pip-更换国内源" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/2018/10/29/pip-更换国内源/" class="article-date">
+  <time datetime="2018-10-29T03:01:46.000Z" itemprop="datePublished">2018-10-29</time>
 </a>
-      
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/blog/2019/10/14/测试/">搭建好了基于hexo的blog</a>
+    <h1 class="article-title" itemprop="name">
+      pip 更换国内源
     </h1>
   
 
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>在使用pip安装东西的过程中，会发现速度十分缓慢。这时，我们可以将pip的下载源变为国内的镜像源，这样会提升下载速度。</p>
+<p>linux下，修改 ~/.pip/pip.conf (没有就创建一个)，windows下，直接在user目录中创建一个pip目录，如：C:\Users\xx\pip，新建文件pip.ini，内容如下（清华源）</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[<span class="keyword">global</span>]</span><br><span class="line">index-url = https://pypi.tuna.tsinghua.edu.cn/simple</span><br><span class="line">[install]</span><br><span class="line">trusted-host=pypi.tuna.tsinghua.edu.cn</span><br></pre></td></tr></table></figure>
 
+<p>或使用阿里的源：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[<span class="keyword">global</span>]</span><br><span class="line">index-url=http://mirrors.aliyun.com/pypi/simple/</span><br><span class="line">[install]</span><br><span class="line">trusted-host=mirrors.aliyun.com</span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/10/29/pip-更换国内源/" data-id="ck1qdxy060008hyf6zhs9iv3n" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/炼丹手册/">炼丹手册</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/blog/2018/10/29/微信python获取好友的信息/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          微信python获取好友的信息
+        
+      </div>
+    </a>
+  
+  
+    <a href="/blog/2018/10/29/python-serial获取所有串口/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">python serial获取所有串口</div>
+    </a>
+  
+</nav>
+
+  
+</article>
 
 </section>
         

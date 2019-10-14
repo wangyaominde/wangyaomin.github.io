@@ -5,20 +5,20 @@
   
 
   
-  <title>python 二维字典的使用 | 耀民的博客</title>
+  <title>python serial获取所有串口 | 耀民的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="今天在做项目的过程中需要用到一组三维的结构，eg.‘序号’，‘频率1，频率2’，‘温度’ 这时我们可以使用这样的格式： dict = {‘序号’:{‘温度’:(频率1，频率2)}}dict={&amp;#39;5&amp;#39;:{&amp;#39;30&amp;#39;:(10,10)}}可以得到：{’30&amp;#39;:(10,10)}查询某一号传感器的某温度的频率信息：dict[&amp;#39;5&amp;#39;][&amp;#39;30&amp;#3">
+  <meta name="description" content="在写gui的时候发现如果自动选择串口号可能会有原主机和新装软件的主机存在串口号不一致的情况，这时，就需要手动的选择串口号了，我们在这里使用了pyserial的包，如果在import serial.tools.list_ports的时候发现报错，我们可以使用pip进行安装，如果pip速度太慢的话我们可以使用更换源来进行加速，安装完成后可以进行逐条输入语句验证是否可以正常输出。  1234567891">
 <meta name="keywords" content="炼丹手册">
 <meta property="og:type" content="article">
-<meta property="og:title" content="python 二维字典的使用">
-<meta property="og:url" content="http://yoursite.com/2018/10/29/python-二维字典的使用/index.html">
+<meta property="og:title" content="python serial获取所有串口">
+<meta property="og:url" content="http://yoursite.com/2018/10/29/python-serial获取所有串口/index.html">
 <meta property="og:site_name" content="耀民的博客">
-<meta property="og:description" content="今天在做项目的过程中需要用到一组三维的结构，eg.‘序号’，‘频率1，频率2’，‘温度’ 这时我们可以使用这样的格式： dict = {‘序号’:{‘温度’:(频率1，频率2)}}dict={&amp;#39;5&amp;#39;:{&amp;#39;30&amp;#39;:(10,10)}}可以得到：{’30&amp;#39;:(10,10)}查询某一号传感器的某温度的频率信息：dict[&amp;#39;5&amp;#39;][&amp;#39;30&amp;#3">
+<meta property="og:description" content="在写gui的时候发现如果自动选择串口号可能会有原主机和新装软件的主机存在串口号不一致的情况，这时，就需要手动的选择串口号了，我们在这里使用了pyserial的包，如果在import serial.tools.list_ports的时候发现报错，我们可以使用pip进行安装，如果pip速度太慢的话我们可以使用更换源来进行加速，安装完成后可以进行逐条输入语句验证是否可以正常输出。  1234567891">
 <meta property="og:locale" content="cn">
-<meta property="og:updated_time" content="2019-10-14T02:59:33.654Z">
+<meta property="og:updated_time" content="2019-10-14T03:26:09.296Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="python 二维字典的使用">
-<meta name="twitter:description" content="今天在做项目的过程中需要用到一组三维的结构，eg.‘序号’，‘频率1，频率2’，‘温度’ 这时我们可以使用这样的格式： dict = {‘序号’:{‘温度’:(频率1，频率2)}}dict={&amp;#39;5&amp;#39;:{&amp;#39;30&amp;#39;:(10,10)}}可以得到：{’30&amp;#39;:(10,10)}查询某一号传感器的某温度的频率信息：dict[&amp;#39;5&amp;#39;][&amp;#39;30&amp;#3">
+<meta name="twitter:title" content="python serial获取所有串口">
+<meta name="twitter:description" content="在写gui的时候发现如果自动选择串口号可能会有原主机和新装软件的主机存在串口号不一致的情况，这时，就需要手动的选择串口号了，我们在这里使用了pyserial的包，如果在import serial.tools.list_ports的时候发现报错，我们可以使用pip进行安装，如果pip速度太慢的话我们可以使用更换源来进行加速，安装完成后可以进行逐条输入语句验证是否可以正常输出。  1234567891">
   
     <link rel="alternate" href="/blog/atom.xml" title="耀民的博客" type="application/atom+xml">
   
@@ -65,10 +65,10 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-python-二维字典的使用" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-python-serial获取所有串口" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/blog/2018/10/29/python-二维字典的使用/" class="article-date">
-  <time datetime="2018-10-29T02:54:05.000Z" itemprop="datePublished">2018-10-29</time>
+    <a href="/blog/2018/10/29/python-serial获取所有串口/" class="article-date">
+  <time datetime="2018-10-29T02:59:01.000Z" itemprop="datePublished">2018-10-29</time>
 </a>
     
   </div>
@@ -79,7 +79,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      python 二维字典的使用
+      python serial获取所有串口
     </h1>
   
 
@@ -87,14 +87,14 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>今天在做项目的过程中需要用到一组三维的结构，eg.‘序号’，‘频率1，频率2’，‘温度’</p>
-<p>这时我们可以使用这样的格式：</p>
-<p>dict = {‘序号’:{‘温度’:(频率1，频率2)}}<br><code>dict={&#39;5&#39;:{&#39;30&#39;:(10,10)}}</code><br>可以得到：<br><code>{’30&#39;:(10,10)}</code><br>查询某一号传感器的某温度的频率信息：<br><code>dict[&#39;5&#39;][&#39;30&#39;]</code><br>可以得到：<br><code>（10，10）</code></p>
+        <p>在写gui的时候发现如果自动选择串口号可能会有原主机和新装软件的主机存在串口号不一致的情况，这时，就需要手动的选择串口号了，我们在这里使用了pyserial的包，如果在<br><code>import serial.tools.list_ports</code><br>的时候发现报错，我们可以使用pip进行安装，如果pip速度太慢的话我们可以使用更换源来进行加速，安装完成后可以进行逐条输入语句验证是否可以正常输出。 </p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> serial</span><br><span class="line"><span class="keyword">import</span> serial.tools.list_ports</span><br><span class="line"><span class="keyword">from</span> easygui <span class="keyword">import</span> *</span><br><span class="line">  </span><br><span class="line">port_list = list(serial.tools.list_ports.comports())</span><br><span class="line"><span class="keyword">if</span> len(port_list) &amp;amp;lt;= <span class="number">0</span>:</span><br><span class="line">    <span class="keyword">print</span> (&amp;quot;The Serial port can<span class="string">'t find!&amp;quot;)</span></span><br><span class="line"><span class="string">  </span></span><br><span class="line"><span class="string">else:</span></span><br><span class="line"><span class="string">    for i in list(port_list):</span></span><br><span class="line"><span class="string">        print (i[0])</span></span><br></pre></td></tr></table></figure>
+
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/10/29/python-二维字典的使用/" data-id="ck1qdxy09000dhyf6pnz83jh7" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/10/29/python-serial获取所有串口/" data-id="ck1qdxy08000ahyf6iytnoyyd" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/炼丹手册/">炼丹手册</a></li></ul>
@@ -105,19 +105,19 @@
     
 <nav id="article-nav">
   
-    <a href="/blog/2018/10/29/python-serial获取所有串口/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/blog/2018/10/29/pip-更换国内源/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          python serial获取所有串口
+          pip 更换国内源
         
       </div>
     </a>
   
   
-    <a href="/blog/2018/10/19/正则表达式简单例程/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/blog/2018/10/29/python-二维字典的使用/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">正则表达式简单例程</div>
+      <div class="article-nav-title">python 二维字典的使用</div>
     </a>
   
 </nav>

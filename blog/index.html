@@ -62,6 +62,51 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-报错-Error-rpmdb-open-failed-的解决" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/2019/12/19/报错-Error-rpmdb-open-failed-的解决/" class="article-date">
+  <time datetime="2019-12-19T12:02:57.000Z" itemprop="datePublished">2019-12-19</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/2019/12/19/报错-Error-rpmdb-open-failed-的解决/">报错 Error: rpmdb open failed 的解决</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>在使用yum安装软件的时候发现如下错误：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">error: rpmdb: BDB0113 Thread/process <span class="number">20287</span>/<span class="number">139700001376064</span> failed: BDB1507 Thread died <span class="keyword">in</span> Berkeley DB library</span><br><span class="line">error: db5 error(-30973) from dbenv-&gt;failchk: BDB0087 DB_RUNRECOVERY: Fatal error, run database recovery</span><br><span class="line">error: cannot open Packages index using db5 -  (<span class="number">-30973</span>)</span><br><span class="line">error: cannot open Packages database <span class="keyword">in</span> /var/lib/rpm</span><br><span class="line">CRITICAL:yum.main:</span><br><span class="line"> </span><br><span class="line">Error: rpmdb open failed</span><br></pre></td></tr></table></figure>
+
+<p>此时，通过：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">rm -f /var/lib/rpm/__db*</span><br><span class="line">rpm --rebuilddb</span><br></pre></td></tr></table></figure>
+
+<p>两条语句即可完成清楚缓存并且重建缓存，这时yum就不会报错了</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/12/19/报错-Error-rpmdb-open-failed-的解决/" data-id="ck1qdxy0h000ohyf6m8xcv85j" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/炼丹手册/">炼丹手册</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-测试" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/blog/2019/10/14/测试/" class="article-date">
@@ -89,7 +134,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/10/14/测试/" data-id="ck1ptunsa00031t6w1hyiyb88" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/10/14/测试/" data-id="ck1qdxy0i000shyf6v9ly0q3f" class="article-share-link">Share</a>
       
       
     </footer>
@@ -99,10 +144,10 @@
 
 
   
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-manjaro-签名无效解决方案" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/blog/2019/10/13/hello-world/" class="article-date">
-  <time datetime="2019-10-13T15:53:04.712Z" itemprop="datePublished">2019-10-13</time>
+    <a href="/blog/2019/08/20/manjaro-签名无效解决方案/" class="article-date">
+  <time datetime="2019-08-20T12:18:58.000Z" itemprop="datePublished">2019-08-20</time>
 </a>
     
   </div>
@@ -113,7 +158,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/blog/2019/10/13/hello-world/">Hello World</a>
+      <a class="article-title" href="/blog/2019/08/20/manjaro-签名无效解决方案/">manjaro 签名无效解决方案</a>
     </h1>
   
 
@@ -121,26 +166,16 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+        <p>安装软件及更新的时候遇到签名无效，这是一种安全策略，我们可以修改<br><code>/etc/pacman.conf</code><br>文件将所有原来<br><code>SigLevel=xxxxx</code><br>注释掉，并且添加<br><code>SigLevel=Never</code><br>即可解决此类问题（会带来安全隐患，可以更新完再将其改回）</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/10/13/hello-world/" data-id="ck1ptuns400001t6wmxfawr5w" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/08/20/manjaro-签名无效解决方案/" data-id="ck1qdxy050005hyf6a6972bdp" class="article-share-link">Share</a>
       
       
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/炼丹手册/">炼丹手册</a></li></ul>
+
     </footer>
   </div>
   
@@ -148,10 +183,10 @@
 
 
   
-    <article id="post-python-二维字典的使用" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-python装饰器" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/blog/2018/10/29/python-二维字典的使用/" class="article-date">
-  <time datetime="2018-10-29T02:54:05.000Z" itemprop="datePublished">2018-10-29</time>
+    <a href="/blog/2019/05/31/python装饰器/" class="article-date">
+  <time datetime="2019-05-31T12:16:16.000Z" itemprop="datePublished">2019-05-31</time>
 </a>
     
   </div>
@@ -162,7 +197,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/blog/2018/10/29/python-二维字典的使用/">python 二维字典的使用</a>
+      <a class="article-title" href="/blog/2019/05/31/python装饰器/">python装饰器 </a>
     </h1>
   
 
@@ -170,16 +205,30 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>今天在做项目的过程中需要用到一组三维的结构，eg.‘序号’，‘频率1，频率2’，‘温度’</p>
-<p>这时我们可以使用这样的格式：</p>
-<p>dict = {‘序号’:{‘温度’:(频率1，频率2)}}<br><code>dict={&#39;5&#39;:{&#39;30&#39;:(10,10)}}</code><br>可以得到：<br><code>{’30&#39;:(10,10)}</code><br>查询某一号传感器的某温度的频率信息：<br><code>dict[&#39;5&#39;][&#39;30&#39;]</code><br>可以得到：<br><code>（10，10）</code></p>
+        <p>最近在使用python编程的时候发现了装饰器这个神奇的东西，在不破坏整个代码的结构和用法的同时将新功能套在旧的代码上，不影响原来代码的结构性和功能性，需要的时候加上，不需要的时候删掉即可。但是这玩意儿到底是啥呢？</p>
+<p>先来看一段代码</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">a</span><span class="params">(func)</span>:</span></span><br><span class="line">    print(<span class="string">"this is func one"</span>)</span><br><span class="line">    func()</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">b</span><span class="params">()</span>:</span></span><br><span class="line">    print(<span class="string">"this is func two"</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">a(b)</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://i.loli.net/2019/10/14/mJ39wBl7DQzrdhu.jpg" alt="代码运行结果"><br>众所周知，python函数也是可以被当成一个参数传递的，所以在这里，我们是把b当为一个参数传递给了a，当我们需要调用b的时候呢？这也被破坏了，所以这里我们需要</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">a</span><span class="params">(func)</span>:</span></span><br><span class="line">    print(<span class="string">"this is func one"</span>)</span><br><span class="line">    func()</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">b</span><span class="params">()</span>:</span></span><br><span class="line">    print(<span class="string">"this is func two"</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">b=a(b)</span><br><span class="line">b</span><br></pre></td></tr></table></figure>
+
+<p>在这里，我们的b=a(b)就解决了结构问题。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">a</span><span class="params">(func)</span>:</span></span><br><span class="line">    print(<span class="string">"this is func one"</span>)</span><br><span class="line">    func()</span><br><span class="line"></span><br><span class="line"><span class="meta">@a</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">b</span><span class="params">()</span>:</span></span><br><span class="line">    print(<span class="string">"this is func two"</span>)</span><br><span class="line"></span><br><span class="line">b</span><br></pre></td></tr></table></figure>
+
+<p>当然，我们用@也可以等效<br>b=a(b )</p>
+<p>像这种@的可以传参数，也可以多次嵌套,但是这样就需要修改一下啦</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">a</span><span class="params">(func)</span>:</span></span><br><span class="line">    print(<span class="string">"this is func one"</span>)</span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">abc</span><span class="params">()</span>:</span></span><br><span class="line">        func()</span><br><span class="line">    <span class="keyword">return</span> abc</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">c</span><span class="params">(func)</span>:</span></span><br><span class="line">    print(<span class="string">"this is func three"</span>)</span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">abc</span><span class="params">()</span>:</span></span><br><span class="line">        func()</span><br><span class="line">    <span class="keyword">return</span> abc</span><br><span class="line"></span><br><span class="line"><span class="meta">@c</span></span><br><span class="line"><span class="meta">@a</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">b</span><span class="params">()</span>:</span></span><br><span class="line">    print(<span class="string">"this is func two"</span>)</span><br><span class="line"></span><br><span class="line">b()</span><br></pre></td></tr></table></figure>
+
+<p>这样就将函数传递过去并且执行了，之前的直接传递的是函数变量</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/10/29/python-二维字典的使用/" data-id="ck1ptuns700011t6wytrj2dxc" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/05/31/python装饰器/" data-id="ck1qdxy0d000ihyf6xy517yp1" class="article-share-link">Share</a>
       
       
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/炼丹手册/">炼丹手册</a></li></ul>
+
     </footer>
   </div>
   
@@ -187,10 +236,10 @@
 
 
   
-    <article id="post-正则表达式简单例程" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-解决mysql-mariaDB-“ERROR-2002-HY000-Can’t-connect-to-local-MySQL-server-through" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/blog/2018/10/19/正则表达式简单例程/" class="article-date">
-  <time datetime="2018-10-19T02:49:51.000Z" itemprop="datePublished">2018-10-19</time>
+    <a href="/blog/2019/01/15/解决mysql-mariaDB-“ERROR-2002-HY000-Can’t-connect-to-local-MySQL-server-through/" class="article-date">
+  <time datetime="2019-01-15T12:11:51.000Z" itemprop="datePublished">2019-01-15</time>
 </a>
     
   </div>
@@ -201,7 +250,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/blog/2018/10/19/正则表达式简单例程/">正则表达式简单例程</a>
+      <a class="article-title" href="/blog/2019/01/15/解决mysql-mariaDB-“ERROR-2002-HY000-Can’t-connect-to-local-MySQL-server-through/">解决mysql/mariaDB “ERROR 2002 (HY000):Can’t connect to local MySQL server through socket ‘/tmp/mysql.sock’ (111)”</a>
     </h1>
   
 
@@ -209,18 +258,274 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>从字符串 str 中提取数字部分的内容(匹配一次)：</p>
-<p>var str = “abc123def”;</p>
-<p>var patt1 = /<a href>0-9</a>+/;</p>
-<p>document.write(str.match(patt1));</p>
-<p>^ 为匹配输入字符串的开始位置。<br><a href>0-9</a>+匹配多个数字， <a href>0-9</a> 匹配单个数字，+ 匹配一个或者多个。<br>abc$匹配字母 abc 并以 abc 结尾，$ 为匹配输入字符串的结束位置。<br>runoo+b，可以匹配 runoob、runooob、runoooooob 等，+ 号代表前面的字符必须至少出现一次（1次或多次）。<br>runoo<em>b，可以匹配 runob、runoob、runoooooob 等，</em> 号代表字符可以不出现，也可以出现一次或者多次（0次、或1次、或多次）。<br>colou?r 可以匹配 color 或者 colour，? 问号代表前面的字符最多只可以出现一次（0次、或1次）</p>
+        <p>搬运&amp;汉化自stackoverflow</p>
+<p>解决这个问题需要重启mysql重置密码</p>
+<p>1.停止mysql<br><code>sudo /etc/init.d/mysql stop</code><br>其他版本：<br><code>sudo /etc/init.d/mysqld stop</code></p>
+<p>2.进入mysql的安全模式<br><code>sudo mysqld_safe --skip-grant-tables &amp;amp;</code></p>
+<p>3.以root用户登录mysql<br><code>mysql -uroot</code></p>
+<p>4.选择mysql数据库<br><code>use mysql;</code></p>
+<p>5.重置密码<br><code>update user set authentication_string=password(&#39;mynewpassword&#39;) where user=&#39;root&#39;;</code></p>
+<p>mysql 5.7版本：<br> <code>update user set authentication_string=password(&#39;mynewpassword&#39;) where user=&#39;root&#39;;</code></p>
+<p>6.更新权限<br><code>flush privileges;</code></p>
+<p>7.退出<br><code>quit</code></p>
+<p>8.重启mysql服务</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo /etc/init.d/mysql stop</span><br><span class="line">...</span><br><span class="line">sudo /etc/init.d/mysql start</span><br></pre></td></tr></table></figure>
+
+<p>在CentOS，Fedora ，RHEL中：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo /etc/init.d/mysqld stop</span><br><span class="line">...</span><br><span class="line">sudo /etc/init.d/mysqld start</span><br></pre></td></tr></table></figure>
+
+<p>9.用新的密码登录<br><code>mysql -u root -p</code></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/10/19/正则表达式简单例程/" data-id="ck1ptuns900021t6wr3t0dooa" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/01/15/解决mysql-mariaDB-“ERROR-2002-HY000-Can’t-connect-to-local-MySQL-server-through/" data-id="ck1qe0p520000j6f6zk8rkt8p" class="article-share-link">Share</a>
       
       
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/炼丹手册/">炼丹手册</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-docker-运行一个容器" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/2019/01/15/docker-运行一个容器/" class="article-date">
+  <time datetime="2019-01-15T12:09:56.000Z" itemprop="datePublished">2019-01-15</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/2019/01/15/docker-运行一个容器/">docker 运行一个容器</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><code>docker run [参数] [参数]</code><br>参数及使用说明：</p>
+<ul>
+<li>-a stdin: 指定标准输入输出内容类型，可选 STDIN/STDOUT/STDERR 三项；</li>
+<li>-d: 后台运行容器，并返回容器ID；</li>
+<li>-i: 以交互模式运行容器，通常与 -t 同时使用；</li>
+<li>-p: 端口映射，格式为：主机(宿主)端口:容器端口</li>
+<li>-t: 为容器重新分配一个伪输入终端，通常与 -i 同时使用；</li>
+<li>–name=”nginx-lb”: 为容器指定一个名称；</li>
+<li>–dns 8.8.8.8: 指定容器使用的DNS服务器，默认和宿主一致；</li>
+<li>–dns-search example.com: 指定容器DNS搜索域名，默认和宿主一致；</li>
+<li>-h “mars”: 指定容器的hostname；</li>
+<li>-e username=”ritchie”: 设置环境变量；</li>
+<li>–env-file=<a href></a>: 从指定文件读入环境变量；</li>
+<li>–cpuset=”0-2″ or –cpuset=”0,1,2″: 绑定容器到指定CPU运行；</li>
+<li>-m :设置容器使用内存最大值；</li>
+<li>–net=”bridge”: 指定容器的网络连接类型，支持 bridge/host/none/container: 四种类型；</li>
+<li>–link=<a href></a>: 添加链接到另一个容器；</li>
+<li>–expose=<a href></a>: 开放一个端口或一组端口；</li>
+</ul>
+<p>查看docker镜像：<br><code>docker images</code></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/01/15/docker-运行一个容器/" data-id="ck1qdxy040004hyf6k5qmjd9h" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Docker/">Docker</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-docker-国内镜像更换" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/2019/01/15/docker-国内镜像更换/" class="article-date">
+  <time datetime="2019-01-15T12:09:09.000Z" itemprop="datePublished">2019-01-15</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/2019/01/15/docker-国内镜像更换/">docker 国内镜像更换</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>今天下载时候发现下载速度太慢，发现有国内镜像<br><a href="https://cr.console.aliyun.com/#/accelerator" target="_blank" rel="noopener">https://cr.console.aliyun.com/#/accelerator</a><br>在上面的连接中有阿里云的镜像更改方法及镜像地址需要登录阿里云。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/01/15/docker-国内镜像更换/" data-id="ck1qdxy020003hyf6tl2b5rik" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Docker/">Docker</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-停止、删除所有的docker容器和镜像" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/2019/01/07/停止、删除所有的docker容器和镜像/" class="article-date">
+  <time datetime="2019-01-07T12:04:56.000Z" itemprop="datePublished">2019-01-07</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/2019/01/07/停止、删除所有的docker容器和镜像/">停止、删除所有的docker容器和镜像</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>列出所有的容器 ID</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker ps -aq</span><br></pre></td></tr></table></figure>
+
+<p>停止所有的容器</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker stop $(docker ps -aq)</span><br></pre></td></tr></table></figure>
+
+<p>删除所有的容器</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker rm $(docker ps -aq)</span><br></pre></td></tr></table></figure>
+
+<p>删除所有的镜像</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker rmi $(docker images -q)</span><br></pre></td></tr></table></figure>
+
+<p>复制文件</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">docker cp mycontainer:/opt/file.txt /opt/<span class="built_in">local</span>/</span><br><span class="line">docker cp /opt/<span class="built_in">local</span>/file.txt mycontainer:/opt/</span><br></pre></td></tr></table></figure>
+
+<p><code>docker image prune --force --all或者docker image prune -f -a</code> : 删除所有不使用的镜像<br><code>docker container prune -f</code>: 删除所有停止的容器</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/01/07/停止、删除所有的docker容器和镜像/" data-id="ck1qdxy0f000khyf65apm1jrp" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Docker/">Docker</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-atom简单配置" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/2018/12/10/atom简单配置/" class="article-date">
+  <time datetime="2018-12-10T03:16:36.000Z" itemprop="datePublished">2018-12-10</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/2018/12/10/atom简单配置/">atom简单配置</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="apm换成国源："><a href="#apm换成国源：" class="headerlink" title="apm换成国源："></a>apm换成国源：</h1><p>刚刚在新电脑上安装了atom，下载插件速度太慢了，从网上找到了解决方法，就是换源，国内有淘宝的源</p>
+<p>新建或编辑 ~/.atom/.apmrc 文件，加入以下两行：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">registry=https://registry.npm.taobao.org/</span><br><span class="line">strict-ssl=fals</span><br></pre></td></tr></table></figure>
+
+<p>保存，退出，使用如下命令检测是否成功<br><code>apm install --check</code></p>
+<h1 id="Hydrogen配置："><a href="#Hydrogen配置：" class="headerlink" title="Hydrogen配置："></a>Hydrogen配置：</h1><p>在使用过程中发现不断有错误出现:<br>这个问题是因为Hydrogen没有调用python3，遇到内核有问题则对应弹出的提示进行安装<br>当弹出：<br><code>/usr/bin/python: No module named ipykernel_launcher</code><br>这时我们需要编辑/usr/local/share/jupyter/kernels/python3/kernel.json文件</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line"> <span class="string">"argv"</span>: [</span><br><span class="line">  <span class="string">"python3"</span>,</span><br><span class="line">  <span class="string">"-m"</span>,</span><br><span class="line">  <span class="string">"ipykernel_launcher"</span>,</span><br><span class="line">  <span class="string">"-f"</span>,</span><br><span class="line">  <span class="string">"&#123;connection_file&#125;"</span></span><br><span class="line"> ],</span><br><span class="line"> <span class="string">"display_name"</span>: <span class="string">"Python 3"</span>,</span><br><span class="line"> <span class="string">"language"</span>: <span class="string">"python"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/12/10/atom简单配置/" data-id="ck1qdxxzz0001hyf6csss3fx7" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/炼丹手册/">炼丹手册</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-python子线程中WMI报错-2147221020解决" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/2018/11/29/python子线程中WMI报错-2147221020解决/" class="article-date">
+  <time datetime="2018-11-29T03:16:36.000Z" itemprop="datePublished">2018-11-29</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/2018/11/29/python子线程中WMI报错-2147221020解决/">python子线程中WMI报错-2147221020解决</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>在编写检测进程的程序的时候发现如下错误：<br><img src="https://i.loli.net/2019/10/14/H6gocumbyitMFeQ.jpg" alt="error"></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">check_exsit</span><span class="params">(process_name)</span>:</span></span><br><span class="line">    WMI = win32com.client.GetObject(<span class="string">'winmgmts:'</span>)</span><br><span class="line">    processCodeCov = WMI.ExecQuery(<span class="string">'select * from Win32_Process where Name="%s"'</span> % process_name)</span><br><span class="line">    <span class="keyword">if</span> len(processCodeCov) &gt; <span class="number">0</span>:</span><br><span class="line">        <span class="keyword">print</span> (<span class="string">'%s is exists'</span> % process_name)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        win32process.CreateProcess(<span class="string">'C:\Program Files (x86)\Tektronix\VectorVuPC\VectorVu-PC.exe'</span>, <span class="string">''</span>, <span class="literal">None</span>, <span class="literal">None</span>, <span class="number">0</span>, win32process.CREATE_NO_WINDOW,<span class="literal">None</span>,<span class="literal">None</span>,win32process.STARTUPINFO())</span><br><span class="line">        <span class="keyword">print</span> (<span class="string">'%s is not exists'</span> % process_name)</span><br></pre></td></tr></table></figure>
+
+<p>这个程序是在子线程中运行的，经过查询得知在子线程中运行WMI需要进行初始化,改为如下程序：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">check_exsit</span><span class="params">(process_name)</span>:</span></span><br><span class="line">    pythoncom.CoInitialize()</span><br><span class="line">    WMI = win32com.client.GetObject(<span class="string">'winmgmts:'</span>)</span><br><span class="line">    processCodeCov = WMI.ExecQuery(<span class="string">'select * from Win32_Process where Name="%s"'</span> % process_name)</span><br><span class="line">    <span class="keyword">if</span> len(processCodeCov) &gt; <span class="number">0</span>:</span><br><span class="line">        <span class="keyword">print</span> (<span class="string">'%s is exists'</span> % process_name)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        win32process.CreateProcess(<span class="string">'C:\Program Files (x86)\Tektronix\VectorVuPC\VectorVu-PC.exe'</span>, <span class="string">''</span>, <span class="literal">None</span>, <span class="literal">None</span>, <span class="number">0</span>, win32process.CREATE_NO_WINDOW,<span class="literal">None</span>,<span class="literal">None</span>,win32process.STARTUPINFO())</span><br><span class="line">        <span class="keyword">print</span> (<span class="string">'%s is not exists'</span> % process_name)</span><br></pre></td></tr></table></figure>
+
+<p>加入初始化pythoncom.CoInitialize()即可</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/11/29/python子线程中WMI报错-2147221020解决/" data-id="ck1qdxy0a000fhyf6gix69q6u" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/炼丹手册/">炼丹手册</a></li></ul>
+
     </footer>
   </div>
   
@@ -229,6 +534,11 @@
 
   
 
+
+  <nav id="page-nav">
+    
+    <span class="page-number current">1</span><a class="page-number" href="/blog/page/2/">2</a><a class="extend next" rel="next" href="/blog/page/2/">Next &raquo;</a>
+  </nav>
 
 </section>
         
@@ -238,15 +548,29 @@
 
   
     
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Docker/">Docker</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/炼丹手册/">炼丹手册</a></li></ul>
+    </div>
+  </div>
+
 
   
     
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/blog/tags/Docker/" style="font-size: 10px;">Docker</a> <a href="/blog/tags/炼丹手册/" style="font-size: 20px;">炼丹手册</a>
+    </div>
+  </div>
+
   
     
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/10/">October 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2018/10/">October 2018</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/12/">December 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/10/">October 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/08/">August 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/05/">May 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/01/">January 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2018/12/">December 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2018/11/">November 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2018/10/">October 2018</a></li></ul>
     </div>
   </div>
 
@@ -259,19 +583,23 @@
       <ul>
         
           <li>
+            <a href="/blog/2019/12/19/报错-Error-rpmdb-open-failed-的解决/">报错 Error: rpmdb open failed 的解决</a>
+          </li>
+        
+          <li>
             <a href="/blog/2019/10/14/测试/">搭建好了基于hexo的blog</a>
           </li>
         
           <li>
-            <a href="/blog/2019/10/13/hello-world/">Hello World</a>
+            <a href="/blog/2019/08/20/manjaro-签名无效解决方案/">manjaro 签名无效解决方案</a>
           </li>
         
           <li>
-            <a href="/blog/2018/10/29/python-二维字典的使用/">python 二维字典的使用</a>
+            <a href="/blog/2019/05/31/python装饰器/">python装饰器 </a>
           </li>
         
           <li>
-            <a href="/blog/2018/10/19/正则表达式简单例程/">正则表达式简单例程</a>
+            <a href="/blog/2019/01/15/解决mysql-mariaDB-“ERROR-2002-HY000-Can’t-connect-to-local-MySQL-server-through/">解决mysql/mariaDB “ERROR 2002 (HY000):Can’t connect to local MySQL server through socket ‘/tmp/mysql.sock’ (111)”</a>
           </li>
         
       </ul>
