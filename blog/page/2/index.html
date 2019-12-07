@@ -171,6 +171,76 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="cn">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/blog/2018/12/10/atom%E7%AE%80%E5%8D%95%E9%85%8D%E7%BD%AE/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/blog/images/avatar.gif">
+      <meta itemprop="name" content="wangyaominde">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="耀民的博客">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/blog/2018/12/10/atom%E7%AE%80%E5%8D%95%E9%85%8D%E7%BD%AE/" class="post-title-link" itemprop="url">atom简单配置</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2018-12-10 11:16:36" itemprop="dateCreated datePublished" datetime="2018-12-10T11:16:36+08:00">2018-12-10</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2019-10-14 11:26:33" itemprop="dateModified" datetime="2019-10-14T11:26:33+08:00">2019-10-14</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="apm换成国源："><a href="#apm换成国源：" class="headerlink" title="apm换成国源："></a>apm换成国源：</h1><p>刚刚在新电脑上安装了atom，下载插件速度太慢了，从网上找到了解决方法，就是换源，国内有淘宝的源</p>
+<p>新建或编辑 ~/.atom/.apmrc 文件，加入以下两行：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">registry=https://registry.npm.taobao.org/</span><br><span class="line">strict-ssl=fals</span><br></pre></td></tr></table></figure>
+<p>保存，退出，使用如下命令检测是否成功<br><code>apm install --check</code></p>
+<h1 id="Hydrogen配置："><a href="#Hydrogen配置：" class="headerlink" title="Hydrogen配置："></a>Hydrogen配置：</h1><p>在使用过程中发现不断有错误出现:<br>这个问题是因为Hydrogen没有调用python3，遇到内核有问题则对应弹出的提示进行安装<br>当弹出：<br><code>/usr/bin/python: No module named ipykernel_launcher</code><br>这时我们需要编辑/usr/local/share/jupyter/kernels/python3/kernel.json文件</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line"> <span class="string">"argv"</span>: [</span><br><span class="line">  <span class="string">"python3"</span>,</span><br><span class="line">  <span class="string">"-m"</span>,</span><br><span class="line">  <span class="string">"ipykernel_launcher"</span>,</span><br><span class="line">  <span class="string">"-f"</span>,</span><br><span class="line">  <span class="string">"&#123;connection_file&#125;"</span></span><br><span class="line"> ],</span><br><span class="line"> <span class="string">"display_name"</span>: <span class="string">"Python 3"</span>,</span><br><span class="line"> <span class="string">"language"</span>: <span class="string">"python"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="cn">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/blog/2018/11/29/python%E5%AD%90%E7%BA%BF%E7%A8%8B%E4%B8%ADWMI%E6%8A%A5%E9%94%99-2147221020%E8%A7%A3%E5%86%B3/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -795,7 +865,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/blog/archives/">
         
-          <span class="site-state-item-count">18</span>
+          <span class="site-state-item-count">19</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>

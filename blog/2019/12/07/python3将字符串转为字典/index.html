@@ -51,20 +51,17 @@
   };
 </script>
 
-  <meta name="description" content="在编写检测进程的程序的时候发现如下错误： 12345678def check_exsit(process_name):    WMI = win32com.client.GetObject(&amp;apos;winmgmts:&amp;apos;)    processCodeCov = WMI.ExecQuery(&amp;apos;select * from Win32_Process where Name=&quot;%s&quot;&amp;apos; % process_na">
-<meta name="keywords" content="炼丹手册">
+  <meta name="description" content="在工作中需要从config中读取字典，读取到的字典是字符串：userinfo = &amp;#39;{&amp;quot;name&amp;quot; : &amp;quot;john&amp;quot;, &amp;quot;gender&amp;quot; : &amp;quot;male&amp;quot;, &amp;quot;age&amp;quot;: 28}&amp;#39;需要将上面的变为：userdict = {&amp;quot;name&amp;quot; : &amp;quot;john&amp;q">
 <meta property="og:type" content="article">
-<meta property="og:title" content="python子线程中WMI报错-2147221020解决">
-<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2018&#x2F;11&#x2F;29&#x2F;python%E5%AD%90%E7%BA%BF%E7%A8%8B%E4%B8%ADWMI%E6%8A%A5%E9%94%99-2147221020%E8%A7%A3%E5%86%B3&#x2F;index.html">
+<meta property="og:title" content="python3将字符串转为字典">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;07&#x2F;python3%E5%B0%86%E5%AD%97%E7%AC%A6%E4%B8%B2%E8%BD%AC%E4%B8%BA%E5%AD%97%E5%85%B8&#x2F;index.html">
 <meta property="og:site_name" content="耀民的博客">
-<meta property="og:description" content="在编写检测进程的程序的时候发现如下错误： 12345678def check_exsit(process_name):    WMI = win32com.client.GetObject(&amp;apos;winmgmts:&amp;apos;)    processCodeCov = WMI.ExecQuery(&amp;apos;select * from Win32_Process where Name=&quot;%s&quot;&amp;apos; % process_na">
+<meta property="og:description" content="在工作中需要从config中读取字典，读取到的字典是字符串：userinfo = &amp;#39;{&amp;quot;name&amp;quot; : &amp;quot;john&amp;quot;, &amp;quot;gender&amp;quot; : &amp;quot;male&amp;quot;, &amp;quot;age&amp;quot;: 28}&amp;#39;需要将上面的变为：userdict = {&amp;quot;name&amp;quot; : &amp;quot;john&amp;q">
 <meta property="og:locale" content="cn">
-<meta property="og:image" content="https:&#x2F;&#x2F;i.loli.net&#x2F;2019&#x2F;10&#x2F;14&#x2F;H6gocumbyitMFeQ.jpg">
-<meta property="og:updated_time" content="2019-10-14T03:26:58.000Z">
+<meta property="og:updated_time" content="2019-12-07T11:34:44.345Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https:&#x2F;&#x2F;i.loli.net&#x2F;2019&#x2F;10&#x2F;14&#x2F;H6gocumbyitMFeQ.jpg">
 
-<link rel="canonical" href="http://yoursite.com/2018/11/29/python%E5%AD%90%E7%BA%BF%E7%A8%8B%E4%B8%ADWMI%E6%8A%A5%E9%94%99-2147221020%E8%A7%A3%E5%86%B3/">
+<link rel="canonical" href="http://yoursite.com/2019/12/07/python3%E5%B0%86%E5%AD%97%E7%AC%A6%E4%B8%B2%E8%BD%AC%E4%B8%BA%E5%AD%97%E5%85%B8/">
 
 
 <script id="page-configurations">
@@ -78,7 +75,7 @@
   };
 </script>
 
-  <title>python子线程中WMI报错-2147221020解决 | 耀民的博客</title>
+  <title>python3将字符串转为字典 | 耀民的博客</title>
   
 
 
@@ -177,7 +174,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="cn">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/blog/2018/11/29/python%E5%AD%90%E7%BA%BF%E7%A8%8B%E4%B8%ADWMI%E6%8A%A5%E9%94%99-2147221020%E8%A7%A3%E5%86%B3/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/blog/2019/12/07/python3%E5%B0%86%E5%AD%97%E7%AC%A6%E4%B8%B2%E8%BD%AC%E4%B8%BA%E5%AD%97%E5%85%B8/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/blog/images/avatar.gif">
@@ -190,7 +187,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          python子线程中WMI报错-2147221020解决
+          python3将字符串转为字典
         </h1>
 
         <div class="post-meta">
@@ -199,16 +196,10 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
+              
 
-              <time title="Created: 2018-11-29 11:16:36" itemprop="dateCreated datePublished" datetime="2018-11-29T11:16:36+08:00">2018-11-29</time>
+              <time title="Created: 2019-12-07 19:30:32 / Modified: 19:34:44" itemprop="dateCreated datePublished" datetime="2019-12-07T19:30:32+08:00">2019-12-07</time>
             </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2019-10-14 11:26:58" itemprop="dateModified" datetime="2019-10-14T11:26:58+08:00">2019-10-14</time>
-              </span>
 
           
 
@@ -221,11 +212,14 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>在编写检测进程的程序的时候发现如下错误：<br><img src="https://i.loli.net/2019/10/14/H6gocumbyitMFeQ.jpg" alt="error"></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">check_exsit</span><span class="params">(process_name)</span>:</span></span><br><span class="line">    WMI = win32com.client.GetObject(<span class="string">'winmgmts:'</span>)</span><br><span class="line">    processCodeCov = WMI.ExecQuery(<span class="string">'select * from Win32_Process where Name="%s"'</span> % process_name)</span><br><span class="line">    <span class="keyword">if</span> len(processCodeCov) &gt; <span class="number">0</span>:</span><br><span class="line">        <span class="keyword">print</span> (<span class="string">'%s is exists'</span> % process_name)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        win32process.CreateProcess(<span class="string">'C:\Program Files (x86)\Tektronix\VectorVuPC\VectorVu-PC.exe'</span>, <span class="string">''</span>, <span class="literal">None</span>, <span class="literal">None</span>, <span class="number">0</span>, win32process.CREATE_NO_WINDOW,<span class="literal">None</span>,<span class="literal">None</span>,win32process.STARTUPINFO())</span><br><span class="line">        <span class="keyword">print</span> (<span class="string">'%s is not exists'</span> % process_name)</span><br></pre></td></tr></table></figure>
-<p>这个程序是在子线程中运行的，经过查询得知在子线程中运行WMI需要进行初始化,改为如下程序：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">check_exsit</span><span class="params">(process_name)</span>:</span></span><br><span class="line">    pythoncom.CoInitialize()</span><br><span class="line">    WMI = win32com.client.GetObject(<span class="string">'winmgmts:'</span>)</span><br><span class="line">    processCodeCov = WMI.ExecQuery(<span class="string">'select * from Win32_Process where Name="%s"'</span> % process_name)</span><br><span class="line">    <span class="keyword">if</span> len(processCodeCov) &gt; <span class="number">0</span>:</span><br><span class="line">        <span class="keyword">print</span> (<span class="string">'%s is exists'</span> % process_name)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        win32process.CreateProcess(<span class="string">'C:\Program Files (x86)\Tektronix\VectorVuPC\VectorVu-PC.exe'</span>, <span class="string">''</span>, <span class="literal">None</span>, <span class="literal">None</span>, <span class="number">0</span>, win32process.CREATE_NO_WINDOW,<span class="literal">None</span>,<span class="literal">None</span>,win32process.STARTUPINFO())</span><br><span class="line">        <span class="keyword">print</span> (<span class="string">'%s is not exists'</span> % process_name)</span><br></pre></td></tr></table></figure>
-<p>加入初始化pythoncom.CoInitialize()即可</p>
+        <p>在工作中需要从config中读取字典，读取到的字典是字符串：<br><code>userinfo = &#39;{&quot;name&quot; : &quot;john&quot;, &quot;gender&quot; : &quot;male&quot;, &quot;age&quot;: 28}&#39;</code>需要将上面的变为：<br><code>userdict = {&quot;name&quot; : &quot;john&quot;, &quot;gender&quot; : &quot;male&quot;, &quot;age&quot;: 28}</code><br>有以下几种方法：</p>
+<h1 id="通过-json-来转换"><a href="#通过-json-来转换" class="headerlink" title="通过 json 来转换"></a>通过 json 来转换</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">import</span> json</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>user_info= <span class="string">'&#123;"name" : "john", "gender" : "male", "age": 28&#125;'</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>user_dict = json.loads(user_info)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>user_dict</span><br><span class="line">&#123;<span class="string">u'gender'</span>: <span class="string">u'male'</span>, <span class="string">u'age'</span>: <span class="number">28</span>, <span class="string">u'name'</span>: <span class="string">u'john'</span>&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这里有个问题：*<em>数组或对象之中的字符串必须使用双引号，不能使用单引号 *</em></p>
+<h1 id="通过-eval"><a href="#通过-eval" class="headerlink" title="通过 eval"></a>通过 eval</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>user_info = <span class="string">'&#123;"name" : "john", "gender" : "male", "age": 28&#125;'</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>user_dict = eval(user_info)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>user_dict</span><br><span class="line">&#123;<span class="string">'gender'</span>: <span class="string">'male'</span>, <span class="string">'age'</span>: <span class="number">28</span>, <span class="string">'name'</span>: <span class="string">'john'</span>&#125;</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>user_info = <span class="string">"&#123;'name' : 'john', 'gender' : 'male', 'age': 28&#125;"</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>user_dict = eval(user_info)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>user_dict</span><br><span class="line">&#123;<span class="string">'gender'</span>: <span class="string">'male'</span>, <span class="string">'age'</span>: <span class="number">28</span>, <span class="string">'name'</span>: <span class="string">'john'</span>&#125;</span><br></pre></td></tr></table></figure>
+<p>这个有很严重的安全问题，当用户从config中输入破坏性的代码则会对整个系统存在安全性的威胁</p>
+<h1 id="通过-literal-eval"><a href="#通过-literal-eval" class="headerlink" title="通过 literal_eval_"></a>通过 literal_eval_</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">import</span> ast</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>user = <span class="string">'&#123;"name" : "john", "gender" : "male", "age": 28&#125;'</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>user_dict = ast.literal_eval(user)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>user_dict</span><br><span class="line">&#123;<span class="string">'gender'</span>: <span class="string">'male'</span>, <span class="string">'age'</span>: <span class="number">28</span>, <span class="string">'name'</span>: <span class="string">'john'</span>&#125;</span><br><span class="line">user_info = <span class="string">"&#123;'name' : 'john', 'gender' : 'male', 'age': 28&#125;"</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>user_dict = ast.literal_eval(user)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>user_dict</span><br><span class="line">&#123;<span class="string">'gender'</span>: <span class="string">'male'</span>, <span class="string">'age'</span>: <span class="number">28</span>, <span class="string">'name'</span>: <span class="string">'john'</span>&#125;</span><br></pre></td></tr></table></figure>
+<p>用这个是比较好的解决方法</p>
 
     </div>
 
@@ -234,25 +228,19 @@
     
 
       <footer class="post-footer">
-          <div class="post-tags">
-              <a href="/blog/tags/%E7%82%BC%E4%B8%B9%E6%89%8B%E5%86%8C/" rel="tag"># 炼丹手册</a>
-          </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-next post-nav-item">
-                <a href="/blog/2018/11/27/%E8%A7%A3%E5%86%B3%E6%A0%91%E8%8E%93%E6%B4%BEkali%E6%9B%B4%E6%8D%A2%E5%9B%BD%E5%86%85%E6%BA%90%E5%90%8E%E6%9B%B4%E6%96%B0%E6%8A%A5%E9%94%99/" rel="next" title="解决树莓派kali更换国内源后更新报错">
-                  <i class="fa fa-chevron-left"></i> 解决树莓派kali更换国内源后更新报错
+                <a href="/blog/2019/11/06/%E7%BB%88%E4%BA%8E%E5%8E%BB%E6%83%B3%E8%B5%B7%E6%9D%A5%E5%86%99%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E4%BA%86/" rel="next" title="终于去想起来写一篇博客了">
+                  <i class="fa fa-chevron-left"></i> 终于去想起来写一篇博客了
                 </a>
             </div>
 
             <span class="post-nav-divider"></span>
 
             <div class="post-nav-prev post-nav-item">
-                <a href="/blog/2018/12/10/atom%E7%AE%80%E5%8D%95%E9%85%8D%E7%BD%AE/" rel="prev" title="atom简单配置">
-                  atom简单配置 <i class="fa fa-chevron-right"></i>
-                </a>
             </div>
           </div>
       </footer>
@@ -291,6 +279,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#通过-json-来转换"><span class="nav-number">1.</span> <span class="nav-text">通过 json 来转换</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#通过-eval"><span class="nav-number">2.</span> <span class="nav-text">通过 eval</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#通过-literal-eval"><span class="nav-number">3.</span> <span class="nav-text">通过 literal_eval_</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
