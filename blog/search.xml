@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>atom简单配置</title>
+    <url>/blog/2018/12/10/atom%E7%AE%80%E5%8D%95%E9%85%8D%E7%BD%AE/</url>
+    <content><![CDATA[<h1 id="apm换成国源："><a href="#apm换成国源：" class="headerlink" title="apm换成国源："></a>apm换成国源：</h1><p>刚刚在新电脑上安装了atom，下载插件速度太慢了，从网上找到了解决方法，就是换源，国内有淘宝的源</p>
+<p>新建或编辑 ~/.atom/.apmrc 文件，加入以下两行：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">registry=https://registry.npm.taobao.org/</span><br><span class="line">strict-ssl=fals</span><br></pre></td></tr></table></figure>
+<p>保存，退出，使用如下命令检测是否成功<br><code>apm install --check</code></p>
+<h1 id="Hydrogen配置："><a href="#Hydrogen配置：" class="headerlink" title="Hydrogen配置："></a>Hydrogen配置：</h1><p>在使用过程中发现不断有错误出现:<br>这个问题是因为Hydrogen没有调用python3，遇到内核有问题则对应弹出的提示进行安装<br>当弹出：<br><code>/usr/bin/python: No module named ipykernel_launcher</code><br>这时我们需要编辑/usr/local/share/jupyter/kernels/python3/kernel.json文件</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line"> <span class="string">&quot;argv&quot;</span>: [</span><br><span class="line">  <span class="string">&quot;python3&quot;</span>,</span><br><span class="line">  <span class="string">&quot;-m&quot;</span>,</span><br><span class="line">  <span class="string">&quot;ipykernel_launcher&quot;</span>,</span><br><span class="line">  <span class="string">&quot;-f&quot;</span>,</span><br><span class="line">  <span class="string">&quot;&#123;connection_file&#125;&quot;</span></span><br><span class="line"> ],</span><br><span class="line"> <span class="string">&quot;display_name&quot;</span>: <span class="string">&quot;Python 3&quot;</span>,</span><br><span class="line"> <span class="string">&quot;language&quot;</span>: <span class="string">&quot;python&quot;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      <tags>
+        <tag>炼丹手册</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>PyQt5 简单教程</title>
     <url>/blog/2018/11/12/PyQt5-%E7%AE%80%E5%8D%95%E6%95%99%E7%A8%8B/</url>
     <content><![CDATA[<p>最近在公司开发一套自动化测试系统，要做一个带GUI的软件，采用了python 进行开发所以在GUI上使用了pyqt5进行开发</p>
@@ -48,14 +61,19 @@
       </tags>
   </entry>
   <entry>
-    <title>atom简单配置</title>
-    <url>/blog/2018/12/10/atom%E7%AE%80%E5%8D%95%E9%85%8D%E7%BD%AE/</url>
-    <content><![CDATA[<h1 id="apm换成国源："><a href="#apm换成国源：" class="headerlink" title="apm换成国源："></a>apm换成国源：</h1><p>刚刚在新电脑上安装了atom，下载插件速度太慢了，从网上找到了解决方法，就是换源，国内有淘宝的源</p>
-<p>新建或编辑 ~/.atom/.apmrc 文件，加入以下两行：</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">registry=https://registry.npm.taobao.org/</span><br><span class="line">strict-ssl=fals</span><br></pre></td></tr></table></figure>
-<p>保存，退出，使用如下命令检测是否成功<br><code>apm install --check</code></p>
-<h1 id="Hydrogen配置："><a href="#Hydrogen配置：" class="headerlink" title="Hydrogen配置："></a>Hydrogen配置：</h1><p>在使用过程中发现不断有错误出现:<br>这个问题是因为Hydrogen没有调用python3，遇到内核有问题则对应弹出的提示进行安装<br>当弹出：<br><code>/usr/bin/python: No module named ipykernel_launcher</code><br>这时我们需要编辑/usr/local/share/jupyter/kernels/python3/kernel.json文件</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line"> <span class="string">&quot;argv&quot;</span>: [</span><br><span class="line">  <span class="string">&quot;python3&quot;</span>,</span><br><span class="line">  <span class="string">&quot;-m&quot;</span>,</span><br><span class="line">  <span class="string">&quot;ipykernel_launcher&quot;</span>,</span><br><span class="line">  <span class="string">&quot;-f&quot;</span>,</span><br><span class="line">  <span class="string">&quot;&#123;connection_file&#125;&quot;</span></span><br><span class="line"> ],</span><br><span class="line"> <span class="string">&quot;display_name&quot;</span>: <span class="string">&quot;Python 3&quot;</span>,</span><br><span class="line"> <span class="string">&quot;language&quot;</span>: <span class="string">&quot;python&quot;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    <title>docker 国内镜像更换</title>
+    <url>/blog/2019/01/15/docker-%E5%9B%BD%E5%86%85%E9%95%9C%E5%83%8F%E6%9B%B4%E6%8D%A2/</url>
+    <content><![CDATA[<p>今天下载时候发现下载速度太慢，发现有国内镜像<br><a href="https://cr.console.aliyun.com/#/accelerator">https://cr.console.aliyun.com/#/accelerator</a><br>在上面的连接中有阿里云的镜像更改方法及镜像地址需要登录阿里云。</p>
+]]></content>
+      <tags>
+        <tag>Docker</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>manjaro 签名无效解决方案</title>
+    <url>/blog/2019/08/20/manjaro-%E7%AD%BE%E5%90%8D%E6%97%A0%E6%95%88%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</url>
+    <content><![CDATA[<p>安装软件及更新的时候遇到签名无效，这是一种安全策略，我们可以修改<br><code>/etc/pacman.conf</code><br>文件将所有原来<br><code>SigLevel=xxxxx</code><br>注释掉，并且添加<br><code>SigLevel=Never</code><br>即可解决此类问题（会带来安全隐患，可以更新完再将其改回）</p>
+]]></content>
       <tags>
         <tag>炼丹手册</tag>
       </tags>
@@ -89,24 +107,6 @@
       </tags>
   </entry>
   <entry>
-    <title>docker 国内镜像更换</title>
-    <url>/blog/2019/01/15/docker-%E5%9B%BD%E5%86%85%E9%95%9C%E5%83%8F%E6%9B%B4%E6%8D%A2/</url>
-    <content><![CDATA[<p>今天下载时候发现下载速度太慢，发现有国内镜像<br><a href="https://cr.console.aliyun.com/#/accelerator">https://cr.console.aliyun.com/#/accelerator</a><br>在上面的连接中有阿里云的镜像更改方法及镜像地址需要登录阿里云。</p>
-]]></content>
-      <tags>
-        <tag>Docker</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>manjaro 签名无效解决方案</title>
-    <url>/blog/2019/08/20/manjaro-%E7%AD%BE%E5%90%8D%E6%97%A0%E6%95%88%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</url>
-    <content><![CDATA[<p>安装软件及更新的时候遇到签名无效，这是一种安全策略，我们可以修改<br><code>/etc/pacman.conf</code><br>文件将所有原来<br><code>SigLevel=xxxxx</code><br>注释掉，并且添加<br><code>SigLevel=Never</code><br>即可解决此类问题（会带来安全隐患，可以更新完再将其改回）</p>
-]]></content>
-      <tags>
-        <tag>炼丹手册</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>pip 更换国内源</title>
     <url>/blog/2018/10/29/pip-%E6%9B%B4%E6%8D%A2%E5%9B%BD%E5%86%85%E6%BA%90/</url>
     <content><![CDATA[<p>在使用pip安装东西的过程中，会发现速度十分缓慢。这时，我们可以将pip的下载源变为国内的镜像源，这样会提升下载速度。</p>
@@ -114,17 +114,6 @@
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">[<span class="keyword">global</span>]</span><br><span class="line">index-url = https://pypi.tuna.tsinghua.edu.cn/simple</span><br><span class="line">[install]</span><br><span class="line">trusted-host=pypi.tuna.tsinghua.edu.cn</span><br></pre></td></tr></table></figure>
 <p>或使用阿里的源：</p>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">[<span class="keyword">global</span>]</span><br><span class="line">index-url=http://mirrors.aliyun.com/pypi/simple/</span><br><span class="line">[install]</span><br><span class="line">trusted-host=mirrors.aliyun.com</span><br></pre></td></tr></table></figure>]]></content>
-      <tags>
-        <tag>炼丹手册</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>python 二维字典的使用</title>
-    <url>/blog/2018/10/29/python-%E4%BA%8C%E7%BB%B4%E5%AD%97%E5%85%B8%E7%9A%84%E4%BD%BF%E7%94%A8/</url>
-    <content><![CDATA[<p>今天在做项目的过程中需要用到一组三维的结构，eg.‘序号’，‘频率1，频率2’，‘温度’</p>
-<p>这时我们可以使用这样的格式：</p>
-<p>dict = {‘序号’:{‘温度’:(频率1，频率2)}}<br><code>dict=&#123;&#39;5&#39;:&#123;&#39;30&#39;:(10,10)&#125;&#125;</code><br>可以得到：<br><code>&#123;’30&#39;:(10,10)&#125;</code><br>查询某一号传感器的某温度的频率信息：<br><code>dict[&#39;5&#39;][&#39;30&#39;]</code><br>可以得到：<br><code>（10，10）</code></p>
-]]></content>
       <tags>
         <tag>炼丹手册</tag>
       </tags>
@@ -154,13 +143,11 @@
       </tags>
   </entry>
   <entry>
-    <title>python子线程中WMI报错-2147221020解决</title>
-    <url>/blog/2018/11/29/python%E5%AD%90%E7%BA%BF%E7%A8%8B%E4%B8%ADWMI%E6%8A%A5%E9%94%99-2147221020%E8%A7%A3%E5%86%B3/</url>
-    <content><![CDATA[<p>在编写检测进程的程序的时候发现如下错误：<br><img src="https://i.loli.net/2019/10/14/H6gocumbyitMFeQ.jpg" alt="error"></p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">check_exsit</span>(<span class="params">process_name</span>):</span></span><br><span class="line">    WMI = win32com.client.GetObject(<span class="string">&#x27;winmgmts:&#x27;</span>)</span><br><span class="line">    processCodeCov = WMI.ExecQuery(<span class="string">&#x27;select * from Win32_Process where Name=&quot;%s&quot;&#x27;</span> % process_name)</span><br><span class="line">    <span class="keyword">if</span> <span class="built_in">len</span>(processCodeCov) &gt; <span class="number">0</span>:</span><br><span class="line">        <span class="built_in">print</span> (<span class="string">&#x27;%s is exists&#x27;</span> % process_name)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        win32process.CreateProcess(<span class="string">&#x27;C:\Program Files (x86)\Tektronix\VectorVuPC\VectorVu-PC.exe&#x27;</span>, <span class="string">&#x27;&#x27;</span>, <span class="literal">None</span>, <span class="literal">None</span>, <span class="number">0</span>, win32process.CREATE_NO_WINDOW,<span class="literal">None</span>,<span class="literal">None</span>,win32process.STARTUPINFO())</span><br><span class="line">        <span class="built_in">print</span> (<span class="string">&#x27;%s is not exists&#x27;</span> % process_name)</span><br></pre></td></tr></table></figure>
-<p>这个程序是在子线程中运行的，经过查询得知在子线程中运行WMI需要进行初始化,改为如下程序：</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">check_exsit</span>(<span class="params">process_name</span>):</span></span><br><span class="line">    pythoncom.CoInitialize()</span><br><span class="line">    WMI = win32com.client.GetObject(<span class="string">&#x27;winmgmts:&#x27;</span>)</span><br><span class="line">    processCodeCov = WMI.ExecQuery(<span class="string">&#x27;select * from Win32_Process where Name=&quot;%s&quot;&#x27;</span> % process_name)</span><br><span class="line">    <span class="keyword">if</span> <span class="built_in">len</span>(processCodeCov) &gt; <span class="number">0</span>:</span><br><span class="line">        <span class="built_in">print</span> (<span class="string">&#x27;%s is exists&#x27;</span> % process_name)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        win32process.CreateProcess(<span class="string">&#x27;C:\Program Files (x86)\Tektronix\VectorVuPC\VectorVu-PC.exe&#x27;</span>, <span class="string">&#x27;&#x27;</span>, <span class="literal">None</span>, <span class="literal">None</span>, <span class="number">0</span>, win32process.CREATE_NO_WINDOW,<span class="literal">None</span>,<span class="literal">None</span>,win32process.STARTUPINFO())</span><br><span class="line">        <span class="built_in">print</span> (<span class="string">&#x27;%s is not exists&#x27;</span> % process_name)</span><br></pre></td></tr></table></figure>
-<p>加入初始化pythoncom.CoInitialize()即可</p>
+    <title>python 二维字典的使用</title>
+    <url>/blog/2018/10/29/python-%E4%BA%8C%E7%BB%B4%E5%AD%97%E5%85%B8%E7%9A%84%E4%BD%BF%E7%94%A8/</url>
+    <content><![CDATA[<p>今天在做项目的过程中需要用到一组三维的结构，eg.‘序号’，‘频率1，频率2’，‘温度’</p>
+<p>这时我们可以使用这样的格式：</p>
+<p>dict = {‘序号’:{‘温度’:(频率1，频率2)}}<br><code>dict=&#123;&#39;5&#39;:&#123;&#39;30&#39;:(10,10)&#125;&#125;</code><br>可以得到：<br><code>&#123;’30&#39;:(10,10)&#125;</code><br>查询某一号传感器的某温度的频率信息：<br><code>dict[&#39;5&#39;][&#39;30&#39;]</code><br>可以得到：<br><code>（10，10）</code></p>
 ]]></content>
       <tags>
         <tag>炼丹手册</tag>
@@ -202,6 +189,19 @@
 ]]></content>
       <tags>
         <tag>Docker</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>python子线程中WMI报错-2147221020解决</title>
+    <url>/blog/2018/11/29/python%E5%AD%90%E7%BA%BF%E7%A8%8B%E4%B8%ADWMI%E6%8A%A5%E9%94%99-2147221020%E8%A7%A3%E5%86%B3/</url>
+    <content><![CDATA[<p>在编写检测进程的程序的时候发现如下错误：<br><img src="https://i.loli.net/2019/10/14/H6gocumbyitMFeQ.jpg" alt="error"></p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">check_exsit</span>(<span class="params">process_name</span>):</span></span><br><span class="line">    WMI = win32com.client.GetObject(<span class="string">&#x27;winmgmts:&#x27;</span>)</span><br><span class="line">    processCodeCov = WMI.ExecQuery(<span class="string">&#x27;select * from Win32_Process where Name=&quot;%s&quot;&#x27;</span> % process_name)</span><br><span class="line">    <span class="keyword">if</span> <span class="built_in">len</span>(processCodeCov) &gt; <span class="number">0</span>:</span><br><span class="line">        <span class="built_in">print</span> (<span class="string">&#x27;%s is exists&#x27;</span> % process_name)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        win32process.CreateProcess(<span class="string">&#x27;C:\Program Files (x86)\Tektronix\VectorVuPC\VectorVu-PC.exe&#x27;</span>, <span class="string">&#x27;&#x27;</span>, <span class="literal">None</span>, <span class="literal">None</span>, <span class="number">0</span>, win32process.CREATE_NO_WINDOW,<span class="literal">None</span>,<span class="literal">None</span>,win32process.STARTUPINFO())</span><br><span class="line">        <span class="built_in">print</span> (<span class="string">&#x27;%s is not exists&#x27;</span> % process_name)</span><br></pre></td></tr></table></figure>
+<p>这个程序是在子线程中运行的，经过查询得知在子线程中运行WMI需要进行初始化,改为如下程序：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">check_exsit</span>(<span class="params">process_name</span>):</span></span><br><span class="line">    pythoncom.CoInitialize()</span><br><span class="line">    WMI = win32com.client.GetObject(<span class="string">&#x27;winmgmts:&#x27;</span>)</span><br><span class="line">    processCodeCov = WMI.ExecQuery(<span class="string">&#x27;select * from Win32_Process where Name=&quot;%s&quot;&#x27;</span> % process_name)</span><br><span class="line">    <span class="keyword">if</span> <span class="built_in">len</span>(processCodeCov) &gt; <span class="number">0</span>:</span><br><span class="line">        <span class="built_in">print</span> (<span class="string">&#x27;%s is exists&#x27;</span> % process_name)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        win32process.CreateProcess(<span class="string">&#x27;C:\Program Files (x86)\Tektronix\VectorVuPC\VectorVu-PC.exe&#x27;</span>, <span class="string">&#x27;&#x27;</span>, <span class="literal">None</span>, <span class="literal">None</span>, <span class="number">0</span>, win32process.CREATE_NO_WINDOW,<span class="literal">None</span>,<span class="literal">None</span>,win32process.STARTUPINFO())</span><br><span class="line">        <span class="built_in">print</span> (<span class="string">&#x27;%s is not exists&#x27;</span> % process_name)</span><br></pre></td></tr></table></figure>
+<p>加入初始化pythoncom.CoInitialize()即可</p>
+]]></content>
+      <tags>
+        <tag>炼丹手册</tag>
       </tags>
   </entry>
   <entry>
@@ -268,17 +268,6 @@
       </tags>
   </entry>
   <entry>
-    <title>解决树莓派kali更换国内源后更新报错</title>
-    <url>/blog/2018/11/27/%E8%A7%A3%E5%86%B3%E6%A0%91%E8%8E%93%E6%B4%BEkali%E6%9B%B4%E6%8D%A2%E5%9B%BD%E5%86%85%E6%BA%90%E5%90%8E%E6%9B%B4%E6%96%B0%E6%8A%A5%E9%94%99/</url>
-    <content><![CDATA[<p>在更新时发现报错如下：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">dpkg: error processing package raspi3-firmware (--configure):</span><br><span class="line"> installed raspi3-firmware package post-installation script subprocess returned error <span class="built_in">exit</span> status 1</span><br><span class="line">Errors were encountered <span class="keyword">while</span> processing:</span><br><span class="line"> raspi3-firmware</span><br><span class="line">E: Sub-process /usr/bin/dpkg returned an error code (1)</span><br></pre></td></tr></table></figure>
-<p>此时，进入/usr/bin/dpkg删除info文件夹后再新建一个即可，具体原因还在查 大家可以使用kali的64位arm包，这样不会报错<br><img src="https://i.loli.net/2019/10/14/Trsj7BZcSOkmp39.jpg" alt="64bit kali of raspberry"></p>
-]]></content>
-      <tags>
-        <tag>炼丹手册</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>解决mysql/mariaDB “ERROR 2002 (HY000):Can’t connect to local MySQL server through socket ‘/tmp/mysql.sock’ (111)”</title>
     <url>/blog/2019/01/15/%E8%A7%A3%E5%86%B3mysql-mariaDB-%E2%80%9CERROR-2002-HY000-Can%E2%80%99t-connect-to-local-MySQL-server-through/</url>
     <content><![CDATA[<p>搬运&amp;汉化自stackoverflow</p>
@@ -296,6 +285,17 @@
 <p>在CentOS，Fedora ，RHEL中：</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo /etc/init.d/mysqld stop</span><br><span class="line">...</span><br><span class="line">sudo /etc/init.d/mysqld start</span><br></pre></td></tr></table></figure>
 <p>9.用新的密码登录<br><code>mysql -u root -p</code></p>
+]]></content>
+      <tags>
+        <tag>炼丹手册</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>解决树莓派kali更换国内源后更新报错</title>
+    <url>/blog/2018/11/27/%E8%A7%A3%E5%86%B3%E6%A0%91%E8%8E%93%E6%B4%BEkali%E6%9B%B4%E6%8D%A2%E5%9B%BD%E5%86%85%E6%BA%90%E5%90%8E%E6%9B%B4%E6%96%B0%E6%8A%A5%E9%94%99/</url>
+    <content><![CDATA[<p>在更新时发现报错如下：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">dpkg: error processing package raspi3-firmware (--configure):</span><br><span class="line"> installed raspi3-firmware package post-installation script subprocess returned error <span class="built_in">exit</span> status 1</span><br><span class="line">Errors were encountered <span class="keyword">while</span> processing:</span><br><span class="line"> raspi3-firmware</span><br><span class="line">E: Sub-process /usr/bin/dpkg returned an error code (1)</span><br></pre></td></tr></table></figure>
+<p>此时，进入/usr/bin/dpkg删除info文件夹后再新建一个即可，具体原因还在查 大家可以使用kali的64位arm包，这样不会报错<br><img src="https://i.loli.net/2019/10/14/Trsj7BZcSOkmp39.jpg" alt="64bit kali of raspberry"></p>
 ]]></content>
       <tags>
         <tag>炼丹手册</tag>
