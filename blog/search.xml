@@ -48,15 +48,6 @@
       </tags>
   </entry>
   <entry>
-    <title>docker 国内镜像更换</title>
-    <url>/blog/2019/01/15/docker-%E5%9B%BD%E5%86%85%E9%95%9C%E5%83%8F%E6%9B%B4%E6%8D%A2/</url>
-    <content><![CDATA[<p>今天下载时候发现下载速度太慢，发现有国内镜像<br><a href="https://cr.console.aliyun.com/#/accelerator">https://cr.console.aliyun.com/#/accelerator</a><br>在上面的连接中有阿里云的镜像更改方法及镜像地址需要登录阿里云。</p>
-]]></content>
-      <tags>
-        <tag>Docker</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>atom简单配置</title>
     <url>/blog/2018/12/10/atom%E7%AE%80%E5%8D%95%E9%85%8D%E7%BD%AE/</url>
     <content><![CDATA[<h1 id="apm换成国源："><a href="#apm换成国源：" class="headerlink" title="apm换成国源："></a>apm换成国源：</h1><p>刚刚在新电脑上安装了atom，下载插件速度太慢了，从网上找到了解决方法，就是换源，国内有淘宝的源</p>
@@ -67,6 +58,15 @@
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line"> <span class="string">&quot;argv&quot;</span>: [</span><br><span class="line">  <span class="string">&quot;python3&quot;</span>,</span><br><span class="line">  <span class="string">&quot;-m&quot;</span>,</span><br><span class="line">  <span class="string">&quot;ipykernel_launcher&quot;</span>,</span><br><span class="line">  <span class="string">&quot;-f&quot;</span>,</span><br><span class="line">  <span class="string">&quot;&#123;connection_file&#125;&quot;</span></span><br><span class="line"> ],</span><br><span class="line"> <span class="string">&quot;display_name&quot;</span>: <span class="string">&quot;Python 3&quot;</span>,</span><br><span class="line"> <span class="string">&quot;language&quot;</span>: <span class="string">&quot;python&quot;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
       <tags>
         <tag>炼丹手册</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>docker 国内镜像更换</title>
+    <url>/blog/2019/01/15/docker-%E5%9B%BD%E5%86%85%E9%95%9C%E5%83%8F%E6%9B%B4%E6%8D%A2/</url>
+    <content><![CDATA[<p>今天下载时候发现下载速度太慢，发现有国内镜像<br><a href="https://cr.console.aliyun.com/#/accelerator">https://cr.console.aliyun.com/#/accelerator</a><br>在上面的连接中有阿里云的镜像更改方法及镜像地址需要登录阿里云。</p>
+]]></content>
+      <tags>
+        <tag>Docker</tag>
       </tags>
   </entry>
   <entry>
