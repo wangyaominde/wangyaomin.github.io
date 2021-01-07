@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>atom简单配置</title>
+    <url>/blog/2018/12/10/atom%E7%AE%80%E5%8D%95%E9%85%8D%E7%BD%AE/</url>
+    <content><![CDATA[<h1 id="apm换成国源："><a href="#apm换成国源：" class="headerlink" title="apm换成国源："></a>apm换成国源：</h1><p>刚刚在新电脑上安装了atom，下载插件速度太慢了，从网上找到了解决方法，就是换源，国内有淘宝的源</p>
+<p>新建或编辑 ~/.atom/.apmrc 文件，加入以下两行：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">registry=https://registry.npm.taobao.org/</span><br><span class="line">strict-ssl=fals</span><br></pre></td></tr></table></figure>
+<p>保存，退出，使用如下命令检测是否成功<br><code>apm install --check</code></p>
+<h1 id="Hydrogen配置："><a href="#Hydrogen配置：" class="headerlink" title="Hydrogen配置："></a>Hydrogen配置：</h1><p>在使用过程中发现不断有错误出现:<br>这个问题是因为Hydrogen没有调用python3，遇到内核有问题则对应弹出的提示进行安装<br>当弹出：<br><code>/usr/bin/python: No module named ipykernel_launcher</code><br>这时我们需要编辑/usr/local/share/jupyter/kernels/python3/kernel.json文件</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line"> <span class="string">&quot;argv&quot;</span>: [</span><br><span class="line">  <span class="string">&quot;python3&quot;</span>,</span><br><span class="line">  <span class="string">&quot;-m&quot;</span>,</span><br><span class="line">  <span class="string">&quot;ipykernel_launcher&quot;</span>,</span><br><span class="line">  <span class="string">&quot;-f&quot;</span>,</span><br><span class="line">  <span class="string">&quot;&#123;connection_file&#125;&quot;</span></span><br><span class="line"> ],</span><br><span class="line"> <span class="string">&quot;display_name&quot;</span>: <span class="string">&quot;Python 3&quot;</span>,</span><br><span class="line"> <span class="string">&quot;language&quot;</span>: <span class="string">&quot;python&quot;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      <tags>
+        <tag>炼丹手册</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>PyQt5 简单教程</title>
     <url>/blog/2018/11/12/PyQt5-%E7%AE%80%E5%8D%95%E6%95%99%E7%A8%8B/</url>
     <content><![CDATA[<p>最近在公司开发一套自动化测试系统，要做一个带GUI的软件，采用了python 进行开发所以在GUI上使用了pyqt5进行开发</p>
@@ -57,19 +70,6 @@
       </tags>
   </entry>
   <entry>
-    <title>atom简单配置</title>
-    <url>/blog/2018/12/10/atom%E7%AE%80%E5%8D%95%E9%85%8D%E7%BD%AE/</url>
-    <content><![CDATA[<h1 id="apm换成国源："><a href="#apm换成国源：" class="headerlink" title="apm换成国源："></a>apm换成国源：</h1><p>刚刚在新电脑上安装了atom，下载插件速度太慢了，从网上找到了解决方法，就是换源，国内有淘宝的源</p>
-<p>新建或编辑 ~/.atom/.apmrc 文件，加入以下两行：</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">registry=https://registry.npm.taobao.org/</span><br><span class="line">strict-ssl=fals</span><br></pre></td></tr></table></figure>
-<p>保存，退出，使用如下命令检测是否成功<br><code>apm install --check</code></p>
-<h1 id="Hydrogen配置："><a href="#Hydrogen配置：" class="headerlink" title="Hydrogen配置："></a>Hydrogen配置：</h1><p>在使用过程中发现不断有错误出现:<br>这个问题是因为Hydrogen没有调用python3，遇到内核有问题则对应弹出的提示进行安装<br>当弹出：<br><code>/usr/bin/python: No module named ipykernel_launcher</code><br>这时我们需要编辑/usr/local/share/jupyter/kernels/python3/kernel.json文件</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line"> <span class="string">&quot;argv&quot;</span>: [</span><br><span class="line">  <span class="string">&quot;python3&quot;</span>,</span><br><span class="line">  <span class="string">&quot;-m&quot;</span>,</span><br><span class="line">  <span class="string">&quot;ipykernel_launcher&quot;</span>,</span><br><span class="line">  <span class="string">&quot;-f&quot;</span>,</span><br><span class="line">  <span class="string">&quot;&#123;connection_file&#125;&quot;</span></span><br><span class="line"> ],</span><br><span class="line"> <span class="string">&quot;display_name&quot;</span>: <span class="string">&quot;Python 3&quot;</span>,</span><br><span class="line"> <span class="string">&quot;language&quot;</span>: <span class="string">&quot;python&quot;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-      <tags>
-        <tag>炼丹手册</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>docker 运行一个容器</title>
     <url>/blog/2019/01/15/docker-%E8%BF%90%E8%A1%8C%E4%B8%80%E4%B8%AA%E5%AE%B9%E5%99%A8/</url>
     <content><![CDATA[<p><code>docker run [参数] [参数]</code><br>参数及使用说明：</p>
@@ -96,6 +96,20 @@
       <tags>
         <tag>Docker</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/blog/2021/01/07/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
   </entry>
   <entry>
     <title>manjaro 签名无效解决方案</title>
@@ -205,15 +219,6 @@
       </tags>
   </entry>
   <entry>
-    <title>出差有感</title>
-    <url>/blog/2019/12/27/%E5%87%BA%E5%B7%AE%E6%9C%89%E6%84%9F/</url>
-    <content><![CDATA[<p>这个月出了好几趟差了，从安徽到山东，从山东到陕西，虽然是离家近了，但是事情忙，又没空回家，总是觉得自己应该在出差过程中有些提升，但是从硬件安装到软件调试，所有的问题都出现在对接的人的身上，没有标准，或者是有标准都不遵守。<br>其实大家按照一套标准来做东西完全可以减少很多返工的时间，同样的，牵头的人也没想明白整个项目的架构和技术层面的标准。<br>归根结底就是人<strong>不行</strong><br>年底了开始‘犯小人’，希望明年会好点吧，再这样下去真的挺累。<br>出差挺好的就是有点伤肝</p>
-]]></content>
-      <tags>
-        <tag>日常</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>微信python获取好友的信息</title>
     <url>/blog/2018/10/29/%E5%BE%AE%E4%BF%A1python%E8%8E%B7%E5%8F%96%E5%A5%BD%E5%8F%8B%E7%9A%84%E4%BF%A1%E6%81%AF/</url>
     <content><![CDATA[<p>可以通过本程序获取好友的昵称，备注名，等信息，来自微信注册时的信息，采用itchat进行收集，使用xlwt进行保存，最终呈现为excel表格</p>
@@ -221,6 +226,15 @@
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># coding:utf-8</span></span><br><span class="line"><span class="keyword">import</span> itchat,time,sys,xlwt</span><br><span class="line"> </span><br><span class="line">file = xlwt.Workbook()</span><br><span class="line">table = file.add_sheet(<span class="string">&#x27;info&#x27;</span>,cell_overwrite_ok=<span class="literal">True</span>)</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"><span class="comment"># 登录-持续</span></span><br><span class="line">itchat.auto_login(enableCmdQR=<span class="number">2</span>)</span><br><span class="line">print(<span class="string">u&quot;logged&quot;</span>)</span><br><span class="line"><span class="comment"># 获取好友列表</span></span><br><span class="line">friends = itchat.get_friends(update=<span class="literal">True</span>)[<span class="number">0</span>:]</span><br><span class="line"> </span><br><span class="line">male = female = other = <span class="number">0</span></span><br><span class="line"> </span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> friends[<span class="number">1</span>:]:</span><br><span class="line">    sex = i[<span class="string">&quot;Sex&quot;</span>]</span><br><span class="line">    <span class="keyword">if</span> sex == <span class="number">1</span>:</span><br><span class="line">        male += <span class="number">1</span></span><br><span class="line">    <span class="keyword">elif</span> sex == <span class="number">2</span>:</span><br><span class="line">        female += <span class="number">1</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        other += <span class="number">1</span></span><br><span class="line">total = <span class="built_in">len</span>(friends[<span class="number">1</span>:])</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line">table.write(<span class="number">0</span>,<span class="number">7</span>,<span class="string">u&#x27;【共&#x27;</span>+<span class="built_in">str</span>(<span class="built_in">len</span>(friends)-<span class="number">1</span>)+<span class="string">u&#x27;位朋友，&#x27;</span>+<span class="built_in">str</span>(male)+<span class="string">u&#x27;位男性朋友，&#x27;</span>+<span class="built_in">str</span>(female)+<span class="string">u&#x27;位女性朋友，另外&#x27;</span>+<span class="built_in">str</span>(other)+<span class="string">u&#x27;位不明性别】&#x27;</span>)</span><br><span class="line">table.write(<span class="number">0</span>,<span class="number">0</span>,<span class="string">u&#x27; 【昵称】&#x27;</span>)  </span><br><span class="line">table.write(<span class="number">0</span>,<span class="number">1</span>,<span class="string">u&#x27; 【备注名】&#x27;</span>)</span><br><span class="line">table.write(<span class="number">0</span>,<span class="number">2</span>,<span class="string">u&#x27; 【省份】&#x27;</span>)  </span><br><span class="line">table.write(<span class="number">0</span>,<span class="number">3</span>,<span class="string">u&#x27; 【城市】&#x27;</span>)  </span><br><span class="line">table.write(<span class="number">0</span>,<span class="number">4</span>,<span class="string">u&#x27; 【签名】&#x27;</span>)</span><br><span class="line"> </span><br><span class="line">a=<span class="number">0</span></span><br><span class="line"> </span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> friends:</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line">    table.write(a+<span class="number">1</span>,<span class="number">0</span>,i[<span class="string">&#x27;NickName&#x27;</span>])</span><br><span class="line">    table.write(a+<span class="number">1</span>,<span class="number">1</span>,i[<span class="string">&#x27;RemarkName&#x27;</span>])</span><br><span class="line">    table.write(a+<span class="number">1</span>,<span class="number">2</span>,i[<span class="string">&#x27;Province&#x27;</span>])</span><br><span class="line">    table.write(a+<span class="number">1</span>,<span class="number">3</span>,i[<span class="string">&#x27;City&#x27;</span>])</span><br><span class="line">    table.write(a+<span class="number">1</span>,<span class="number">4</span>,i[<span class="string">&#x27;Signature&#x27;</span>])</span><br><span class="line">    <span class="keyword">if</span> i[<span class="string">&#x27;RemarkName&#x27;</span>] == <span class="string">u&#x27;&#x27;</span>:</span><br><span class="line">        table.write(a+<span class="number">1</span>,<span class="number">1</span>,<span class="string">u&#x27;[ ]&#x27;</span>)</span><br><span class="line">    <span class="keyword">if</span> i[<span class="string">&#x27;Province&#x27;</span>] == <span class="string">u&#x27;&#x27;</span>:</span><br><span class="line">        table.write(a+<span class="number">1</span>,<span class="number">2</span>,<span class="string">u&#x27;[ ]&#x27;</span>)</span><br><span class="line">    <span class="keyword">if</span> i[<span class="string">&#x27;City&#x27;</span>] == <span class="string">u&#x27;&#x27;</span>:</span><br><span class="line">        table.write(a+<span class="number">1</span>,<span class="number">3</span>,<span class="string">u&#x27;[ ]&#x27;</span>)</span><br><span class="line">    <span class="keyword">if</span> i[<span class="string">&#x27;Signature&#x27;</span>] == <span class="string">u&#x27;&#x27;</span>:</span><br><span class="line">        table.write(a+<span class="number">1</span>,<span class="number">4</span>,<span class="string">u&#x27;[ ]&#x27;</span>)</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line">    a=a+<span class="number">1</span></span><br><span class="line">    print(a)</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"><span class="comment"># qm=raw_input(&quot;file name &gt;&gt;&gt;:&quot;)</span></span><br><span class="line">aaa=<span class="string">&#x27;weixin_&#x27;</span>+time.strftime(<span class="string">&quot;%Y%m%d&quot;</span>, time.localtime())+<span class="string">&#x27;.xls&#x27;</span></span><br><span class="line">file.save(aaa)</span><br><span class="line">itchat.send(<span class="string">&#x27;made by junzi&#x27;</span>,<span class="string">&#x27;filehelper&#x27;</span>)</span><br><span class="line">itchat.send(<span class="string">&#x27;@%s@%s&#x27;</span> % (<span class="string">&#x27;fil&#x27;</span>,aaa), <span class="string">&#x27;filehelper&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span> (<span class="string">&quot;over&quot;</span>)</span><br></pre></td></tr></table></figure>]]></content>
       <tags>
         <tag>炼丹手册</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>出差有感</title>
+    <url>/blog/2019/12/27/%E5%87%BA%E5%B7%AE%E6%9C%89%E6%84%9F/</url>
+    <content><![CDATA[<p>这个月出了好几趟差了，从安徽到山东，从山东到陕西，虽然是离家近了，但是事情忙，又没空回家，总是觉得自己应该在出差过程中有些提升，但是从硬件安装到软件调试，所有的问题都出现在对接的人的身上，没有标准，或者是有标准都不遵守。<br>其实大家按照一套标准来做东西完全可以减少很多返工的时间，同样的，牵头的人也没想明白整个项目的架构和技术层面的标准。<br>归根结底就是人<strong>不行</strong><br>年底了开始‘犯小人’，希望明年会好点吧，再这样下去真的挺累。<br>出差挺好的就是有点伤肝</p>
+]]></content>
+      <tags>
+        <tag>日常</tag>
       </tags>
   </entry>
   <entry>

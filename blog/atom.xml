@@ -3,11 +3,11 @@
   <title>耀民的播客</title>
   
   
-  <link href="https://wangyaomin.com/atom.xml" rel="self"/>
+  <link href="https://wangyaominde.github.io/wangyaomin.github.io/atom.xml" rel="self"/>
   
-  <link href="https://wangyaomin.com/"/>
-  <updated>2020-08-20T04:16:41.000Z</updated>
-  <id>https://wangyaomin.com/</id>
+  <link href="https://wangyaominde.github.io/wangyaomin.github.io/"/>
+  <updated>2021-01-07T02:39:14.000Z</updated>
+  <id>https://wangyaominde.github.io/wangyaomin.github.io/</id>
   
   <author>
     <name>wangyaominde</name>
@@ -17,9 +17,30 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Hello World</title>
+    <link href="https://wangyaominde.github.io/wangyaomin.github.io/2021/01/07/hello-world/"/>
+    <id>https://wangyaominde.github.io/wangyaomin.github.io/2021/01/07/hello-world/</id>
+    <published>2021-01-07T02:39:14.000Z</published>
+    <updated>2021-01-07T02:39:14.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
     <title>我们为什么不保持高效的沟通？</title>
-    <link href="https://wangyaomin.com/2020/08/20/%E6%9C%AA%E5%91%BD%E5%90%8D/"/>
-    <id>https://wangyaomin.com/2020/08/20/%E6%9C%AA%E5%91%BD%E5%90%8D/</id>
+    <link href="https://wangyaominde.github.io/wangyaomin.github.io/2020/08/20/%E6%9C%AA%E5%91%BD%E5%90%8D/"/>
+    <id>https://wangyaominde.github.io/wangyaomin.github.io/2020/08/20/%E6%9C%AA%E5%91%BD%E5%90%8D/</id>
     <published>2020-08-20T04:07:27.000Z</published>
     <updated>2020-08-20T04:16:41.000Z</updated>
     
@@ -35,14 +56,14 @@
     
     
     
-    <category term="日常" scheme="https://wangyaomin.com/tags/%E6%97%A5%E5%B8%B8/"/>
+    <category term="日常" scheme="https://wangyaominde.github.io/wangyaomin.github.io/tags/%E6%97%A5%E5%B8%B8/"/>
     
   </entry>
   
   <entry>
     <title>出差有感</title>
-    <link href="https://wangyaomin.com/2019/12/27/%E5%87%BA%E5%B7%AE%E6%9C%89%E6%84%9F/"/>
-    <id>https://wangyaomin.com/2019/12/27/%E5%87%BA%E5%B7%AE%E6%9C%89%E6%84%9F/</id>
+    <link href="https://wangyaominde.github.io/wangyaomin.github.io/2019/12/27/%E5%87%BA%E5%B7%AE%E6%9C%89%E6%84%9F/"/>
+    <id>https://wangyaominde.github.io/wangyaomin.github.io/2019/12/27/%E5%87%BA%E5%B7%AE%E6%9C%89%E6%84%9F/</id>
     <published>2019-12-27T03:36:43.000Z</published>
     <updated>2019-12-27T03:41:16.000Z</updated>
     
@@ -58,14 +79,14 @@
     
     
     
-    <category term="日常" scheme="https://wangyaomin.com/tags/%E6%97%A5%E5%B8%B8/"/>
+    <category term="日常" scheme="https://wangyaominde.github.io/wangyaomin.github.io/tags/%E6%97%A5%E5%B8%B8/"/>
     
   </entry>
   
   <entry>
     <title>python3将字符串转为字典</title>
-    <link href="https://wangyaomin.com/2019/12/07/python3%E5%B0%86%E5%AD%97%E7%AC%A6%E4%B8%B2%E8%BD%AC%E4%B8%BA%E5%AD%97%E5%85%B8/"/>
-    <id>https://wangyaomin.com/2019/12/07/python3%E5%B0%86%E5%AD%97%E7%AC%A6%E4%B8%B2%E8%BD%AC%E4%B8%BA%E5%AD%97%E5%85%B8/</id>
+    <link href="https://wangyaominde.github.io/wangyaomin.github.io/2019/12/07/python3%E5%B0%86%E5%AD%97%E7%AC%A6%E4%B8%B2%E8%BD%AC%E4%B8%BA%E5%AD%97%E5%85%B8/"/>
+    <id>https://wangyaominde.github.io/wangyaomin.github.io/2019/12/07/python3%E5%B0%86%E5%AD%97%E7%AC%A6%E4%B8%B2%E8%BD%AC%E4%B8%BA%E5%AD%97%E5%85%B8/</id>
     <published>2019-12-07T11:30:32.000Z</published>
     <updated>2019-12-27T03:37:24.000Z</updated>
     
@@ -81,14 +102,14 @@
     
     
     
-    <category term="炼丹手册" scheme="https://wangyaomin.com/tags/%E7%82%BC%E4%B8%B9%E6%89%8B%E5%86%8C/"/>
+    <category term="炼丹手册" scheme="https://wangyaominde.github.io/wangyaomin.github.io/tags/%E7%82%BC%E4%B8%B9%E6%89%8B%E5%86%8C/"/>
     
   </entry>
   
   <entry>
     <title>终于去想起来写一篇博客了</title>
-    <link href="https://wangyaomin.com/2019/11/06/%E7%BB%88%E4%BA%8E%E5%8E%BB%E6%83%B3%E8%B5%B7%E6%9D%A5%E5%86%99%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E4%BA%86/"/>
-    <id>https://wangyaomin.com/2019/11/06/%E7%BB%88%E4%BA%8E%E5%8E%BB%E6%83%B3%E8%B5%B7%E6%9D%A5%E5%86%99%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E4%BA%86/</id>
+    <link href="https://wangyaominde.github.io/wangyaomin.github.io/2019/11/06/%E7%BB%88%E4%BA%8E%E5%8E%BB%E6%83%B3%E8%B5%B7%E6%9D%A5%E5%86%99%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E4%BA%86/"/>
+    <id>https://wangyaominde.github.io/wangyaomin.github.io/2019/11/06/%E7%BB%88%E4%BA%8E%E5%8E%BB%E6%83%B3%E8%B5%B7%E6%9D%A5%E5%86%99%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E4%BA%86/</id>
     <published>2019-11-06T06:02:09.000Z</published>
     <updated>2019-11-06T06:06:39.000Z</updated>
     
@@ -105,14 +126,14 @@
     
     
     
-    <category term="日常" scheme="https://wangyaomin.com/tags/%E6%97%A5%E5%B8%B8/"/>
+    <category term="日常" scheme="https://wangyaominde.github.io/wangyaomin.github.io/tags/%E6%97%A5%E5%B8%B8/"/>
     
   </entry>
   
   <entry>
     <title>manjaro 签名无效解决方案</title>
-    <link href="https://wangyaomin.com/2019/08/20/manjaro-%E7%AD%BE%E5%90%8D%E6%97%A0%E6%95%88%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
-    <id>https://wangyaomin.com/2019/08/20/manjaro-%E7%AD%BE%E5%90%8D%E6%97%A0%E6%95%88%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</id>
+    <link href="https://wangyaominde.github.io/wangyaomin.github.io/2019/08/20/manjaro-%E7%AD%BE%E5%90%8D%E6%97%A0%E6%95%88%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
+    <id>https://wangyaominde.github.io/wangyaomin.github.io/2019/08/20/manjaro-%E7%AD%BE%E5%90%8D%E6%97%A0%E6%95%88%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</id>
     <published>2019-08-20T12:18:58.000Z</published>
     <updated>2019-10-14T12:19:58.000Z</updated>
     
@@ -128,14 +149,14 @@
     
     
     
-    <category term="炼丹手册" scheme="https://wangyaomin.com/tags/%E7%82%BC%E4%B8%B9%E6%89%8B%E5%86%8C/"/>
+    <category term="炼丹手册" scheme="https://wangyaominde.github.io/wangyaomin.github.io/tags/%E7%82%BC%E4%B8%B9%E6%89%8B%E5%86%8C/"/>
     
   </entry>
   
   <entry>
     <title>python装饰器 </title>
-    <link href="https://wangyaomin.com/2019/05/31/python%E8%A3%85%E9%A5%B0%E5%99%A8/"/>
-    <id>https://wangyaomin.com/2019/05/31/python%E8%A3%85%E9%A5%B0%E5%99%A8/</id>
+    <link href="https://wangyaominde.github.io/wangyaomin.github.io/2019/05/31/python%E8%A3%85%E9%A5%B0%E5%99%A8/"/>
+    <id>https://wangyaominde.github.io/wangyaomin.github.io/2019/05/31/python%E8%A3%85%E9%A5%B0%E5%99%A8/</id>
     <published>2019-05-31T12:16:16.000Z</published>
     <updated>2019-10-14T12:18:40.000Z</updated>
     
@@ -153,14 +174,14 @@
     
     
     
-    <category term="炼丹手册" scheme="https://wangyaomin.com/tags/%E7%82%BC%E4%B8%B9%E6%89%8B%E5%86%8C/"/>
+    <category term="炼丹手册" scheme="https://wangyaominde.github.io/wangyaomin.github.io/tags/%E7%82%BC%E4%B8%B9%E6%89%8B%E5%86%8C/"/>
     
   </entry>
   
   <entry>
     <title>解决mysql/mariaDB “ERROR 2002 (HY000):Can’t connect to local MySQL server through socket ‘/tmp/mysql.sock’ (111)”</title>
-    <link href="https://wangyaomin.com/2019/01/15/%E8%A7%A3%E5%86%B3mysql-mariaDB-%E2%80%9CERROR-2002-HY000-Can%E2%80%99t-connect-to-local-MySQL-server-through/"/>
-    <id>https://wangyaomin.com/2019/01/15/%E8%A7%A3%E5%86%B3mysql-mariaDB-%E2%80%9CERROR-2002-HY000-Can%E2%80%99t-connect-to-local-MySQL-server-through/</id>
+    <link href="https://wangyaominde.github.io/wangyaomin.github.io/2019/01/15/%E8%A7%A3%E5%86%B3mysql-mariaDB-%E2%80%9CERROR-2002-HY000-Can%E2%80%99t-connect-to-local-MySQL-server-through/"/>
+    <id>https://wangyaominde.github.io/wangyaomin.github.io/2019/01/15/%E8%A7%A3%E5%86%B3mysql-mariaDB-%E2%80%9CERROR-2002-HY000-Can%E2%80%99t-connect-to-local-MySQL-server-through/</id>
     <published>2019-01-15T12:11:51.000Z</published>
     <updated>2019-10-14T12:22:16.000Z</updated>
     
@@ -178,14 +199,14 @@
     
     
     
-    <category term="炼丹手册" scheme="https://wangyaomin.com/tags/%E7%82%BC%E4%B8%B9%E6%89%8B%E5%86%8C/"/>
+    <category term="炼丹手册" scheme="https://wangyaominde.github.io/wangyaomin.github.io/tags/%E7%82%BC%E4%B8%B9%E6%89%8B%E5%86%8C/"/>
     
   </entry>
   
   <entry>
     <title>docker 运行一个容器</title>
-    <link href="https://wangyaomin.com/2019/01/15/docker-%E8%BF%90%E8%A1%8C%E4%B8%80%E4%B8%AA%E5%AE%B9%E5%99%A8/"/>
-    <id>https://wangyaomin.com/2019/01/15/docker-%E8%BF%90%E8%A1%8C%E4%B8%80%E4%B8%AA%E5%AE%B9%E5%99%A8/</id>
+    <link href="https://wangyaominde.github.io/wangyaomin.github.io/2019/01/15/docker-%E8%BF%90%E8%A1%8C%E4%B8%80%E4%B8%AA%E5%AE%B9%E5%99%A8/"/>
+    <id>https://wangyaominde.github.io/wangyaomin.github.io/2019/01/15/docker-%E8%BF%90%E8%A1%8C%E4%B8%80%E4%B8%AA%E5%AE%B9%E5%99%A8/</id>
     <published>2019-01-15T12:09:56.000Z</published>
     <updated>2019-10-14T12:11:22.000Z</updated>
     
@@ -204,14 +225,14 @@
     
     
     
-    <category term="Docker" scheme="https://wangyaomin.com/tags/Docker/"/>
+    <category term="Docker" scheme="https://wangyaominde.github.io/wangyaomin.github.io/tags/Docker/"/>
     
   </entry>
   
   <entry>
     <title>docker 国内镜像更换</title>
-    <link href="https://wangyaomin.com/2019/01/15/docker-%E5%9B%BD%E5%86%85%E9%95%9C%E5%83%8F%E6%9B%B4%E6%8D%A2/"/>
-    <id>https://wangyaomin.com/2019/01/15/docker-%E5%9B%BD%E5%86%85%E9%95%9C%E5%83%8F%E6%9B%B4%E6%8D%A2/</id>
+    <link href="https://wangyaominde.github.io/wangyaomin.github.io/2019/01/15/docker-%E5%9B%BD%E5%86%85%E9%95%9C%E5%83%8F%E6%9B%B4%E6%8D%A2/"/>
+    <id>https://wangyaominde.github.io/wangyaomin.github.io/2019/01/15/docker-%E5%9B%BD%E5%86%85%E9%95%9C%E5%83%8F%E6%9B%B4%E6%8D%A2/</id>
     <published>2019-01-15T12:09:09.000Z</published>
     <updated>2019-10-14T12:09:36.000Z</updated>
     
@@ -227,14 +248,14 @@
     
     
     
-    <category term="Docker" scheme="https://wangyaomin.com/tags/Docker/"/>
+    <category term="Docker" scheme="https://wangyaominde.github.io/wangyaomin.github.io/tags/Docker/"/>
     
   </entry>
   
   <entry>
     <title>停止、删除所有的docker容器和镜像</title>
-    <link href="https://wangyaomin.com/2019/01/07/%E5%81%9C%E6%AD%A2%E3%80%81%E5%88%A0%E9%99%A4%E6%89%80%E6%9C%89%E7%9A%84docker%E5%AE%B9%E5%99%A8%E5%92%8C%E9%95%9C%E5%83%8F/"/>
-    <id>https://wangyaomin.com/2019/01/07/%E5%81%9C%E6%AD%A2%E3%80%81%E5%88%A0%E9%99%A4%E6%89%80%E6%9C%89%E7%9A%84docker%E5%AE%B9%E5%99%A8%E5%92%8C%E9%95%9C%E5%83%8F/</id>
+    <link href="https://wangyaominde.github.io/wangyaomin.github.io/2019/01/07/%E5%81%9C%E6%AD%A2%E3%80%81%E5%88%A0%E9%99%A4%E6%89%80%E6%9C%89%E7%9A%84docker%E5%AE%B9%E5%99%A8%E5%92%8C%E9%95%9C%E5%83%8F/"/>
+    <id>https://wangyaominde.github.io/wangyaomin.github.io/2019/01/07/%E5%81%9C%E6%AD%A2%E3%80%81%E5%88%A0%E9%99%A4%E6%89%80%E6%9C%89%E7%9A%84docker%E5%AE%B9%E5%99%A8%E5%92%8C%E9%95%9C%E5%83%8F/</id>
     <published>2019-01-07T12:04:56.000Z</published>
     <updated>2019-10-14T12:08:49.000Z</updated>
     
@@ -251,14 +272,14 @@
     
     
     
-    <category term="Docker" scheme="https://wangyaomin.com/tags/Docker/"/>
+    <category term="Docker" scheme="https://wangyaominde.github.io/wangyaomin.github.io/tags/Docker/"/>
     
   </entry>
   
   <entry>
     <title>报错 Error: rpmdb open failed 的解决</title>
-    <link href="https://wangyaomin.com/2018/12/19/%E6%8A%A5%E9%94%99-Error-rpmdb-open-failed-%E7%9A%84%E8%A7%A3%E5%86%B3/"/>
-    <id>https://wangyaomin.com/2018/12/19/%E6%8A%A5%E9%94%99-Error-rpmdb-open-failed-%E7%9A%84%E8%A7%A3%E5%86%B3/</id>
+    <link href="https://wangyaominde.github.io/wangyaomin.github.io/2018/12/19/%E6%8A%A5%E9%94%99-Error-rpmdb-open-failed-%E7%9A%84%E8%A7%A3%E5%86%B3/"/>
+    <id>https://wangyaominde.github.io/wangyaomin.github.io/2018/12/19/%E6%8A%A5%E9%94%99-Error-rpmdb-open-failed-%E7%9A%84%E8%A7%A3%E5%86%B3/</id>
     <published>2018-12-19T12:02:57.000Z</published>
     <updated>2019-10-14T13:01:38.000Z</updated>
     
@@ -275,14 +296,14 @@
     
     
     
-    <category term="炼丹手册" scheme="https://wangyaomin.com/tags/%E7%82%BC%E4%B8%B9%E6%89%8B%E5%86%8C/"/>
+    <category term="炼丹手册" scheme="https://wangyaominde.github.io/wangyaomin.github.io/tags/%E7%82%BC%E4%B8%B9%E6%89%8B%E5%86%8C/"/>
     
   </entry>
   
   <entry>
     <title>atom简单配置</title>
-    <link href="https://wangyaomin.com/2018/12/10/atom%E7%AE%80%E5%8D%95%E9%85%8D%E7%BD%AE/"/>
-    <id>https://wangyaomin.com/2018/12/10/atom%E7%AE%80%E5%8D%95%E9%85%8D%E7%BD%AE/</id>
+    <link href="https://wangyaominde.github.io/wangyaomin.github.io/2018/12/10/atom%E7%AE%80%E5%8D%95%E9%85%8D%E7%BD%AE/"/>
+    <id>https://wangyaominde.github.io/wangyaomin.github.io/2018/12/10/atom%E7%AE%80%E5%8D%95%E9%85%8D%E7%BD%AE/</id>
     <published>2018-12-10T03:16:36.000Z</published>
     <updated>2019-10-14T03:26:33.000Z</updated>
     
@@ -298,14 +319,14 @@
     
     
     
-    <category term="炼丹手册" scheme="https://wangyaomin.com/tags/%E7%82%BC%E4%B8%B9%E6%89%8B%E5%86%8C/"/>
+    <category term="炼丹手册" scheme="https://wangyaominde.github.io/wangyaomin.github.io/tags/%E7%82%BC%E4%B8%B9%E6%89%8B%E5%86%8C/"/>
     
   </entry>
   
   <entry>
     <title>python子线程中WMI报错-2147221020解决</title>
-    <link href="https://wangyaomin.com/2018/11/29/python%E5%AD%90%E7%BA%BF%E7%A8%8B%E4%B8%ADWMI%E6%8A%A5%E9%94%99-2147221020%E8%A7%A3%E5%86%B3/"/>
-    <id>https://wangyaomin.com/2018/11/29/python%E5%AD%90%E7%BA%BF%E7%A8%8B%E4%B8%ADWMI%E6%8A%A5%E9%94%99-2147221020%E8%A7%A3%E5%86%B3/</id>
+    <link href="https://wangyaominde.github.io/wangyaomin.github.io/2018/11/29/python%E5%AD%90%E7%BA%BF%E7%A8%8B%E4%B8%ADWMI%E6%8A%A5%E9%94%99-2147221020%E8%A7%A3%E5%86%B3/"/>
+    <id>https://wangyaominde.github.io/wangyaomin.github.io/2018/11/29/python%E5%AD%90%E7%BA%BF%E7%A8%8B%E4%B8%ADWMI%E6%8A%A5%E9%94%99-2147221020%E8%A7%A3%E5%86%B3/</id>
     <published>2018-11-29T03:16:36.000Z</published>
     <updated>2019-10-14T03:26:58.000Z</updated>
     
@@ -322,14 +343,14 @@
     
     
     
-    <category term="炼丹手册" scheme="https://wangyaomin.com/tags/%E7%82%BC%E4%B8%B9%E6%89%8B%E5%86%8C/"/>
+    <category term="炼丹手册" scheme="https://wangyaominde.github.io/wangyaomin.github.io/tags/%E7%82%BC%E4%B8%B9%E6%89%8B%E5%86%8C/"/>
     
   </entry>
   
   <entry>
     <title>解决树莓派kali更换国内源后更新报错</title>
-    <link href="https://wangyaomin.com/2018/11/27/%E8%A7%A3%E5%86%B3%E6%A0%91%E8%8E%93%E6%B4%BEkali%E6%9B%B4%E6%8D%A2%E5%9B%BD%E5%86%85%E6%BA%90%E5%90%8E%E6%9B%B4%E6%96%B0%E6%8A%A5%E9%94%99/"/>
-    <id>https://wangyaomin.com/2018/11/27/%E8%A7%A3%E5%86%B3%E6%A0%91%E8%8E%93%E6%B4%BEkali%E6%9B%B4%E6%8D%A2%E5%9B%BD%E5%86%85%E6%BA%90%E5%90%8E%E6%9B%B4%E6%96%B0%E6%8A%A5%E9%94%99/</id>
+    <link href="https://wangyaominde.github.io/wangyaomin.github.io/2018/11/27/%E8%A7%A3%E5%86%B3%E6%A0%91%E8%8E%93%E6%B4%BEkali%E6%9B%B4%E6%8D%A2%E5%9B%BD%E5%86%85%E6%BA%90%E5%90%8E%E6%9B%B4%E6%96%B0%E6%8A%A5%E9%94%99/"/>
+    <id>https://wangyaominde.github.io/wangyaomin.github.io/2018/11/27/%E8%A7%A3%E5%86%B3%E6%A0%91%E8%8E%93%E6%B4%BEkali%E6%9B%B4%E6%8D%A2%E5%9B%BD%E5%86%85%E6%BA%90%E5%90%8E%E6%9B%B4%E6%96%B0%E6%8A%A5%E9%94%99/</id>
     <published>2018-11-27T03:16:36.000Z</published>
     <updated>2019-10-14T03:25:47.000Z</updated>
     
@@ -346,14 +367,14 @@
     
     
     
-    <category term="炼丹手册" scheme="https://wangyaomin.com/tags/%E7%82%BC%E4%B8%B9%E6%89%8B%E5%86%8C/"/>
+    <category term="炼丹手册" scheme="https://wangyaominde.github.io/wangyaomin.github.io/tags/%E7%82%BC%E4%B8%B9%E6%89%8B%E5%86%8C/"/>
     
   </entry>
   
   <entry>
     <title>PyQt5 简单教程</title>
-    <link href="https://wangyaomin.com/2018/11/12/PyQt5-%E7%AE%80%E5%8D%95%E6%95%99%E7%A8%8B/"/>
-    <id>https://wangyaomin.com/2018/11/12/PyQt5-%E7%AE%80%E5%8D%95%E6%95%99%E7%A8%8B/</id>
+    <link href="https://wangyaominde.github.io/wangyaomin.github.io/2018/11/12/PyQt5-%E7%AE%80%E5%8D%95%E6%95%99%E7%A8%8B/"/>
+    <id>https://wangyaominde.github.io/wangyaomin.github.io/2018/11/12/PyQt5-%E7%AE%80%E5%8D%95%E6%95%99%E7%A8%8B/</id>
     <published>2018-11-12T03:07:27.000Z</published>
     <updated>2019-10-14T03:25:46.000Z</updated>
     
@@ -369,14 +390,14 @@
     
     
     
-    <category term="炼丹手册" scheme="https://wangyaomin.com/tags/%E7%82%BC%E4%B8%B9%E6%89%8B%E5%86%8C/"/>
+    <category term="炼丹手册" scheme="https://wangyaominde.github.io/wangyaomin.github.io/tags/%E7%82%BC%E4%B8%B9%E6%89%8B%E5%86%8C/"/>
     
   </entry>
   
   <entry>
     <title>微信python获取好友的信息</title>
-    <link href="https://wangyaomin.com/2018/10/29/%E5%BE%AE%E4%BF%A1python%E8%8E%B7%E5%8F%96%E5%A5%BD%E5%8F%8B%E7%9A%84%E4%BF%A1%E6%81%AF/"/>
-    <id>https://wangyaomin.com/2018/10/29/%E5%BE%AE%E4%BF%A1python%E8%8E%B7%E5%8F%96%E5%A5%BD%E5%8F%8B%E7%9A%84%E4%BF%A1%E6%81%AF/</id>
+    <link href="https://wangyaominde.github.io/wangyaomin.github.io/2018/10/29/%E5%BE%AE%E4%BF%A1python%E8%8E%B7%E5%8F%96%E5%A5%BD%E5%8F%8B%E7%9A%84%E4%BF%A1%E6%81%AF/"/>
+    <id>https://wangyaominde.github.io/wangyaomin.github.io/2018/10/29/%E5%BE%AE%E4%BF%A1python%E8%8E%B7%E5%8F%96%E5%A5%BD%E5%8F%8B%E7%9A%84%E4%BF%A1%E6%81%AF/</id>
     <published>2018-10-29T03:05:23.000Z</published>
     <updated>2019-10-14T03:25:57.000Z</updated>
     
@@ -394,14 +415,14 @@
     
     
     
-    <category term="炼丹手册" scheme="https://wangyaomin.com/tags/%E7%82%BC%E4%B8%B9%E6%89%8B%E5%86%8C/"/>
+    <category term="炼丹手册" scheme="https://wangyaominde.github.io/wangyaomin.github.io/tags/%E7%82%BC%E4%B8%B9%E6%89%8B%E5%86%8C/"/>
     
   </entry>
   
   <entry>
     <title>pip 更换国内源</title>
-    <link href="https://wangyaomin.com/2018/10/29/pip-%E6%9B%B4%E6%8D%A2%E5%9B%BD%E5%86%85%E6%BA%90/"/>
-    <id>https://wangyaomin.com/2018/10/29/pip-%E6%9B%B4%E6%8D%A2%E5%9B%BD%E5%86%85%E6%BA%90/</id>
+    <link href="https://wangyaominde.github.io/wangyaomin.github.io/2018/10/29/pip-%E6%9B%B4%E6%8D%A2%E5%9B%BD%E5%86%85%E6%BA%90/"/>
+    <id>https://wangyaominde.github.io/wangyaomin.github.io/2018/10/29/pip-%E6%9B%B4%E6%8D%A2%E5%9B%BD%E5%86%85%E6%BA%90/</id>
     <published>2018-10-29T03:01:46.000Z</published>
     <updated>2019-10-14T03:26:05.000Z</updated>
     
@@ -418,14 +439,14 @@
     
     
     
-    <category term="炼丹手册" scheme="https://wangyaomin.com/tags/%E7%82%BC%E4%B8%B9%E6%89%8B%E5%86%8C/"/>
+    <category term="炼丹手册" scheme="https://wangyaominde.github.io/wangyaomin.github.io/tags/%E7%82%BC%E4%B8%B9%E6%89%8B%E5%86%8C/"/>
     
   </entry>
   
   <entry>
     <title>python serial获取所有串口</title>
-    <link href="https://wangyaomin.com/2018/10/29/python-serial%E8%8E%B7%E5%8F%96%E6%89%80%E6%9C%89%E4%B8%B2%E5%8F%A3/"/>
-    <id>https://wangyaomin.com/2018/10/29/python-serial%E8%8E%B7%E5%8F%96%E6%89%80%E6%9C%89%E4%B8%B2%E5%8F%A3/</id>
+    <link href="https://wangyaominde.github.io/wangyaomin.github.io/2018/10/29/python-serial%E8%8E%B7%E5%8F%96%E6%89%80%E6%9C%89%E4%B8%B2%E5%8F%A3/"/>
+    <id>https://wangyaominde.github.io/wangyaomin.github.io/2018/10/29/python-serial%E8%8E%B7%E5%8F%96%E6%89%80%E6%9C%89%E4%B8%B2%E5%8F%A3/</id>
     <published>2018-10-29T02:59:01.000Z</published>
     <updated>2019-10-14T03:26:09.000Z</updated>
     
@@ -441,14 +462,14 @@
     
     
     
-    <category term="炼丹手册" scheme="https://wangyaomin.com/tags/%E7%82%BC%E4%B8%B9%E6%89%8B%E5%86%8C/"/>
+    <category term="炼丹手册" scheme="https://wangyaominde.github.io/wangyaomin.github.io/tags/%E7%82%BC%E4%B8%B9%E6%89%8B%E5%86%8C/"/>
     
   </entry>
   
   <entry>
     <title>python 二维字典的使用</title>
-    <link href="https://wangyaomin.com/2018/10/29/python-%E4%BA%8C%E7%BB%B4%E5%AD%97%E5%85%B8%E7%9A%84%E4%BD%BF%E7%94%A8/"/>
-    <id>https://wangyaomin.com/2018/10/29/python-%E4%BA%8C%E7%BB%B4%E5%AD%97%E5%85%B8%E7%9A%84%E4%BD%BF%E7%94%A8/</id>
+    <link href="https://wangyaominde.github.io/wangyaomin.github.io/2018/10/29/python-%E4%BA%8C%E7%BB%B4%E5%AD%97%E5%85%B8%E7%9A%84%E4%BD%BF%E7%94%A8/"/>
+    <id>https://wangyaominde.github.io/wangyaomin.github.io/2018/10/29/python-%E4%BA%8C%E7%BB%B4%E5%AD%97%E5%85%B8%E7%9A%84%E4%BD%BF%E7%94%A8/</id>
     <published>2018-10-29T02:54:05.000Z</published>
     <updated>2019-10-14T02:59:33.000Z</updated>
     
@@ -466,32 +487,7 @@
     
     
     
-    <category term="炼丹手册" scheme="https://wangyaomin.com/tags/%E7%82%BC%E4%B8%B9%E6%89%8B%E5%86%8C/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>正则表达式简单例程</title>
-    <link href="https://wangyaomin.com/2018/10/19/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E7%AE%80%E5%8D%95%E4%BE%8B%E7%A8%8B/"/>
-    <id>https://wangyaomin.com/2018/10/19/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E7%AE%80%E5%8D%95%E4%BE%8B%E7%A8%8B/</id>
-    <published>2018-10-19T02:49:51.000Z</published>
-    <updated>2019-10-14T02:59:38.000Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;从字符串 str 中提取数字部分的内容(匹配一次)：&lt;/p&gt;
-&lt;p&gt;var str = “abc123def”;&lt;/p&gt;
-&lt;p&gt;var patt1 = /&lt;a</summary>
-        
-      
-    
-    
-    
-    
-    <category term="炼丹手册" scheme="https://wangyaomin.com/tags/%E7%82%BC%E4%B8%B9%E6%89%8B%E5%86%8C/"/>
+    <category term="炼丹手册" scheme="https://wangyaominde.github.io/wangyaomin.github.io/tags/%E7%82%BC%E4%B8%B9%E6%89%8B%E5%86%8C/"/>
     
   </entry>
   
