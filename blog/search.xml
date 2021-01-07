@@ -2,7 +2,7 @@
 <search>
   <entry>
     <title>PyQt5 简单教程</title>
-    <url>/2018/11/12/PyQt5-%E7%AE%80%E5%8D%95%E6%95%99%E7%A8%8B/</url>
+    <url>/blog/2018/11/12/PyQt5-%E7%AE%80%E5%8D%95%E6%95%99%E7%A8%8B/</url>
     <content><![CDATA[<p>最近在公司开发一套自动化测试系统，要做一个带GUI的软件，采用了python 进行开发所以在GUI上使用了pyqt5进行开发</p>
 <ol>
 <li><ul>
@@ -49,7 +49,7 @@
   </entry>
   <entry>
     <title>atom简单配置</title>
-    <url>/2018/12/10/atom%E7%AE%80%E5%8D%95%E9%85%8D%E7%BD%AE/</url>
+    <url>/blog/2018/12/10/atom%E7%AE%80%E5%8D%95%E9%85%8D%E7%BD%AE/</url>
     <content><![CDATA[<h1 id="apm换成国源："><a href="#apm换成国源：" class="headerlink" title="apm换成国源："></a>apm换成国源：</h1><p>刚刚在新电脑上安装了atom，下载插件速度太慢了，从网上找到了解决方法，就是换源，国内有淘宝的源</p>
 <p>新建或编辑 ~/.atom/.apmrc 文件，加入以下两行：</p>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">registry=https://registry.npm.taobao.org/</span><br><span class="line">strict-ssl=fals</span><br></pre></td></tr></table></figure>
@@ -62,7 +62,7 @@
   </entry>
   <entry>
     <title>docker 国内镜像更换</title>
-    <url>/2019/01/15/docker-%E5%9B%BD%E5%86%85%E9%95%9C%E5%83%8F%E6%9B%B4%E6%8D%A2/</url>
+    <url>/blog/2019/01/15/docker-%E5%9B%BD%E5%86%85%E9%95%9C%E5%83%8F%E6%9B%B4%E6%8D%A2/</url>
     <content><![CDATA[<p>今天下载时候发现下载速度太慢，发现有国内镜像<br><a href="https://cr.console.aliyun.com/#/accelerator">https://cr.console.aliyun.com/#/accelerator</a><br>在上面的连接中有阿里云的镜像更改方法及镜像地址需要登录阿里云。</p>
 ]]></content>
       <tags>
@@ -71,7 +71,7 @@
   </entry>
   <entry>
     <title>docker 运行一个容器</title>
-    <url>/2019/01/15/docker-%E8%BF%90%E8%A1%8C%E4%B8%80%E4%B8%AA%E5%AE%B9%E5%99%A8/</url>
+    <url>/blog/2019/01/15/docker-%E8%BF%90%E8%A1%8C%E4%B8%80%E4%B8%AA%E5%AE%B9%E5%99%A8/</url>
     <content><![CDATA[<p><code>docker run [参数] [参数]</code><br>参数及使用说明：</p>
 <ul>
 <li>-a stdin: 指定标准输入输出内容类型，可选 STDIN/STDOUT/STDERR 三项；</li>
@@ -99,7 +99,7 @@
   </entry>
   <entry>
     <title>manjaro 签名无效解决方案</title>
-    <url>/2019/08/20/manjaro-%E7%AD%BE%E5%90%8D%E6%97%A0%E6%95%88%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</url>
+    <url>/blog/2019/08/20/manjaro-%E7%AD%BE%E5%90%8D%E6%97%A0%E6%95%88%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</url>
     <content><![CDATA[<p>安装软件及更新的时候遇到签名无效，这是一种安全策略，我们可以修改<br><code>/etc/pacman.conf</code><br>文件将所有原来<br><code>SigLevel=xxxxx</code><br>注释掉，并且添加<br><code>SigLevel=Never</code><br>即可解决此类问题（会带来安全隐患，可以更新完再将其改回）</p>
 ]]></content>
       <tags>
@@ -108,7 +108,7 @@
   </entry>
   <entry>
     <title>pip 更换国内源</title>
-    <url>/2018/10/29/pip-%E6%9B%B4%E6%8D%A2%E5%9B%BD%E5%86%85%E6%BA%90/</url>
+    <url>/blog/2018/10/29/pip-%E6%9B%B4%E6%8D%A2%E5%9B%BD%E5%86%85%E6%BA%90/</url>
     <content><![CDATA[<p>在使用pip安装东西的过程中，会发现速度十分缓慢。这时，我们可以将pip的下载源变为国内的镜像源，这样会提升下载速度。</p>
 <p>linux下，修改 ~/.pip/pip.conf (没有就创建一个)，windows下，直接在user目录中创建一个pip目录，如：C:\Users\xx\pip，新建文件pip.ini，内容如下（清华源）</p>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">[<span class="keyword">global</span>]</span><br><span class="line">index-url = https://pypi.tuna.tsinghua.edu.cn/simple</span><br><span class="line">[install]</span><br><span class="line">trusted-host=pypi.tuna.tsinghua.edu.cn</span><br></pre></td></tr></table></figure>
@@ -120,7 +120,7 @@
   </entry>
   <entry>
     <title>python serial获取所有串口</title>
-    <url>/2018/10/29/python-serial%E8%8E%B7%E5%8F%96%E6%89%80%E6%9C%89%E4%B8%B2%E5%8F%A3/</url>
+    <url>/blog/2018/10/29/python-serial%E8%8E%B7%E5%8F%96%E6%89%80%E6%9C%89%E4%B8%B2%E5%8F%A3/</url>
     <content><![CDATA[<p>在写gui的时候发现如果自动选择串口号可能会有原主机和新装软件的主机存在串口号不一致的情况，这时，就需要手动的选择串口号了，我们在这里使用了pyserial的包，如果在<br><code>import serial.tools.list_ports</code><br>的时候发现报错，我们可以使用pip进行安装，如果pip速度太慢的话我们可以使用更换源来进行加速，安装完成后可以进行逐条输入语句验证是否可以正常输出。 </p>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> serial</span><br><span class="line"><span class="keyword">import</span> serial.tools.list_ports</span><br><span class="line"><span class="keyword">from</span> easygui <span class="keyword">import</span> *</span><br><span class="line">  </span><br><span class="line">port_list = <span class="built_in">list</span>(serial.tools.list_ports.comports())</span><br><span class="line"><span class="keyword">if</span> <span class="built_in">len</span>(port_list) &amp;amp;lt;= <span class="number">0</span>:</span><br><span class="line">    <span class="built_in">print</span> (&amp;quot;The Serial port can<span class="string">&#x27;t find!&amp;quot;)</span></span><br><span class="line"><span class="string">  </span></span><br><span class="line"><span class="string">else:</span></span><br><span class="line"><span class="string">    for i in list(port_list):</span></span><br><span class="line"><span class="string">        print (i[0])</span></span><br></pre></td></tr></table></figure>]]></content>
       <tags>
@@ -129,7 +129,7 @@
   </entry>
   <entry>
     <title>python 二维字典的使用</title>
-    <url>/2018/10/29/python-%E4%BA%8C%E7%BB%B4%E5%AD%97%E5%85%B8%E7%9A%84%E4%BD%BF%E7%94%A8/</url>
+    <url>/blog/2018/10/29/python-%E4%BA%8C%E7%BB%B4%E5%AD%97%E5%85%B8%E7%9A%84%E4%BD%BF%E7%94%A8/</url>
     <content><![CDATA[<p>今天在做项目的过程中需要用到一组三维的结构，eg.‘序号’，‘频率1，频率2’，‘温度’</p>
 <p>这时我们可以使用这样的格式：</p>
 <p>dict = {‘序号’:{‘温度’:(频率1，频率2)}}<br><code>dict=&#123;&#39;5&#39;:&#123;&#39;30&#39;:(10,10)&#125;&#125;</code><br>可以得到：<br><code>&#123;’30&#39;:(10,10)&#125;</code><br>查询某一号传感器的某温度的频率信息：<br><code>dict[&#39;5&#39;][&#39;30&#39;]</code><br>可以得到：<br><code>（10，10）</code></p>
@@ -140,7 +140,7 @@
   </entry>
   <entry>
     <title>python3将字符串转为字典</title>
-    <url>/2019/12/07/python3%E5%B0%86%E5%AD%97%E7%AC%A6%E4%B8%B2%E8%BD%AC%E4%B8%BA%E5%AD%97%E5%85%B8/</url>
+    <url>/blog/2019/12/07/python3%E5%B0%86%E5%AD%97%E7%AC%A6%E4%B8%B2%E8%BD%AC%E4%B8%BA%E5%AD%97%E5%85%B8/</url>
     <content><![CDATA[<p>在工作中需要从config中读取字典，读取到的字典是字符串：<br>`userinfo = ‘{“name” : “john”, “gender” : “male”, “age”: 28}’<br>`需要将上面的变为：<br>`userdict = {“name” : “john”, “gender” : “male”, “age”: 28}<br>`<br>有以下几种方法：</p>
 <h1 id="通过-json-来转换"><a href="#通过-json-来转换" class="headerlink" title="通过 json 来转换"></a>通过 json 来转换</h1><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">import</span> json</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>user_info= <span class="string">&#x27;&#123;&quot;name&quot; : &quot;john&quot;, &quot;gender&quot; : &quot;male&quot;, &quot;age&quot;: 28&#125;&#x27;</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>user_dict = json.loads(user_info)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>user_dict</span><br><span class="line">&#123;<span class="string">u&#x27;gender&#x27;</span>: <span class="string">u&#x27;male&#x27;</span>, <span class="string">u&#x27;age&#x27;</span>: <span class="number">28</span>, <span class="string">u&#x27;name&#x27;</span>: <span class="string">u&#x27;john&#x27;</span>&#125;</span><br></pre></td></tr></table></figure>
 <p>这里有个问题：**数组或对象之中的字符串必须使用双引号，不能使用单引号 **</p>
@@ -155,7 +155,7 @@
   </entry>
   <entry>
     <title>python子线程中WMI报错-2147221020解决</title>
-    <url>/2018/11/29/python%E5%AD%90%E7%BA%BF%E7%A8%8B%E4%B8%ADWMI%E6%8A%A5%E9%94%99-2147221020%E8%A7%A3%E5%86%B3/</url>
+    <url>/blog/2018/11/29/python%E5%AD%90%E7%BA%BF%E7%A8%8B%E4%B8%ADWMI%E6%8A%A5%E9%94%99-2147221020%E8%A7%A3%E5%86%B3/</url>
     <content><![CDATA[<p>在编写检测进程的程序的时候发现如下错误：<br><img src="https://i.loli.net/2019/10/14/H6gocumbyitMFeQ.jpg" alt="error"></p>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">check_exsit</span>(<span class="params">process_name</span>):</span></span><br><span class="line">    WMI = win32com.client.GetObject(<span class="string">&#x27;winmgmts:&#x27;</span>)</span><br><span class="line">    processCodeCov = WMI.ExecQuery(<span class="string">&#x27;select * from Win32_Process where Name=&quot;%s&quot;&#x27;</span> % process_name)</span><br><span class="line">    <span class="keyword">if</span> <span class="built_in">len</span>(processCodeCov) &gt; <span class="number">0</span>:</span><br><span class="line">        <span class="built_in">print</span> (<span class="string">&#x27;%s is exists&#x27;</span> % process_name)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        win32process.CreateProcess(<span class="string">&#x27;C:\Program Files (x86)\Tektronix\VectorVuPC\VectorVu-PC.exe&#x27;</span>, <span class="string">&#x27;&#x27;</span>, <span class="literal">None</span>, <span class="literal">None</span>, <span class="number">0</span>, win32process.CREATE_NO_WINDOW,<span class="literal">None</span>,<span class="literal">None</span>,win32process.STARTUPINFO())</span><br><span class="line">        <span class="built_in">print</span> (<span class="string">&#x27;%s is not exists&#x27;</span> % process_name)</span><br></pre></td></tr></table></figure>
 <p>这个程序是在子线程中运行的，经过查询得知在子线程中运行WMI需要进行初始化,改为如下程序：</p>
@@ -168,7 +168,7 @@
   </entry>
   <entry>
     <title>停止、删除所有的docker容器和镜像</title>
-    <url>/2019/01/07/%E5%81%9C%E6%AD%A2%E3%80%81%E5%88%A0%E9%99%A4%E6%89%80%E6%9C%89%E7%9A%84docker%E5%AE%B9%E5%99%A8%E5%92%8C%E9%95%9C%E5%83%8F/</url>
+    <url>/blog/2019/01/07/%E5%81%9C%E6%AD%A2%E3%80%81%E5%88%A0%E9%99%A4%E6%89%80%E6%9C%89%E7%9A%84docker%E5%AE%B9%E5%99%A8%E5%92%8C%E9%95%9C%E5%83%8F/</url>
     <content><![CDATA[<p>列出所有的容器 ID</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker ps -aq</span><br></pre></td></tr></table></figure>
 <p>停止所有的容器</p>
@@ -187,7 +187,7 @@
   </entry>
   <entry>
     <title>python装饰器 </title>
-    <url>/2019/05/31/python%E8%A3%85%E9%A5%B0%E5%99%A8/</url>
+    <url>/blog/2019/05/31/python%E8%A3%85%E9%A5%B0%E5%99%A8/</url>
     <content><![CDATA[<p>最近在使用python编程的时候发现了装饰器这个神奇的东西，在不破坏整个代码的结构和用法的同时将新功能套在旧的代码上，不影响原来代码的结构性和功能性，需要的时候加上，不需要的时候删掉即可。但是这玩意儿到底是啥呢？</p>
 <p>先来看一段代码</p>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">a</span>(<span class="params">func</span>):</span></span><br><span class="line">    print(<span class="string">&quot;this is func one&quot;</span>)</span><br><span class="line">    func()</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">b</span>():</span></span><br><span class="line">    print(<span class="string">&quot;this is func two&quot;</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">a(b)</span><br></pre></td></tr></table></figure>
@@ -206,7 +206,7 @@
   </entry>
   <entry>
     <title>报错 Error: rpmdb open failed 的解决</title>
-    <url>/2018/12/19/%E6%8A%A5%E9%94%99-Error-rpmdb-open-failed-%E7%9A%84%E8%A7%A3%E5%86%B3/</url>
+    <url>/blog/2018/12/19/%E6%8A%A5%E9%94%99-Error-rpmdb-open-failed-%E7%9A%84%E8%A7%A3%E5%86%B3/</url>
     <content><![CDATA[<p>在使用yum安装软件的时候发现如下错误：</p>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">error: rpmdb: BDB0113 Thread/process <span class="number">20287</span>/<span class="number">139700001376064</span> failed: BDB1507 Thread died <span class="keyword">in</span> Berkeley DB library</span><br><span class="line">error: db5 error(-30973) from dbenv-&gt;failchk: BDB0087 DB_RUNRECOVERY: Fatal error, run database recovery</span><br><span class="line">error: cannot <span class="built_in">open</span> Packages index using db5 -  (-<span class="number">30973</span>)</span><br><span class="line">error: cannot <span class="built_in">open</span> Packages database <span class="keyword">in</span> /var/lib/rpm</span><br><span class="line">CRITICAL:yum.main:</span><br><span class="line"> </span><br><span class="line">Error: rpmdb <span class="built_in">open</span> failed</span><br></pre></td></tr></table></figure>
 <p>此时，通过：</p>
@@ -219,7 +219,7 @@
   </entry>
   <entry>
     <title>微信python获取好友的信息</title>
-    <url>/2018/10/29/%E5%BE%AE%E4%BF%A1python%E8%8E%B7%E5%8F%96%E5%A5%BD%E5%8F%8B%E7%9A%84%E4%BF%A1%E6%81%AF/</url>
+    <url>/blog/2018/10/29/%E5%BE%AE%E4%BF%A1python%E8%8E%B7%E5%8F%96%E5%A5%BD%E5%8F%8B%E7%9A%84%E4%BF%A1%E6%81%AF/</url>
     <content><![CDATA[<p>可以通过本程序获取好友的昵称，备注名，等信息，来自微信注册时的信息，采用itchat进行收集，使用xlwt进行保存，最终呈现为excel表格</p>
 <p>使用时请先安装xlwt，itchat等包</p>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># coding:utf-8</span></span><br><span class="line"><span class="keyword">import</span> itchat,time,sys,xlwt</span><br><span class="line"> </span><br><span class="line">file = xlwt.Workbook()</span><br><span class="line">table = file.add_sheet(<span class="string">&#x27;info&#x27;</span>,cell_overwrite_ok=<span class="literal">True</span>)</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"><span class="comment"># 登录-持续</span></span><br><span class="line">itchat.auto_login(enableCmdQR=<span class="number">2</span>)</span><br><span class="line">print(<span class="string">u&quot;logged&quot;</span>)</span><br><span class="line"><span class="comment"># 获取好友列表</span></span><br><span class="line">friends = itchat.get_friends(update=<span class="literal">True</span>)[<span class="number">0</span>:]</span><br><span class="line"> </span><br><span class="line">male = female = other = <span class="number">0</span></span><br><span class="line"> </span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> friends[<span class="number">1</span>:]:</span><br><span class="line">    sex = i[<span class="string">&quot;Sex&quot;</span>]</span><br><span class="line">    <span class="keyword">if</span> sex == <span class="number">1</span>:</span><br><span class="line">        male += <span class="number">1</span></span><br><span class="line">    <span class="keyword">elif</span> sex == <span class="number">2</span>:</span><br><span class="line">        female += <span class="number">1</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        other += <span class="number">1</span></span><br><span class="line">total = <span class="built_in">len</span>(friends[<span class="number">1</span>:])</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line">table.write(<span class="number">0</span>,<span class="number">7</span>,<span class="string">u&#x27;【共&#x27;</span>+<span class="built_in">str</span>(<span class="built_in">len</span>(friends)-<span class="number">1</span>)+<span class="string">u&#x27;位朋友，&#x27;</span>+<span class="built_in">str</span>(male)+<span class="string">u&#x27;位男性朋友，&#x27;</span>+<span class="built_in">str</span>(female)+<span class="string">u&#x27;位女性朋友，另外&#x27;</span>+<span class="built_in">str</span>(other)+<span class="string">u&#x27;位不明性别】&#x27;</span>)</span><br><span class="line">table.write(<span class="number">0</span>,<span class="number">0</span>,<span class="string">u&#x27; 【昵称】&#x27;</span>)  </span><br><span class="line">table.write(<span class="number">0</span>,<span class="number">1</span>,<span class="string">u&#x27; 【备注名】&#x27;</span>)</span><br><span class="line">table.write(<span class="number">0</span>,<span class="number">2</span>,<span class="string">u&#x27; 【省份】&#x27;</span>)  </span><br><span class="line">table.write(<span class="number">0</span>,<span class="number">3</span>,<span class="string">u&#x27; 【城市】&#x27;</span>)  </span><br><span class="line">table.write(<span class="number">0</span>,<span class="number">4</span>,<span class="string">u&#x27; 【签名】&#x27;</span>)</span><br><span class="line"> </span><br><span class="line">a=<span class="number">0</span></span><br><span class="line"> </span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> friends:</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line">    table.write(a+<span class="number">1</span>,<span class="number">0</span>,i[<span class="string">&#x27;NickName&#x27;</span>])</span><br><span class="line">    table.write(a+<span class="number">1</span>,<span class="number">1</span>,i[<span class="string">&#x27;RemarkName&#x27;</span>])</span><br><span class="line">    table.write(a+<span class="number">1</span>,<span class="number">2</span>,i[<span class="string">&#x27;Province&#x27;</span>])</span><br><span class="line">    table.write(a+<span class="number">1</span>,<span class="number">3</span>,i[<span class="string">&#x27;City&#x27;</span>])</span><br><span class="line">    table.write(a+<span class="number">1</span>,<span class="number">4</span>,i[<span class="string">&#x27;Signature&#x27;</span>])</span><br><span class="line">    <span class="keyword">if</span> i[<span class="string">&#x27;RemarkName&#x27;</span>] == <span class="string">u&#x27;&#x27;</span>:</span><br><span class="line">        table.write(a+<span class="number">1</span>,<span class="number">1</span>,<span class="string">u&#x27;[ ]&#x27;</span>)</span><br><span class="line">    <span class="keyword">if</span> i[<span class="string">&#x27;Province&#x27;</span>] == <span class="string">u&#x27;&#x27;</span>:</span><br><span class="line">        table.write(a+<span class="number">1</span>,<span class="number">2</span>,<span class="string">u&#x27;[ ]&#x27;</span>)</span><br><span class="line">    <span class="keyword">if</span> i[<span class="string">&#x27;City&#x27;</span>] == <span class="string">u&#x27;&#x27;</span>:</span><br><span class="line">        table.write(a+<span class="number">1</span>,<span class="number">3</span>,<span class="string">u&#x27;[ ]&#x27;</span>)</span><br><span class="line">    <span class="keyword">if</span> i[<span class="string">&#x27;Signature&#x27;</span>] == <span class="string">u&#x27;&#x27;</span>:</span><br><span class="line">        table.write(a+<span class="number">1</span>,<span class="number">4</span>,<span class="string">u&#x27;[ ]&#x27;</span>)</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line">    a=a+<span class="number">1</span></span><br><span class="line">    print(a)</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"><span class="comment"># qm=raw_input(&quot;file name &gt;&gt;&gt;:&quot;)</span></span><br><span class="line">aaa=<span class="string">&#x27;weixin_&#x27;</span>+time.strftime(<span class="string">&quot;%Y%m%d&quot;</span>, time.localtime())+<span class="string">&#x27;.xls&#x27;</span></span><br><span class="line">file.save(aaa)</span><br><span class="line">itchat.send(<span class="string">&#x27;made by junzi&#x27;</span>,<span class="string">&#x27;filehelper&#x27;</span>)</span><br><span class="line">itchat.send(<span class="string">&#x27;@%s@%s&#x27;</span> % (<span class="string">&#x27;fil&#x27;</span>,aaa), <span class="string">&#x27;filehelper&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span> (<span class="string">&quot;over&quot;</span>)</span><br></pre></td></tr></table></figure>]]></content>
@@ -229,7 +229,7 @@
   </entry>
   <entry>
     <title>我们为什么不保持高效的沟通？</title>
-    <url>/2020/08/20/%E6%9C%AA%E5%91%BD%E5%90%8D/</url>
+    <url>/blog/2020/08/20/%E6%9C%AA%E5%91%BD%E5%90%8D/</url>
     <content><![CDATA[<p>这次出差大部分时间都花在了，等待别人沟通的过程中。真正需要我做的事没有多少，但是由于沟通的原因导致进度迟迟不能推进。这太令人感到头疼了，在工作过程中，大家好像都不能很好地保持沟通，真正需要做的事情，但是由于沟通的不畅，导致了进度的拖慢。我们应该怎么样才能保持一个高效的沟通呢？我觉得主要还是在日常过程中沟通，也不是很顺畅，所以应该从日常就应该有一个很好的沟通渠道和沟通方式。而不是遇到事儿，以后才开始想办法去沟通。本来这一次很简单，介绍一下技术就OK了，由于对方的沟通问题，导致这次出差的时间延长了一周，刚刚过来的时候，他们信誓旦旦地讲这边已经沟通好了，你来就行了，但是真正的过来以后发现好多事情都没有沟通，施工项目的现场现在也发现有很多之前由于沟通导致的问题。本来预计全部走无线通路，但是现在发现无线通路有问题，所以可能要临时要改成有限，投入在改成有限通路的过程中，还需要改一些现场的补偿导线长度等具体细节问题。我觉得我们还是在整个过程中花费了大量的时间，这些时间本不应该在这个时间节点耗费。在这个即将交付的日期前，有这么大的技术架构改动，这实在是很不应该发生的事情。希望在之后的过程中能够保持一个良好的沟通吧，毕竟沟通成本永远是项目过程中比较大的成本(时间成本）。共勉吧。</p>
 ]]></content>
       <tags>
@@ -238,7 +238,7 @@
   </entry>
   <entry>
     <title>出差有感</title>
-    <url>/2019/12/27/%E5%87%BA%E5%B7%AE%E6%9C%89%E6%84%9F/</url>
+    <url>/blog/2019/12/27/%E5%87%BA%E5%B7%AE%E6%9C%89%E6%84%9F/</url>
     <content><![CDATA[<p>这个月出了好几趟差了，从安徽到山东，从山东到陕西，虽然是离家近了，但是事情忙，又没空回家，总是觉得自己应该在出差过程中有些提升，但是从硬件安装到软件调试，所有的问题都出现在对接的人的身上，没有标准，或者是有标准都不遵守。<br>其实大家按照一套标准来做东西完全可以减少很多返工的时间，同样的，牵头的人也没想明白整个项目的架构和技术层面的标准。<br>归根结底就是人<strong>不行</strong><br>年底了开始‘犯小人’，希望明年会好点吧，再这样下去真的挺累。<br>出差挺好的就是有点伤肝</p>
 ]]></content>
       <tags>
@@ -247,7 +247,7 @@
   </entry>
   <entry>
     <title>终于去想起来写一篇博客了</title>
-    <url>/2019/11/06/%E7%BB%88%E4%BA%8E%E5%8E%BB%E6%83%B3%E8%B5%B7%E6%9D%A5%E5%86%99%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E4%BA%86/</url>
+    <url>/blog/2019/11/06/%E7%BB%88%E4%BA%8E%E5%8E%BB%E6%83%B3%E8%B5%B7%E6%9D%A5%E5%86%99%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E4%BA%86/</url>
     <content><![CDATA[<p>准备把明年定位成考试年，考证开始啦！<br>在学校时候老师催着考证，考个鬼，自己都不知道自己的职业发展，还考证，现在有个清晰的认识以后应该考啥证其实自己心里都有“🌲”了，向自己想去的方向努力吧～</p>
 ]]></content>
       <tags>
@@ -256,7 +256,7 @@
   </entry>
   <entry>
     <title>正则表达式简单例程</title>
-    <url>/2018/10/19/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E7%AE%80%E5%8D%95%E4%BE%8B%E7%A8%8B/</url>
+    <url>/blog/2018/10/19/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E7%AE%80%E5%8D%95%E4%BE%8B%E7%A8%8B/</url>
     <content><![CDATA[<p>从字符串 str 中提取数字部分的内容(匹配一次)：</p>
 <p>var str = “abc123def”;</p>
 <p>var patt1 = /<a href="">0-9</a>+/;</p>
@@ -269,7 +269,7 @@
   </entry>
   <entry>
     <title>解决树莓派kali更换国内源后更新报错</title>
-    <url>/2018/11/27/%E8%A7%A3%E5%86%B3%E6%A0%91%E8%8E%93%E6%B4%BEkali%E6%9B%B4%E6%8D%A2%E5%9B%BD%E5%86%85%E6%BA%90%E5%90%8E%E6%9B%B4%E6%96%B0%E6%8A%A5%E9%94%99/</url>
+    <url>/blog/2018/11/27/%E8%A7%A3%E5%86%B3%E6%A0%91%E8%8E%93%E6%B4%BEkali%E6%9B%B4%E6%8D%A2%E5%9B%BD%E5%86%85%E6%BA%90%E5%90%8E%E6%9B%B4%E6%96%B0%E6%8A%A5%E9%94%99/</url>
     <content><![CDATA[<p>在更新时发现报错如下：</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">dpkg: error processing package raspi3-firmware (--configure):</span><br><span class="line"> installed raspi3-firmware package post-installation script subprocess returned error <span class="built_in">exit</span> status 1</span><br><span class="line">Errors were encountered <span class="keyword">while</span> processing:</span><br><span class="line"> raspi3-firmware</span><br><span class="line">E: Sub-process /usr/bin/dpkg returned an error code (1)</span><br></pre></td></tr></table></figure>
 <p>此时，进入/usr/bin/dpkg删除info文件夹后再新建一个即可，具体原因还在查 大家可以使用kali的64位arm包，这样不会报错<br><img src="https://i.loli.net/2019/10/14/Trsj7BZcSOkmp39.jpg" alt="64bit kali of raspberry"></p>
@@ -280,7 +280,7 @@
   </entry>
   <entry>
     <title>解决mysql/mariaDB “ERROR 2002 (HY000):Can’t connect to local MySQL server through socket ‘/tmp/mysql.sock’ (111)”</title>
-    <url>/2019/01/15/%E8%A7%A3%E5%86%B3mysql-mariaDB-%E2%80%9CERROR-2002-HY000-Can%E2%80%99t-connect-to-local-MySQL-server-through/</url>
+    <url>/blog/2019/01/15/%E8%A7%A3%E5%86%B3mysql-mariaDB-%E2%80%9CERROR-2002-HY000-Can%E2%80%99t-connect-to-local-MySQL-server-through/</url>
     <content><![CDATA[<p>搬运&amp;汉化自stackoverflow</p>
 <p>解决这个问题需要重启mysql重置密码</p>
 <p>1.停止mysql<br><code>sudo /etc/init.d/mysql stop</code><br>其他版本：<br><code>sudo /etc/init.d/mysqld stop</code></p>
