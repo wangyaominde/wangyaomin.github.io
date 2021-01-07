@@ -61,15 +61,6 @@
       </tags>
   </entry>
   <entry>
-    <title>docker 国内镜像更换</title>
-    <url>/blog/2019/01/15/docker-%E5%9B%BD%E5%86%85%E9%95%9C%E5%83%8F%E6%9B%B4%E6%8D%A2/</url>
-    <content><![CDATA[<p>今天下载时候发现下载速度太慢，发现有国内镜像<br><a href="https://cr.console.aliyun.com/#/accelerator">https://cr.console.aliyun.com/#/accelerator</a><br>在上面的连接中有阿里云的镜像更改方法及镜像地址需要登录阿里云。</p>
-]]></content>
-      <tags>
-        <tag>Docker</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>docker 运行一个容器</title>
     <url>/blog/2019/01/15/docker-%E8%BF%90%E8%A1%8C%E4%B8%80%E4%B8%AA%E5%AE%B9%E5%99%A8/</url>
     <content><![CDATA[<p><code>docker run [参数] [参数]</code><br>参数及使用说明：</p>
@@ -98,10 +89,31 @@
       </tags>
   </entry>
   <entry>
+    <title>docker 国内镜像更换</title>
+    <url>/blog/2019/01/15/docker-%E5%9B%BD%E5%86%85%E9%95%9C%E5%83%8F%E6%9B%B4%E6%8D%A2/</url>
+    <content><![CDATA[<p>今天下载时候发现下载速度太慢，发现有国内镜像<br><a href="https://cr.console.aliyun.com/#/accelerator">https://cr.console.aliyun.com/#/accelerator</a><br>在上面的连接中有阿里云的镜像更改方法及镜像地址需要登录阿里云。</p>
+]]></content>
+      <tags>
+        <tag>Docker</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>manjaro 签名无效解决方案</title>
     <url>/blog/2019/08/20/manjaro-%E7%AD%BE%E5%90%8D%E6%97%A0%E6%95%88%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</url>
     <content><![CDATA[<p>安装软件及更新的时候遇到签名无效，这是一种安全策略，我们可以修改<br><code>/etc/pacman.conf</code><br>文件将所有原来<br><code>SigLevel=xxxxx</code><br>注释掉，并且添加<br><code>SigLevel=Never</code><br>即可解决此类问题（会带来安全隐患，可以更新完再将其改回）</p>
 ]]></content>
+      <tags>
+        <tag>炼丹手册</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>pip 更换国内源</title>
+    <url>/blog/2018/10/29/pip-%E6%9B%B4%E6%8D%A2%E5%9B%BD%E5%86%85%E6%BA%90/</url>
+    <content><![CDATA[<p>在使用pip安装东西的过程中，会发现速度十分缓慢。这时，我们可以将pip的下载源变为国内的镜像源，这样会提升下载速度。</p>
+<p>linux下，修改 ~/.pip/pip.conf (没有就创建一个)，windows下，直接在user目录中创建一个pip目录，如：C:\Users\xx\pip，新建文件pip.ini，内容如下（清华源）</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">[<span class="keyword">global</span>]</span><br><span class="line">index-url = https://pypi.tuna.tsinghua.edu.cn/simple</span><br><span class="line">[install]</span><br><span class="line">trusted-host=pypi.tuna.tsinghua.edu.cn</span><br></pre></td></tr></table></figure>
+<p>或使用阿里的源：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">[<span class="keyword">global</span>]</span><br><span class="line">index-url=http://mirrors.aliyun.com/pypi/simple/</span><br><span class="line">[install]</span><br><span class="line">trusted-host=mirrors.aliyun.com</span><br></pre></td></tr></table></figure>]]></content>
       <tags>
         <tag>炼丹手册</tag>
       </tags>
@@ -122,18 +134,6 @@
     <url>/blog/2018/10/29/python-serial%E8%8E%B7%E5%8F%96%E6%89%80%E6%9C%89%E4%B8%B2%E5%8F%A3/</url>
     <content><![CDATA[<p>在写gui的时候发现如果自动选择串口号可能会有原主机和新装软件的主机存在串口号不一致的情况，这时，就需要手动的选择串口号了，我们在这里使用了pyserial的包，如果在<br><code>import serial.tools.list_ports</code><br>的时候发现报错，我们可以使用pip进行安装，如果pip速度太慢的话我们可以使用更换源来进行加速，安装完成后可以进行逐条输入语句验证是否可以正常输出。 </p>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> serial</span><br><span class="line"><span class="keyword">import</span> serial.tools.list_ports</span><br><span class="line"><span class="keyword">from</span> easygui <span class="keyword">import</span> *</span><br><span class="line">  </span><br><span class="line">port_list = <span class="built_in">list</span>(serial.tools.list_ports.comports())</span><br><span class="line"><span class="keyword">if</span> <span class="built_in">len</span>(port_list) &amp;amp;lt;= <span class="number">0</span>:</span><br><span class="line">    <span class="built_in">print</span> (&amp;quot;The Serial port can<span class="string">&#x27;t find!&amp;quot;)</span></span><br><span class="line"><span class="string">  </span></span><br><span class="line"><span class="string">else:</span></span><br><span class="line"><span class="string">    for i in list(port_list):</span></span><br><span class="line"><span class="string">        print (i[0])</span></span><br></pre></td></tr></table></figure>]]></content>
-      <tags>
-        <tag>炼丹手册</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>pip 更换国内源</title>
-    <url>/blog/2018/10/29/pip-%E6%9B%B4%E6%8D%A2%E5%9B%BD%E5%86%85%E6%BA%90/</url>
-    <content><![CDATA[<p>在使用pip安装东西的过程中，会发现速度十分缓慢。这时，我们可以将pip的下载源变为国内的镜像源，这样会提升下载速度。</p>
-<p>linux下，修改 ~/.pip/pip.conf (没有就创建一个)，windows下，直接在user目录中创建一个pip目录，如：C:\Users\xx\pip，新建文件pip.ini，内容如下（清华源）</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">[<span class="keyword">global</span>]</span><br><span class="line">index-url = https://pypi.tuna.tsinghua.edu.cn/simple</span><br><span class="line">[install]</span><br><span class="line">trusted-host=pypi.tuna.tsinghua.edu.cn</span><br></pre></td></tr></table></figure>
-<p>或使用阿里的源：</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">[<span class="keyword">global</span>]</span><br><span class="line">index-url=http://mirrors.aliyun.com/pypi/simple/</span><br><span class="line">[install]</span><br><span class="line">trusted-host=mirrors.aliyun.com</span><br></pre></td></tr></table></figure>]]></content>
       <tags>
         <tag>炼丹手册</tag>
       </tags>
@@ -268,6 +268,17 @@
       </tags>
   </entry>
   <entry>
+    <title>解决树莓派kali更换国内源后更新报错</title>
+    <url>/blog/2018/11/27/%E8%A7%A3%E5%86%B3%E6%A0%91%E8%8E%93%E6%B4%BEkali%E6%9B%B4%E6%8D%A2%E5%9B%BD%E5%86%85%E6%BA%90%E5%90%8E%E6%9B%B4%E6%96%B0%E6%8A%A5%E9%94%99/</url>
+    <content><![CDATA[<p>在更新时发现报错如下：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">dpkg: error processing package raspi3-firmware (--configure):</span><br><span class="line"> installed raspi3-firmware package post-installation script subprocess returned error <span class="built_in">exit</span> status 1</span><br><span class="line">Errors were encountered <span class="keyword">while</span> processing:</span><br><span class="line"> raspi3-firmware</span><br><span class="line">E: Sub-process /usr/bin/dpkg returned an error code (1)</span><br></pre></td></tr></table></figure>
+<p>此时，进入/usr/bin/dpkg删除info文件夹后再新建一个即可，具体原因还在查 大家可以使用kali的64位arm包，这样不会报错<br><img src="https://i.loli.net/2019/10/14/Trsj7BZcSOkmp39.jpg" alt="64bit kali of raspberry"></p>
+]]></content>
+      <tags>
+        <tag>炼丹手册</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>解决mysql/mariaDB “ERROR 2002 (HY000):Can’t connect to local MySQL server through socket ‘/tmp/mysql.sock’ (111)”</title>
     <url>/blog/2019/01/15/%E8%A7%A3%E5%86%B3mysql-mariaDB-%E2%80%9CERROR-2002-HY000-Can%E2%80%99t-connect-to-local-MySQL-server-through/</url>
     <content><![CDATA[<p>搬运&amp;汉化自stackoverflow</p>
@@ -285,17 +296,6 @@
 <p>在CentOS，Fedora ，RHEL中：</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo /etc/init.d/mysqld stop</span><br><span class="line">...</span><br><span class="line">sudo /etc/init.d/mysqld start</span><br></pre></td></tr></table></figure>
 <p>9.用新的密码登录<br><code>mysql -u root -p</code></p>
-]]></content>
-      <tags>
-        <tag>炼丹手册</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>解决树莓派kali更换国内源后更新报错</title>
-    <url>/blog/2018/11/27/%E8%A7%A3%E5%86%B3%E6%A0%91%E8%8E%93%E6%B4%BEkali%E6%9B%B4%E6%8D%A2%E5%9B%BD%E5%86%85%E6%BA%90%E5%90%8E%E6%9B%B4%E6%96%B0%E6%8A%A5%E9%94%99/</url>
-    <content><![CDATA[<p>在更新时发现报错如下：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">dpkg: error processing package raspi3-firmware (--configure):</span><br><span class="line"> installed raspi3-firmware package post-installation script subprocess returned error <span class="built_in">exit</span> status 1</span><br><span class="line">Errors were encountered <span class="keyword">while</span> processing:</span><br><span class="line"> raspi3-firmware</span><br><span class="line">E: Sub-process /usr/bin/dpkg returned an error code (1)</span><br></pre></td></tr></table></figure>
-<p>此时，进入/usr/bin/dpkg删除info文件夹后再新建一个即可，具体原因还在查 大家可以使用kali的64位arm包，这样不会报错<br><img src="https://i.loli.net/2019/10/14/Trsj7BZcSOkmp39.jpg" alt="64bit kali of raspberry"></p>
 ]]></content>
       <tags>
         <tag>炼丹手册</tag>

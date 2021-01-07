@@ -9,11 +9,11 @@
     
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
   <title>
-    我们为什么不保持高效的沟通？ |  耀民的博客
+    python3将字符串转为字典 |  耀民的博客
   </title>
   <meta name="generator" content="hexo-theme-ayer">
   
-  <link rel="shortcut icon" href="/blog/favicon.ico" />
+  <link rel="shortcut icon" href="/favicon.ico" />
   
   
 <link rel="stylesheet" href="/blog/dist/main.css">
@@ -45,7 +45,7 @@
     <main class="content on">
       <section class="outer">
   <article
-  id="post-未命名"
+  id="post-python3将字符串转为字典"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
@@ -56,22 +56,22 @@
     <header class="article-header">
        
 <h1 class="article-title sea-center" style="border-left:0" itemprop="name">
-  我们为什么不保持高效的沟通？
+  python3将字符串转为字典
 </h1>
  
 
     </header>
      
     <div class="article-meta">
-      <a href="/blog/2020/08/20/%E6%9C%AA%E5%91%BD%E5%90%8D/" class="article-date">
-  <time datetime="2020-08-20T04:07:27.000Z" itemprop="datePublished">2020-08-20</time>
+      <a href="/blog/2019/12/07/python3%E5%B0%86%E5%AD%97%E7%AC%A6%E4%B8%B2%E8%BD%AC%E4%B8%BA%E5%AD%97%E5%85%B8/" class="article-date">
+  <time datetime="2019-12-07T11:30:32.000Z" itemprop="datePublished">2019-12-07</time>
 </a>   
 <div class="word_count">
     <span class="post-time">
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> 字数统计:</span>
-            <span class="post-count">497</span>
+            <span class="post-count">423</span>
         </span>
     </span>
 
@@ -80,20 +80,28 @@
         <span class="post-meta-item-icon">
             <i class="ri-book-open-line"></i>
             <span class="post-meta-item-text"> 阅读时长≈</span>
-            <span class="post-count">1 分钟</span>
+            <span class="post-count">2 分钟</span>
         </span>
     </span>
 </div>
  
     </div>
       
+    <div class="tocbot"></div>
+
 
 
 
   
     <div class="article-entry" itemprop="articleBody">
        
-  <p>这次出差大部分时间都花在了，等待别人沟通的过程中。真正需要我做的事没有多少，但是由于沟通的原因导致进度迟迟不能推进。这太令人感到头疼了，在工作过程中，大家好像都不能很好地保持沟通，真正需要做的事情，但是由于沟通的不畅，导致了进度的拖慢。我们应该怎么样才能保持一个高效的沟通呢？我觉得主要还是在日常过程中沟通，也不是很顺畅，所以应该从日常就应该有一个很好的沟通渠道和沟通方式。而不是遇到事儿，以后才开始想办法去沟通。本来这一次很简单，介绍一下技术就OK了，由于对方的沟通问题，导致这次出差的时间延长了一周，刚刚过来的时候，他们信誓旦旦地讲这边已经沟通好了，你来就行了，但是真正的过来以后发现好多事情都没有沟通，施工项目的现场现在也发现有很多之前由于沟通导致的问题。本来预计全部走无线通路，但是现在发现无线通路有问题，所以可能要临时要改成有限，投入在改成有限通路的过程中，还需要改一些现场的补偿导线长度等具体细节问题。我觉得我们还是在整个过程中花费了大量的时间，这些时间本不应该在这个时间节点耗费。在这个即将交付的日期前，有这么大的技术架构改动，这实在是很不应该发生的事情。希望在之后的过程中能够保持一个良好的沟通吧，毕竟沟通成本永远是项目过程中比较大的成本(时间成本）。共勉吧。</p>
+  <p>在工作中需要从config中读取字典，读取到的字典是字符串：<br>`userinfo = ‘{“name” : “john”, “gender” : “male”, “age”: 28}’<br>`需要将上面的变为：<br>`userdict = {“name” : “john”, “gender” : “male”, “age”: 28}<br>`<br>有以下几种方法：</p>
+<h1 id="通过-json-来转换"><a href="#通过-json-来转换" class="headerlink" title="通过 json 来转换"></a>通过 json 来转换</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">import</span> json</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>user_info= <span class="string">&#x27;&#123;&quot;name&quot; : &quot;john&quot;, &quot;gender&quot; : &quot;male&quot;, &quot;age&quot;: 28&#125;&#x27;</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>user_dict = json.loads(user_info)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>user_dict</span><br><span class="line">&#123;<span class="string">u&#x27;gender&#x27;</span>: <span class="string">u&#x27;male&#x27;</span>, <span class="string">u&#x27;age&#x27;</span>: <span class="number">28</span>, <span class="string">u&#x27;name&#x27;</span>: <span class="string">u&#x27;john&#x27;</span>&#125;</span><br></pre></td></tr></table></figure>
+<p>这里有个问题：**数组或对象之中的字符串必须使用双引号，不能使用单引号 **</p>
+<h1 id="通过-eval"><a href="#通过-eval" class="headerlink" title="通过 eval"></a>通过 eval</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>user_info = <span class="string">&#x27;&#123;&quot;name&quot; : &quot;john&quot;, &quot;gender&quot; : &quot;male&quot;, &quot;age&quot;: 28&#125;&#x27;</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>user_dict = <span class="built_in">eval</span>(user_info)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>user_dict</span><br><span class="line">&#123;<span class="string">&#x27;gender&#x27;</span>: <span class="string">&#x27;male&#x27;</span>, <span class="string">&#x27;age&#x27;</span>: <span class="number">28</span>, <span class="string">&#x27;name&#x27;</span>: <span class="string">&#x27;john&#x27;</span>&#125;</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>user_info = <span class="string">&quot;&#123;&#x27;name&#x27; : &#x27;john&#x27;, &#x27;gender&#x27; : &#x27;male&#x27;, &#x27;age&#x27;: 28&#125;&quot;</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>user_dict = <span class="built_in">eval</span>(user_info)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>user_dict</span><br><span class="line">&#123;<span class="string">&#x27;gender&#x27;</span>: <span class="string">&#x27;male&#x27;</span>, <span class="string">&#x27;age&#x27;</span>: <span class="number">28</span>, <span class="string">&#x27;name&#x27;</span>: <span class="string">&#x27;john&#x27;</span>&#125;</span><br></pre></td></tr></table></figure>
+<p>这个有很严重的安全问题，当用户从config中输入破坏性的代码则会对整个系统存在安全性的威胁</p>
+<h1 id="通过-literal-eval"><a href="#通过-literal-eval" class="headerlink" title="通过 literal_eval_"></a>通过 literal_eval_</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">import</span> ast</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>user = <span class="string">&#x27;&#123;&quot;name&quot; : &quot;john&quot;, &quot;gender&quot; : &quot;male&quot;, &quot;age&quot;: 28&#125;&#x27;</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>user_dict = ast.literal_eval(user)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>user_dict</span><br><span class="line">&#123;<span class="string">&#x27;gender&#x27;</span>: <span class="string">&#x27;male&#x27;</span>, <span class="string">&#x27;age&#x27;</span>: <span class="number">28</span>, <span class="string">&#x27;name&#x27;</span>: <span class="string">&#x27;john&#x27;</span>&#125;</span><br><span class="line">user_info = <span class="string">&quot;&#123;&#x27;name&#x27; : &#x27;john&#x27;, &#x27;gender&#x27; : &#x27;male&#x27;, &#x27;age&#x27;: 28&#125;&quot;</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>user_dict = ast.literal_eval(user)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>user_dict</span><br><span class="line">&#123;<span class="string">&#x27;gender&#x27;</span>: <span class="string">&#x27;male&#x27;</span>, <span class="string">&#x27;age&#x27;</span>: <span class="number">28</span>, <span class="string">&#x27;name&#x27;</span>: <span class="string">&#x27;john&#x27;</span>&#125;</span><br></pre></td></tr></table></figure>
+<p>用这个是比较好的解决方法</p>
  
       <!-- reward -->
       
@@ -158,12 +166,12 @@
     <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://wangyaomin.com/blog/2020/08/20/%E6%9C%AA%E5%91%BD%E5%90%8D/" alt="微信分享二维码">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://wangyaomin.com/blog/2019/12/07/python3%E5%B0%86%E5%AD%97%E7%AC%A6%E4%B8%B2%E8%BD%AC%E4%B8%BA%E5%AD%97%E5%85%B8/" alt="微信分享二维码">
     </div>
 </div>
 
 <div id="share-mask"></div>  
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/%E6%97%A5%E5%B8%B8/" rel="tag">日常</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/%E7%82%BC%E4%B8%B9%E6%89%8B%E5%86%8C/" rel="tag">炼丹手册</a></li></ul>
 
     </footer>
   </div>
@@ -171,10 +179,19 @@
    
   <nav class="article-nav">
     
-    
       <a href="/blog/2019/12/27/%E5%87%BA%E5%B7%AE%E6%9C%89%E6%84%9F/" class="article-nav-link">
+        <strong class="article-nav-caption">上一篇</strong>
+        <div class="article-nav-title">
+          
+            出差有感
+          
+        </div>
+      </a>
+    
+    
+      <a href="/blog/2019/11/06/%E7%BB%88%E4%BA%8E%E5%8E%BB%E6%83%B3%E8%B5%B7%E6%9D%A5%E5%86%99%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E4%BA%86/" class="article-nav-link">
         <strong class="article-nav-caption">下一篇</strong>
-        <div class="article-nav-title">出差有感</div>
+        <div class="article-nav-title">终于去想起来写一篇博客了</div>
       </a>
     
   </nav>
@@ -297,7 +314,7 @@
 <nav class="navbar">
   
   <div class="logo">
-    <a href="/blog/"><img src="/blog/images/ayer-side.svg" alt="耀民的博客"></a>
+    <a href="/blog/"><img src="/images/ayer-side.svg" alt="耀民的博客"></a>
   </div>
   
   <ul class="nav nav-main">
