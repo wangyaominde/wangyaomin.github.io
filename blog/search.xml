@@ -48,6 +48,15 @@
       </tags>
   </entry>
   <entry>
+    <title>docker 国内镜像更换</title>
+    <url>/blog/2019/01/15/docker-%E5%9B%BD%E5%86%85%E9%95%9C%E5%83%8F%E6%9B%B4%E6%8D%A2/</url>
+    <content><![CDATA[<p>今天下载时候发现下载速度太慢，发现有国内镜像<br><a href="https://cr.console.aliyun.com/#/accelerator">https://cr.console.aliyun.com/#/accelerator</a><br>在上面的连接中有阿里云的镜像更改方法及镜像地址需要登录阿里云。</p>
+]]></content>
+      <tags>
+        <tag>Docker</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>atom简单配置</title>
     <url>/blog/2018/12/10/atom%E7%AE%80%E5%8D%95%E9%85%8D%E7%BD%AE/</url>
     <content><![CDATA[<h1 id="apm换成国源："><a href="#apm换成国源：" class="headerlink" title="apm换成国源："></a>apm换成国源：</h1><p>刚刚在新电脑上安装了atom，下载插件速度太慢了，从网上找到了解决方法，就是换源，国内有淘宝的源</p>
@@ -58,15 +67,6 @@
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line"> <span class="string">&quot;argv&quot;</span>: [</span><br><span class="line">  <span class="string">&quot;python3&quot;</span>,</span><br><span class="line">  <span class="string">&quot;-m&quot;</span>,</span><br><span class="line">  <span class="string">&quot;ipykernel_launcher&quot;</span>,</span><br><span class="line">  <span class="string">&quot;-f&quot;</span>,</span><br><span class="line">  <span class="string">&quot;&#123;connection_file&#125;&quot;</span></span><br><span class="line"> ],</span><br><span class="line"> <span class="string">&quot;display_name&quot;</span>: <span class="string">&quot;Python 3&quot;</span>,</span><br><span class="line"> <span class="string">&quot;language&quot;</span>: <span class="string">&quot;python&quot;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
       <tags>
         <tag>炼丹手册</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>docker 国内镜像更换</title>
-    <url>/blog/2019/01/15/docker-%E5%9B%BD%E5%86%85%E9%95%9C%E5%83%8F%E6%9B%B4%E6%8D%A2/</url>
-    <content><![CDATA[<p>今天下载时候发现下载速度太慢，发现有国内镜像<br><a href="https://cr.console.aliyun.com/#/accelerator">https://cr.console.aliyun.com/#/accelerator</a><br>在上面的连接中有阿里云的镜像更改方法及镜像地址需要登录阿里云。</p>
-]]></content>
-      <tags>
-        <tag>Docker</tag>
       </tags>
   </entry>
   <entry>
@@ -246,6 +246,19 @@
       </tags>
   </entry>
   <entry>
+    <title>正则表达式简单例程</title>
+    <url>/blog/2018/10/19/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E7%AE%80%E5%8D%95%E4%BE%8B%E7%A8%8B/</url>
+    <content><![CDATA[<p>从字符串 str 中提取数字部分的内容(匹配一次)：</p>
+<p>var str = “abc123def”;</p>
+<p>var patt1 = /<a href="">0-9</a>+/;</p>
+<p>document.write(str.match(patt1));</p>
+<p>^ 为匹配输入字符串的开始位置。<br><a href="">0-9</a>+匹配多个数字， <a href="">0-9</a> 匹配单个数字，+ 匹配一个或者多个。<br>abc$匹配字母 abc 并以 abc 结尾，$ 为匹配输入字符串的结束位置。<br>runoo+b，可以匹配 runoob、runooob、runoooooob 等，+ 号代表前面的字符必须至少出现一次（1次或多次）。<br>runoo<em>b，可以匹配 runob、runoob、runoooooob 等，</em> 号代表字符可以不出现，也可以出现一次或者多次（0次、或1次、或多次）。<br>colou?r 可以匹配 color 或者 colour，? 问号代表前面的字符最多只可以出现一次（0次、或1次）</p>
+]]></content>
+      <tags>
+        <tag>炼丹手册</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>终于去想起来写一篇博客了</title>
     <url>/blog/2019/11/06/%E7%BB%88%E4%BA%8E%E5%8E%BB%E6%83%B3%E8%B5%B7%E6%9D%A5%E5%86%99%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E4%BA%86/</url>
     <content><![CDATA[<p>准备把明年定位成考试年，考证开始啦！<br>在学校时候老师催着考证，考个鬼，自己都不知道自己的职业发展，还考证，现在有个清晰的认识以后应该考啥证其实自己心里都有“🌲”了，向自己想去的方向努力吧～</p>
@@ -272,19 +285,6 @@
 <p>在CentOS，Fedora ，RHEL中：</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo /etc/init.d/mysqld stop</span><br><span class="line">...</span><br><span class="line">sudo /etc/init.d/mysqld start</span><br></pre></td></tr></table></figure>
 <p>9.用新的密码登录<br><code>mysql -u root -p</code></p>
-]]></content>
-      <tags>
-        <tag>炼丹手册</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>正则表达式简单例程</title>
-    <url>/blog/2018/10/19/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E7%AE%80%E5%8D%95%E4%BE%8B%E7%A8%8B/</url>
-    <content><![CDATA[<p>从字符串 str 中提取数字部分的内容(匹配一次)：</p>
-<p>var str = “abc123def”;</p>
-<p>var patt1 = /<a href="">0-9</a>+/;</p>
-<p>document.write(str.match(patt1));</p>
-<p>^ 为匹配输入字符串的开始位置。<br><a href="">0-9</a>+匹配多个数字， <a href="">0-9</a> 匹配单个数字，+ 匹配一个或者多个。<br>abc$匹配字母 abc 并以 abc 结尾，$ 为匹配输入字符串的结束位置。<br>runoo+b，可以匹配 runoob、runooob、runoooooob 等，+ 号代表前面的字符必须至少出现一次（1次或多次）。<br>runoo<em>b，可以匹配 runob、runoob、runoooooob 等，</em> 号代表字符可以不出现，也可以出现一次或者多次（0次、或1次、或多次）。<br>colou?r 可以匹配 color 或者 colour，? 问号代表前面的字符最多只可以出现一次（0次、或1次）</p>
 ]]></content>
       <tags>
         <tag>炼丹手册</tag>
