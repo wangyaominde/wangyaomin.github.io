@@ -141,6 +141,55 @@
     
     
     <article
+  id="post-也许是自己掌控欲太弱了"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/blog/2021/01/08/%E4%B9%9F%E8%AE%B8%E6%98%AF%E8%87%AA%E5%B7%B1%E6%8E%8C%E6%8E%A7%E6%AC%B2%E5%A4%AA%E5%BC%B1%E4%BA%86/"
+    >可能是自己掌控欲太弱了</a> 
+</h2>
+ 
+
+    </header>
+     
+    <div class="article-meta">
+      <a href="/blog/2021/01/08/%E4%B9%9F%E8%AE%B8%E6%98%AF%E8%87%AA%E5%B7%B1%E6%8E%8C%E6%8E%A7%E6%AC%B2%E5%A4%AA%E5%BC%B1%E4%BA%86/" class="article-date">
+  <time datetime="2021-01-07T18:23:27.000Z" itemprop="datePublished">2021-01-08</time>
+</a>    
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <p>不知道咋的，好几段感情都是自己没什么掌控欲最终导致有始无终，总觉得不管是什么事都应该有始有终，告别互相告诉对方一切安好也是很好的，不知道怎么回事，可能是自我克制能力比较强？ 曾经有人说过我对待身边的人有点太狠了， 所以我后面一直在想对着自己狠来改进。 改到后面发现自己的对于周边事物的掌控欲越来越弱了。 不管是周围的人还是周围的物品，仿佛都失去了很强的控制欲。很有意思的一件事，是在我的所有的感情经历中都没有查岗这么一说，仿佛这个词对于我来讲根本不存在。 也许我是需要复盘一下，自己对待感情的态度了， 这个感情不管是爱情还是友情等其他的情感。 也很有可能是自己很明白自己是一个非常重感情的人，所以导致了自己不太敢把自己的安全托付给别人。 因为这样一段失去这个关系的维系导致的将会是自己完全没有安全感。 也有人说我人缘比较好，其实我觉得人缘好，只是我对所有的人都是付出的真心的，真心换真心得到的，当然是好人缘了。 但是我一直相信一件事就是人性本恶， 所以我一直确信人在某些环境下，会做出一些很可怕的事。 即便这个事儿，会伤了你的心会让你们之间的感情消失。 可能在某些极端的环境下，有外界的刺激，你和你的好朋友，在某些情况不太明朗的时候突然一下他就跟你消失了， 这个是我非常不能忍受的一点，即便是我们的关系恶化的，不能恢复到从前了，但是我希望还是有始有终。</p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/%E6%83%85%E6%84%9F/" rel="tag">情感</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+ 
+    
+</article>
+
+    
+    <article
   id="post-未命名"
   class="article article-type-post"
   itemscope
@@ -630,72 +679,13 @@
 </article>
 
     
-    <article
-  id="post-停止、删除所有的docker容器和镜像"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/blog/2019/01/07/%E5%81%9C%E6%AD%A2%E3%80%81%E5%88%A0%E9%99%A4%E6%89%80%E6%9C%89%E7%9A%84docker%E5%AE%B9%E5%99%A8%E5%92%8C%E9%95%9C%E5%83%8F/"
-    >停止、删除所有的docker容器和镜像</a> 
-</h2>
- 
-
-    </header>
-     
-    <div class="article-meta">
-      <a href="/blog/2019/01/07/%E5%81%9C%E6%AD%A2%E3%80%81%E5%88%A0%E9%99%A4%E6%89%80%E6%9C%89%E7%9A%84docker%E5%AE%B9%E5%99%A8%E5%92%8C%E9%95%9C%E5%83%8F/" class="article-date">
-  <time datetime="2019-01-07T12:04:56.000Z" itemprop="datePublished">2019-01-07</time>
-</a>    
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <p>列出所有的容器 ID</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker ps -aq</span><br></pre></td></tr></table></figure>
-<p>停止所有的容器</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker stop $(docker ps -aq)</span><br></pre></td></tr></table></figure>
-<p>删除所有的容器</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker rm $(docker ps -aq)</span><br></pre></td></tr></table></figure>
-<p>删除所有的镜像</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker rmi $(docker images -q)</span><br></pre></td></tr></table></figure>
-<p>复制文件</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">docker cp mycontainer:/opt/file.txt /opt/<span class="built_in">local</span>/</span><br><span class="line">docker cp /opt/<span class="built_in">local</span>/file.txt mycontainer:/opt/</span><br></pre></td></tr></table></figure>
-<p><code>docker image prune --force --all或者docker image prune -f -a</code> : 删除所有不使用的镜像<br><code>docker container prune -f</code>: 删除所有停止的容器</p>
- 
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Docker/" rel="tag">Docker</a></li></ul>
-
-    </footer>
-  </div>
-
-    
- 
-    
-</article>
-
-    
   </article>
   
 
   
   <nav class="page-nav">
     
-    <span class="page-number current">1</span><a class="page-number" href="/blog/page/2/">2</a><a class="extend next" rel="next" href="/blog/page/2/">下一页</a>
+    <span class="page-number current">1</span><a class="page-number" href="/blog/page/2/">2</a><a class="page-number" href="/blog/page/3/">3</a><a class="extend next" rel="next" href="/blog/page/2/">下一页</a>
   </nav>
   
 </section>
