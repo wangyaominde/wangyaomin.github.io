@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
 
-<html lang="en">
+<html lang="cn">
 
 
 <head>
@@ -9,7 +9,7 @@
     
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
   <title>
-    python子线程中WMI报错-2147221020解决 |  Hexo
+    python子线程中WMI报错-2147221020解决 |  耀民的博客
   </title>
   <meta name="generator" content="hexo-theme-ayer">
   
@@ -70,7 +70,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> Word count:</span>
-            <span class="post-count">180</span>
+            <span class="post-count">208</span>
         </span>
     </span>
 
@@ -93,9 +93,9 @@
     <div class="article-entry" itemprop="articleBody">
        
   <p>在编写检测进程的程序的时候发现如下错误：<br><img src="https://i.loli.net/2019/10/14/H6gocumbyitMFeQ.jpg" alt="error"></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">check_exsit</span><span class="params">(process_name)</span>:</span></span><br><span class="line">    WMI = win32com.client.GetObject(<span class="string">'winmgmts:'</span>)</span><br><span class="line">    processCodeCov = WMI.ExecQuery(<span class="string">'select * from Win32_Process where Name="%s"'</span> % process_name)</span><br><span class="line">    <span class="keyword">if</span> len(processCodeCov) &gt; <span class="number">0</span>:</span><br><span class="line">        <span class="keyword">print</span> (<span class="string">'%s is exists'</span> % process_name)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        win32process.CreateProcess(<span class="string">'C:\Program Files (x86)\Tektronix\VectorVuPC\VectorVu-PC.exe'</span>, <span class="string">''</span>, <span class="literal">None</span>, <span class="literal">None</span>, <span class="number">0</span>, win32process.CREATE_NO_WINDOW,<span class="literal">None</span>,<span class="literal">None</span>,win32process.STARTUPINFO())</span><br><span class="line">        <span class="keyword">print</span> (<span class="string">'%s is not exists'</span> % process_name)</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">check_exsit</span>(<span class="params">process_name</span>):</span></span><br><span class="line">    WMI = win32com.client.GetObject(<span class="string">&#x27;winmgmts:&#x27;</span>)</span><br><span class="line">    processCodeCov = WMI.ExecQuery(<span class="string">&#x27;select * from Win32_Process where Name=&quot;%s&quot;&#x27;</span> % process_name)</span><br><span class="line">    <span class="keyword">if</span> <span class="built_in">len</span>(processCodeCov) &gt; <span class="number">0</span>:</span><br><span class="line">        <span class="built_in">print</span> (<span class="string">&#x27;%s is exists&#x27;</span> % process_name)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        win32process.CreateProcess(<span class="string">&#x27;C:\Program Files (x86)\Tektronix\VectorVuPC\VectorVu-PC.exe&#x27;</span>, <span class="string">&#x27;&#x27;</span>, <span class="literal">None</span>, <span class="literal">None</span>, <span class="number">0</span>, win32process.CREATE_NO_WINDOW,<span class="literal">None</span>,<span class="literal">None</span>,win32process.STARTUPINFO())</span><br><span class="line">        <span class="built_in">print</span> (<span class="string">&#x27;%s is not exists&#x27;</span> % process_name)</span><br></pre></td></tr></table></figure>
 <p>这个程序是在子线程中运行的，经过查询得知在子线程中运行WMI需要进行初始化,改为如下程序：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">check_exsit</span><span class="params">(process_name)</span>:</span></span><br><span class="line">    pythoncom.CoInitialize()</span><br><span class="line">    WMI = win32com.client.GetObject(<span class="string">'winmgmts:'</span>)</span><br><span class="line">    processCodeCov = WMI.ExecQuery(<span class="string">'select * from Win32_Process where Name="%s"'</span> % process_name)</span><br><span class="line">    <span class="keyword">if</span> len(processCodeCov) &gt; <span class="number">0</span>:</span><br><span class="line">        <span class="keyword">print</span> (<span class="string">'%s is exists'</span> % process_name)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        win32process.CreateProcess(<span class="string">'C:\Program Files (x86)\Tektronix\VectorVuPC\VectorVu-PC.exe'</span>, <span class="string">''</span>, <span class="literal">None</span>, <span class="literal">None</span>, <span class="number">0</span>, win32process.CREATE_NO_WINDOW,<span class="literal">None</span>,<span class="literal">None</span>,win32process.STARTUPINFO())</span><br><span class="line">        <span class="keyword">print</span> (<span class="string">'%s is not exists'</span> % process_name)</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">check_exsit</span>(<span class="params">process_name</span>):</span></span><br><span class="line">    pythoncom.CoInitialize()</span><br><span class="line">    WMI = win32com.client.GetObject(<span class="string">&#x27;winmgmts:&#x27;</span>)</span><br><span class="line">    processCodeCov = WMI.ExecQuery(<span class="string">&#x27;select * from Win32_Process where Name=&quot;%s&quot;&#x27;</span> % process_name)</span><br><span class="line">    <span class="keyword">if</span> <span class="built_in">len</span>(processCodeCov) &gt; <span class="number">0</span>:</span><br><span class="line">        <span class="built_in">print</span> (<span class="string">&#x27;%s is exists&#x27;</span> % process_name)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        win32process.CreateProcess(<span class="string">&#x27;C:\Program Files (x86)\Tektronix\VectorVuPC\VectorVu-PC.exe&#x27;</span>, <span class="string">&#x27;&#x27;</span>, <span class="literal">None</span>, <span class="literal">None</span>, <span class="number">0</span>, win32process.CREATE_NO_WINDOW,<span class="literal">None</span>,<span class="literal">None</span>,win32process.STARTUPINFO())</span><br><span class="line">        <span class="built_in">print</span> (<span class="string">&#x27;%s is not exists&#x27;</span> % process_name)</span><br></pre></td></tr></table></figure>
 <p>加入初始化pythoncom.CoInitialize()即可</p>
  
       <!-- reward -->
@@ -167,7 +167,7 @@
     <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://yoursite.com/2018/11/29/python%E5%AD%90%E7%BA%BF%E7%A8%8B%E4%B8%ADWMI%E6%8A%A5%E9%94%99-2147221020%E8%A7%A3%E5%86%B3/" alt="微信分享二维码">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://example.com/2018/11/29/python%E5%AD%90%E7%BA%BF%E7%A8%8B%E4%B8%ADWMI%E6%8A%A5%E9%94%99-2147221020%E8%A7%A3%E5%86%B3/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -257,7 +257,7 @@
       <li>
         Copyrights &copy;
         2015-2021
-        <i class="ri-heart-fill heart_icon"></i> John Doe
+        <i class="ri-heart-fill heart_icon"></i> wangyaominde
       </li>
     </ul>
     <ul>
@@ -315,7 +315,7 @@
 <nav class="navbar">
   
   <div class="logo">
-    <a href="/"><img src="/images/ayer-side.svg" alt="Hexo"></a>
+    <a href="/"><img src="/images/ayer-side.svg" alt="耀民的博客"></a>
   </div>
   
   <ul class="nav nav-main">
@@ -326,14 +326,6 @@
     
     <li class="nav-item">
       <a class="nav-item-link" href="/archives">归档</a>
-    </li>
-    
-    <li class="nav-item">
-      <a class="nav-item-link" href="/categories">分类</a>
-    </li>
-    
-    <li class="nav-item">
-      <a class="nav-item-link" href="/tags">标签</a>
     </li>
     
   </ul>
@@ -375,6 +367,16 @@
   <p class="reward-p"><i class="ri-cup-line"></i>请我喝杯咖啡吧~</p>
   <div class="reward-box">
     
+    <div class="reward-item">
+      <img class="reward-img" src="https://cdn.jsdelivr.net/gh/Shen-Yu/cdn/img/alipay.jpg">
+      <span class="reward-type">支付宝</span>
+    </div>
+    
+    
+    <div class="reward-item">
+      <img class="reward-img" src="https://cdn.jsdelivr.net/gh/Shen-Yu/cdn/img/wechat.jpg">
+      <span class="reward-type">微信</span>
+    </div>
     
   </div>
 </div>

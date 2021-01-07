@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
 
-<html lang="en">
+<html lang="cn">
 
 
 <head>
@@ -9,7 +9,7 @@
     
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
   <title>
-     Hexo
+     耀民的博客
   </title>
   <meta name="generator" content="hexo-theme-ayer">
   
@@ -55,7 +55,7 @@
       <img src="/images/cover1.jpg" alt="image frame" />
     </div>
     <div class="cover-inner text-center text-white">
-      <h1><a href="/">Hexo</a></h1>
+      <h1><a href="/">耀民的博客</a></h1>
       <div id="subtitle-box">
         
         <span id="subtitle"></span>
@@ -95,6 +95,22 @@
   
 <div id="main">
   <section class="outer">
+  
+  <ul class="ads">
+    
+        <li>
+            <a target="_blank" rel="noopener" href="https://curl.qcloud.com/ezctH6FU">
+                <img src="https://cdn.jsdelivr.net/gh/Shen-Yu/cdn/img/ten_1.jpg" width="300" alt="腾讯云限时秒杀">
+            </a>
+        </li>
+    
+        <li>
+            <a target="_blank" rel="noopener" href="https://curl.qcloud.com/kvO7hb43">
+                <img src="https://cdn.jsdelivr.net/gh/Shen-Yu/cdn/img/ten_2.jpg" width="300" alt="云服务器全球购低至2折">
+            </a>
+        </li>
+    
+</ul>
   
   
   
@@ -270,12 +286,11 @@
     <div class="article-entry" itemprop="articleBody">
        
   <p>在工作中需要从config中读取字典，读取到的字典是字符串：<br>`userinfo = ‘{“name” : “john”, “gender” : “male”, “age”: 28}’<br>`需要将上面的变为：<br>`userdict = {“name” : “john”, “gender” : “male”, “age”: 28}<br>`<br>有以下几种方法：</p>
-<h1 id="通过-json-来转换"><a href="#通过-json-来转换" class="headerlink" title="通过 json 来转换"></a>通过 json 来转换</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">import</span> json</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>user_info= <span class="string">'&#123;"name" : "john", "gender" : "male", "age": 28&#125;'</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>user_dict = json.loads(user_info)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>user_dict</span><br><span class="line">&#123;<span class="string">u'gender'</span>: <span class="string">u'male'</span>, <span class="string">u'age'</span>: <span class="number">28</span>, <span class="string">u'name'</span>: <span class="string">u'john'</span>&#125;</span><br></pre></td></tr></table></figure>
-
-<p>这里有个问题：*<em>数组或对象之中的字符串必须使用双引号，不能使用单引号 *</em></p>
-<h1 id="通过-eval"><a href="#通过-eval" class="headerlink" title="通过 eval"></a>通过 eval</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>user_info = <span class="string">'&#123;"name" : "john", "gender" : "male", "age": 28&#125;'</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>user_dict = eval(user_info)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>user_dict</span><br><span class="line">&#123;<span class="string">'gender'</span>: <span class="string">'male'</span>, <span class="string">'age'</span>: <span class="number">28</span>, <span class="string">'name'</span>: <span class="string">'john'</span>&#125;</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>user_info = <span class="string">"&#123;'name' : 'john', 'gender' : 'male', 'age': 28&#125;"</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>user_dict = eval(user_info)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>user_dict</span><br><span class="line">&#123;<span class="string">'gender'</span>: <span class="string">'male'</span>, <span class="string">'age'</span>: <span class="number">28</span>, <span class="string">'name'</span>: <span class="string">'john'</span>&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="通过-json-来转换"><a href="#通过-json-来转换" class="headerlink" title="通过 json 来转换"></a>通过 json 来转换</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">import</span> json</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>user_info= <span class="string">&#x27;&#123;&quot;name&quot; : &quot;john&quot;, &quot;gender&quot; : &quot;male&quot;, &quot;age&quot;: 28&#125;&#x27;</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>user_dict = json.loads(user_info)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>user_dict</span><br><span class="line">&#123;<span class="string">u&#x27;gender&#x27;</span>: <span class="string">u&#x27;male&#x27;</span>, <span class="string">u&#x27;age&#x27;</span>: <span class="number">28</span>, <span class="string">u&#x27;name&#x27;</span>: <span class="string">u&#x27;john&#x27;</span>&#125;</span><br></pre></td></tr></table></figure>
+<p>这里有个问题：**数组或对象之中的字符串必须使用双引号，不能使用单引号 **</p>
+<h1 id="通过-eval"><a href="#通过-eval" class="headerlink" title="通过 eval"></a>通过 eval</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>user_info = <span class="string">&#x27;&#123;&quot;name&quot; : &quot;john&quot;, &quot;gender&quot; : &quot;male&quot;, &quot;age&quot;: 28&#125;&#x27;</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>user_dict = <span class="built_in">eval</span>(user_info)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>user_dict</span><br><span class="line">&#123;<span class="string">&#x27;gender&#x27;</span>: <span class="string">&#x27;male&#x27;</span>, <span class="string">&#x27;age&#x27;</span>: <span class="number">28</span>, <span class="string">&#x27;name&#x27;</span>: <span class="string">&#x27;john&#x27;</span>&#125;</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>user_info = <span class="string">&quot;&#123;&#x27;name&#x27; : &#x27;john&#x27;, &#x27;gender&#x27; : &#x27;male&#x27;, &#x27;age&#x27;: 28&#125;&quot;</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>user_dict = <span class="built_in">eval</span>(user_info)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>user_dict</span><br><span class="line">&#123;<span class="string">&#x27;gender&#x27;</span>: <span class="string">&#x27;male&#x27;</span>, <span class="string">&#x27;age&#x27;</span>: <span class="number">28</span>, <span class="string">&#x27;name&#x27;</span>: <span class="string">&#x27;john&#x27;</span>&#125;</span><br></pre></td></tr></table></figure>
 <p>这个有很严重的安全问题，当用户从config中输入破坏性的代码则会对整个系统存在安全性的威胁</p>
-<h1 id="通过-literal-eval"><a href="#通过-literal-eval" class="headerlink" title="通过 literal_eval_"></a>通过 literal_eval_</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">import</span> ast</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>user = <span class="string">'&#123;"name" : "john", "gender" : "male", "age": 28&#125;'</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>user_dict = ast.literal_eval(user)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>user_dict</span><br><span class="line">&#123;<span class="string">'gender'</span>: <span class="string">'male'</span>, <span class="string">'age'</span>: <span class="number">28</span>, <span class="string">'name'</span>: <span class="string">'john'</span>&#125;</span><br><span class="line">user_info = <span class="string">"&#123;'name' : 'john', 'gender' : 'male', 'age': 28&#125;"</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>user_dict = ast.literal_eval(user)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>user_dict</span><br><span class="line">&#123;<span class="string">'gender'</span>: <span class="string">'male'</span>, <span class="string">'age'</span>: <span class="number">28</span>, <span class="string">'name'</span>: <span class="string">'john'</span>&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="通过-literal-eval"><a href="#通过-literal-eval" class="headerlink" title="通过 literal_eval_"></a>通过 literal_eval_</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">import</span> ast</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>user = <span class="string">&#x27;&#123;&quot;name&quot; : &quot;john&quot;, &quot;gender&quot; : &quot;male&quot;, &quot;age&quot;: 28&#125;&#x27;</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>user_dict = ast.literal_eval(user)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>user_dict</span><br><span class="line">&#123;<span class="string">&#x27;gender&#x27;</span>: <span class="string">&#x27;male&#x27;</span>, <span class="string">&#x27;age&#x27;</span>: <span class="number">28</span>, <span class="string">&#x27;name&#x27;</span>: <span class="string">&#x27;john&#x27;</span>&#125;</span><br><span class="line">user_info = <span class="string">&quot;&#123;&#x27;name&#x27; : &#x27;john&#x27;, &#x27;gender&#x27; : &#x27;male&#x27;, &#x27;age&#x27;: 28&#125;&quot;</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>user_dict = ast.literal_eval(user)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>user_dict</span><br><span class="line">&#123;<span class="string">&#x27;gender&#x27;</span>: <span class="string">&#x27;male&#x27;</span>, <span class="string">&#x27;age&#x27;</span>: <span class="number">28</span>, <span class="string">&#x27;name&#x27;</span>: <span class="string">&#x27;john&#x27;</span>&#125;</span><br></pre></td></tr></table></figure>
 <p>用这个是比较好的解决方法</p>
  
       <!-- reward -->
@@ -425,14 +440,14 @@
        
   <p>最近在使用python编程的时候发现了装饰器这个神奇的东西，在不破坏整个代码的结构和用法的同时将新功能套在旧的代码上，不影响原来代码的结构性和功能性，需要的时候加上，不需要的时候删掉即可。但是这玩意儿到底是啥呢？</p>
 <p>先来看一段代码</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">a</span><span class="params">(func)</span>:</span></span><br><span class="line">    print(<span class="string">"this is func one"</span>)</span><br><span class="line">    func()</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">b</span><span class="params">()</span>:</span></span><br><span class="line">    print(<span class="string">"this is func two"</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">a(b)</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">a</span>(<span class="params">func</span>):</span></span><br><span class="line">    print(<span class="string">&quot;this is func one&quot;</span>)</span><br><span class="line">    func()</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">b</span>():</span></span><br><span class="line">    print(<span class="string">&quot;this is func two&quot;</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">a(b)</span><br></pre></td></tr></table></figure>
 <p><img src="https://i.loli.net/2019/10/14/mJ39wBl7DQzrdhu.jpg" alt="代码运行结果"><br>众所周知，python函数也是可以被当成一个参数传递的，所以在这里，我们是把b当为一个参数传递给了a，当我们需要调用b的时候呢？这也被破坏了，所以这里我们需要</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">a</span><span class="params">(func)</span>:</span></span><br><span class="line">    print(<span class="string">"this is func one"</span>)</span><br><span class="line">    func()</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">b</span><span class="params">()</span>:</span></span><br><span class="line">    print(<span class="string">"this is func two"</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">b=a(b)</span><br><span class="line">b</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">a</span>(<span class="params">func</span>):</span></span><br><span class="line">    print(<span class="string">&quot;this is func one&quot;</span>)</span><br><span class="line">    func()</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">b</span>():</span></span><br><span class="line">    print(<span class="string">&quot;this is func two&quot;</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">b=a(b)</span><br><span class="line">b</span><br></pre></td></tr></table></figure>
 <p>在这里，我们的b=a(b)就解决了结构问题。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">a</span><span class="params">(func)</span>:</span></span><br><span class="line">    print(<span class="string">"this is func one"</span>)</span><br><span class="line">    func()</span><br><span class="line"></span><br><span class="line"><span class="meta">@a</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">b</span><span class="params">()</span>:</span></span><br><span class="line">    print(<span class="string">"this is func two"</span>)</span><br><span class="line"></span><br><span class="line">b</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">a</span>(<span class="params">func</span>):</span></span><br><span class="line">    print(<span class="string">&quot;this is func one&quot;</span>)</span><br><span class="line">    func()</span><br><span class="line"></span><br><span class="line"><span class="meta">@a</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">b</span>():</span></span><br><span class="line">    print(<span class="string">&quot;this is func two&quot;</span>)</span><br><span class="line"></span><br><span class="line">b</span><br></pre></td></tr></table></figure>
 <p>当然，我们用@也可以等效<br>b=a(b )</p>
 <p>像这种@的可以传参数，也可以多次嵌套,但是这样就需要修改一下啦</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">a</span><span class="params">(func)</span>:</span></span><br><span class="line">    print(<span class="string">"this is func one"</span>)</span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">abc</span><span class="params">()</span>:</span></span><br><span class="line">        func()</span><br><span class="line">    <span class="keyword">return</span> abc</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">c</span><span class="params">(func)</span>:</span></span><br><span class="line">    print(<span class="string">"this is func three"</span>)</span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">abc</span><span class="params">()</span>:</span></span><br><span class="line">        func()</span><br><span class="line">    <span class="keyword">return</span> abc</span><br><span class="line"></span><br><span class="line"><span class="meta">@c</span></span><br><span class="line"><span class="meta">@a</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">b</span><span class="params">()</span>:</span></span><br><span class="line">    print(<span class="string">"this is func two"</span>)</span><br><span class="line"></span><br><span class="line">b()</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">a</span>(<span class="params">func</span>):</span></span><br><span class="line">    print(<span class="string">&quot;this is func one&quot;</span>)</span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">abc</span>():</span></span><br><span class="line">        func()</span><br><span class="line">    <span class="keyword">return</span> abc</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">c</span>(<span class="params">func</span>):</span></span><br><span class="line">    print(<span class="string">&quot;this is func three&quot;</span>)</span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">abc</span>():</span></span><br><span class="line">        func()</span><br><span class="line">    <span class="keyword">return</span> abc</span><br><span class="line"></span><br><span class="line"><span class="meta">@c</span></span><br><span class="line"><span class="meta">@a</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">b</span>():</span></span><br><span class="line">    print(<span class="string">&quot;this is func two&quot;</span>)</span><br><span class="line"></span><br><span class="line">b()</span><br></pre></td></tr></table></figure>
 <p>这样就将函数传递过去并且执行了，之前的直接传递的是函数变量</p>
  
       <!-- reward -->
@@ -494,10 +509,8 @@
 <p>7.退出<br><code>quit</code></p>
 <p>8.重启mysql服务</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo /etc/init.d/mysql stop</span><br><span class="line">...</span><br><span class="line">sudo /etc/init.d/mysql start</span><br></pre></td></tr></table></figure>
-
 <p>在CentOS，Fedora ，RHEL中：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo /etc/init.d/mysqld stop</span><br><span class="line">...</span><br><span class="line">sudo /etc/init.d/mysqld start</span><br></pre></td></tr></table></figure>
-
 <p>9.用新的密码登录<br><code>mysql -u root -p</code></p>
  
       <!-- reward -->
@@ -615,7 +628,7 @@
       
     <div class="article-entry" itemprop="articleBody">
        
-  <p>今天下载时候发现下载速度太慢，发现有国内镜像<br><a href="https://cr.console.aliyun.com/#/accelerator" target="_blank" rel="noopener">https://cr.console.aliyun.com/#/accelerator</a><br>在上面的连接中有阿里云的镜像更改方法及镜像地址需要登录阿里云。</p>
+  <p>今天下载时候发现下载速度太慢，发现有国内镜像<br><a target="_blank" rel="noopener" href="https://cr.console.aliyun.com/#/accelerator">https://cr.console.aliyun.com/#/accelerator</a><br>在上面的连接中有阿里云的镜像更改方法及镜像地址需要登录阿里云。</p>
  
       <!-- reward -->
       
@@ -714,7 +727,7 @@
       <li>
         Copyrights &copy;
         2015-2021
-        <i class="ri-heart-fill heart_icon"></i> John Doe
+        <i class="ri-heart-fill heart_icon"></i> wangyaominde
       </li>
     </ul>
     <ul>
@@ -772,7 +785,7 @@
 <nav class="navbar">
   
   <div class="logo">
-    <a href="/"><img src="/images/ayer-side.svg" alt="Hexo"></a>
+    <a href="/"><img src="/images/ayer-side.svg" alt="耀民的博客"></a>
   </div>
   
   <ul class="nav nav-main">
@@ -783,14 +796,6 @@
     
     <li class="nav-item">
       <a class="nav-item-link" href="/archives">归档</a>
-    </li>
-    
-    <li class="nav-item">
-      <a class="nav-item-link" href="/categories">分类</a>
-    </li>
-    
-    <li class="nav-item">
-      <a class="nav-item-link" href="/tags">标签</a>
     </li>
     
   </ul>
@@ -832,6 +837,16 @@
   <p class="reward-p"><i class="ri-cup-line"></i>请我喝杯咖啡吧~</p>
   <div class="reward-box">
     
+    <div class="reward-item">
+      <img class="reward-img" src="https://cdn.jsdelivr.net/gh/Shen-Yu/cdn/img/alipay.jpg">
+      <span class="reward-type">支付宝</span>
+    </div>
+    
+    
+    <div class="reward-item">
+      <img class="reward-img" src="https://cdn.jsdelivr.net/gh/Shen-Yu/cdn/img/wechat.jpg">
+      <span class="reward-type">微信</span>
+    </div>
     
   </div>
 </div>

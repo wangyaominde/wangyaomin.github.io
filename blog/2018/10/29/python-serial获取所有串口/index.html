@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
 
-<html lang="en">
+<html lang="cn">
 
 
 <head>
@@ -9,7 +9,7 @@
     
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
   <title>
-    python serial获取所有串口 |  Hexo
+    python serial获取所有串口 |  耀民的博客
   </title>
   <meta name="generator" content="hexo-theme-ayer">
   
@@ -70,7 +70,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> Word count:</span>
-            <span class="post-count">181</span>
+            <span class="post-count">182</span>
         </span>
     </span>
 
@@ -93,8 +93,7 @@
     <div class="article-entry" itemprop="articleBody">
        
   <p>在写gui的时候发现如果自动选择串口号可能会有原主机和新装软件的主机存在串口号不一致的情况，这时，就需要手动的选择串口号了，我们在这里使用了pyserial的包，如果在<br><code>import serial.tools.list_ports</code><br>的时候发现报错，我们可以使用pip进行安装，如果pip速度太慢的话我们可以使用更换源来进行加速，安装完成后可以进行逐条输入语句验证是否可以正常输出。 </p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> serial</span><br><span class="line"><span class="keyword">import</span> serial.tools.list_ports</span><br><span class="line"><span class="keyword">from</span> easygui <span class="keyword">import</span> *</span><br><span class="line">  </span><br><span class="line">port_list = list(serial.tools.list_ports.comports())</span><br><span class="line"><span class="keyword">if</span> len(port_list) &amp;amp;lt;= <span class="number">0</span>:</span><br><span class="line">    <span class="keyword">print</span> (&amp;quot;The Serial port can<span class="string">'t find!&amp;quot;)</span></span><br><span class="line"><span class="string">  </span></span><br><span class="line"><span class="string">else:</span></span><br><span class="line"><span class="string">    for i in list(port_list):</span></span><br><span class="line"><span class="string">        print (i[0])</span></span><br></pre></td></tr></table></figure>
- 
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> serial</span><br><span class="line"><span class="keyword">import</span> serial.tools.list_ports</span><br><span class="line"><span class="keyword">from</span> easygui <span class="keyword">import</span> *</span><br><span class="line">  </span><br><span class="line">port_list = <span class="built_in">list</span>(serial.tools.list_ports.comports())</span><br><span class="line"><span class="keyword">if</span> <span class="built_in">len</span>(port_list) &amp;amp;lt;= <span class="number">0</span>:</span><br><span class="line">    <span class="built_in">print</span> (&amp;quot;The Serial port can<span class="string">&#x27;t find!&amp;quot;)</span></span><br><span class="line"><span class="string">  </span></span><br><span class="line"><span class="string">else:</span></span><br><span class="line"><span class="string">    for i in list(port_list):</span></span><br><span class="line"><span class="string">        print (i[0])</span></span><br></pre></td></tr></table></figure> 
       <!-- reward -->
       
       <div id="reword-out">
@@ -164,7 +163,7 @@
     <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://yoursite.com/2018/10/29/python-serial%E8%8E%B7%E5%8F%96%E6%89%80%E6%9C%89%E4%B8%B2%E5%8F%A3/" alt="微信分享二维码">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://example.com/2018/10/29/python-serial%E8%8E%B7%E5%8F%96%E6%89%80%E6%9C%89%E4%B8%B2%E5%8F%A3/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -254,7 +253,7 @@
       <li>
         Copyrights &copy;
         2015-2021
-        <i class="ri-heart-fill heart_icon"></i> John Doe
+        <i class="ri-heart-fill heart_icon"></i> wangyaominde
       </li>
     </ul>
     <ul>
@@ -312,7 +311,7 @@
 <nav class="navbar">
   
   <div class="logo">
-    <a href="/"><img src="/images/ayer-side.svg" alt="Hexo"></a>
+    <a href="/"><img src="/images/ayer-side.svg" alt="耀民的博客"></a>
   </div>
   
   <ul class="nav nav-main">
@@ -323,14 +322,6 @@
     
     <li class="nav-item">
       <a class="nav-item-link" href="/archives">归档</a>
-    </li>
-    
-    <li class="nav-item">
-      <a class="nav-item-link" href="/categories">分类</a>
-    </li>
-    
-    <li class="nav-item">
-      <a class="nav-item-link" href="/tags">标签</a>
     </li>
     
   </ul>
@@ -372,6 +363,16 @@
   <p class="reward-p"><i class="ri-cup-line"></i>请我喝杯咖啡吧~</p>
   <div class="reward-box">
     
+    <div class="reward-item">
+      <img class="reward-img" src="https://cdn.jsdelivr.net/gh/Shen-Yu/cdn/img/alipay.jpg">
+      <span class="reward-type">支付宝</span>
+    </div>
+    
+    
+    <div class="reward-item">
+      <img class="reward-img" src="https://cdn.jsdelivr.net/gh/Shen-Yu/cdn/img/wechat.jpg">
+      <span class="reward-type">微信</span>
+    </div>
     
   </div>
 </div>

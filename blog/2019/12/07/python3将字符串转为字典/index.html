@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
 
-<html lang="en">
+<html lang="cn">
 
 
 <head>
@@ -9,7 +9,7 @@
     
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
   <title>
-    python3将字符串转为字典 |  Hexo
+    python3将字符串转为字典 |  耀民的博客
   </title>
   <meta name="generator" content="hexo-theme-ayer">
   
@@ -70,7 +70,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> Word count:</span>
-            <span class="post-count">313</span>
+            <span class="post-count">423</span>
         </span>
     </span>
 
@@ -79,7 +79,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-book-open-line"></i>
             <span class="post-meta-item-text"> Reading time≈</span>
-            <span class="post-count">1 min</span>
+            <span class="post-count">2 min</span>
         </span>
     </span>
 </div>
@@ -95,12 +95,11 @@
     <div class="article-entry" itemprop="articleBody">
        
   <p>在工作中需要从config中读取字典，读取到的字典是字符串：<br>`userinfo = ‘{“name” : “john”, “gender” : “male”, “age”: 28}’<br>`需要将上面的变为：<br>`userdict = {“name” : “john”, “gender” : “male”, “age”: 28}<br>`<br>有以下几种方法：</p>
-<h1 id="通过-json-来转换"><a href="#通过-json-来转换" class="headerlink" title="通过 json 来转换"></a>通过 json 来转换</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">import</span> json</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>user_info= <span class="string">'&#123;"name" : "john", "gender" : "male", "age": 28&#125;'</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>user_dict = json.loads(user_info)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>user_dict</span><br><span class="line">&#123;<span class="string">u'gender'</span>: <span class="string">u'male'</span>, <span class="string">u'age'</span>: <span class="number">28</span>, <span class="string">u'name'</span>: <span class="string">u'john'</span>&#125;</span><br></pre></td></tr></table></figure>
-
-<p>这里有个问题：*<em>数组或对象之中的字符串必须使用双引号，不能使用单引号 *</em></p>
-<h1 id="通过-eval"><a href="#通过-eval" class="headerlink" title="通过 eval"></a>通过 eval</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>user_info = <span class="string">'&#123;"name" : "john", "gender" : "male", "age": 28&#125;'</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>user_dict = eval(user_info)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>user_dict</span><br><span class="line">&#123;<span class="string">'gender'</span>: <span class="string">'male'</span>, <span class="string">'age'</span>: <span class="number">28</span>, <span class="string">'name'</span>: <span class="string">'john'</span>&#125;</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>user_info = <span class="string">"&#123;'name' : 'john', 'gender' : 'male', 'age': 28&#125;"</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>user_dict = eval(user_info)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>user_dict</span><br><span class="line">&#123;<span class="string">'gender'</span>: <span class="string">'male'</span>, <span class="string">'age'</span>: <span class="number">28</span>, <span class="string">'name'</span>: <span class="string">'john'</span>&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="通过-json-来转换"><a href="#通过-json-来转换" class="headerlink" title="通过 json 来转换"></a>通过 json 来转换</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">import</span> json</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>user_info= <span class="string">&#x27;&#123;&quot;name&quot; : &quot;john&quot;, &quot;gender&quot; : &quot;male&quot;, &quot;age&quot;: 28&#125;&#x27;</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>user_dict = json.loads(user_info)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>user_dict</span><br><span class="line">&#123;<span class="string">u&#x27;gender&#x27;</span>: <span class="string">u&#x27;male&#x27;</span>, <span class="string">u&#x27;age&#x27;</span>: <span class="number">28</span>, <span class="string">u&#x27;name&#x27;</span>: <span class="string">u&#x27;john&#x27;</span>&#125;</span><br></pre></td></tr></table></figure>
+<p>这里有个问题：**数组或对象之中的字符串必须使用双引号，不能使用单引号 **</p>
+<h1 id="通过-eval"><a href="#通过-eval" class="headerlink" title="通过 eval"></a>通过 eval</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>user_info = <span class="string">&#x27;&#123;&quot;name&quot; : &quot;john&quot;, &quot;gender&quot; : &quot;male&quot;, &quot;age&quot;: 28&#125;&#x27;</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>user_dict = <span class="built_in">eval</span>(user_info)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>user_dict</span><br><span class="line">&#123;<span class="string">&#x27;gender&#x27;</span>: <span class="string">&#x27;male&#x27;</span>, <span class="string">&#x27;age&#x27;</span>: <span class="number">28</span>, <span class="string">&#x27;name&#x27;</span>: <span class="string">&#x27;john&#x27;</span>&#125;</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>user_info = <span class="string">&quot;&#123;&#x27;name&#x27; : &#x27;john&#x27;, &#x27;gender&#x27; : &#x27;male&#x27;, &#x27;age&#x27;: 28&#125;&quot;</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>user_dict = <span class="built_in">eval</span>(user_info)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>user_dict</span><br><span class="line">&#123;<span class="string">&#x27;gender&#x27;</span>: <span class="string">&#x27;male&#x27;</span>, <span class="string">&#x27;age&#x27;</span>: <span class="number">28</span>, <span class="string">&#x27;name&#x27;</span>: <span class="string">&#x27;john&#x27;</span>&#125;</span><br></pre></td></tr></table></figure>
 <p>这个有很严重的安全问题，当用户从config中输入破坏性的代码则会对整个系统存在安全性的威胁</p>
-<h1 id="通过-literal-eval"><a href="#通过-literal-eval" class="headerlink" title="通过 literal_eval_"></a>通过 literal_eval_</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">import</span> ast</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>user = <span class="string">'&#123;"name" : "john", "gender" : "male", "age": 28&#125;'</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>user_dict = ast.literal_eval(user)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>user_dict</span><br><span class="line">&#123;<span class="string">'gender'</span>: <span class="string">'male'</span>, <span class="string">'age'</span>: <span class="number">28</span>, <span class="string">'name'</span>: <span class="string">'john'</span>&#125;</span><br><span class="line">user_info = <span class="string">"&#123;'name' : 'john', 'gender' : 'male', 'age': 28&#125;"</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>user_dict = ast.literal_eval(user)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>user_dict</span><br><span class="line">&#123;<span class="string">'gender'</span>: <span class="string">'male'</span>, <span class="string">'age'</span>: <span class="number">28</span>, <span class="string">'name'</span>: <span class="string">'john'</span>&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="通过-literal-eval"><a href="#通过-literal-eval" class="headerlink" title="通过 literal_eval_"></a>通过 literal_eval_</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">import</span> ast</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>user = <span class="string">&#x27;&#123;&quot;name&quot; : &quot;john&quot;, &quot;gender&quot; : &quot;male&quot;, &quot;age&quot;: 28&#125;&#x27;</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>user_dict = ast.literal_eval(user)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>user_dict</span><br><span class="line">&#123;<span class="string">&#x27;gender&#x27;</span>: <span class="string">&#x27;male&#x27;</span>, <span class="string">&#x27;age&#x27;</span>: <span class="number">28</span>, <span class="string">&#x27;name&#x27;</span>: <span class="string">&#x27;john&#x27;</span>&#125;</span><br><span class="line">user_info = <span class="string">&quot;&#123;&#x27;name&#x27; : &#x27;john&#x27;, &#x27;gender&#x27; : &#x27;male&#x27;, &#x27;age&#x27;: 28&#125;&quot;</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>user_dict = ast.literal_eval(user)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>user_dict</span><br><span class="line">&#123;<span class="string">&#x27;gender&#x27;</span>: <span class="string">&#x27;male&#x27;</span>, <span class="string">&#x27;age&#x27;</span>: <span class="number">28</span>, <span class="string">&#x27;name&#x27;</span>: <span class="string">&#x27;john&#x27;</span>&#125;</span><br></pre></td></tr></table></figure>
 <p>用这个是比较好的解决方法</p>
  
       <!-- reward -->
@@ -172,7 +171,7 @@
     <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://yoursite.com/2019/12/07/python3%E5%B0%86%E5%AD%97%E7%AC%A6%E4%B8%B2%E8%BD%AC%E4%B8%BA%E5%AD%97%E5%85%B8/" alt="微信分享二维码">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://example.com/2019/12/07/python3%E5%B0%86%E5%AD%97%E7%AC%A6%E4%B8%B2%E8%BD%AC%E4%B8%BA%E5%AD%97%E5%85%B8/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -262,7 +261,7 @@
       <li>
         Copyrights &copy;
         2015-2021
-        <i class="ri-heart-fill heart_icon"></i> John Doe
+        <i class="ri-heart-fill heart_icon"></i> wangyaominde
       </li>
     </ul>
     <ul>
@@ -320,7 +319,7 @@
 <nav class="navbar">
   
   <div class="logo">
-    <a href="/"><img src="/images/ayer-side.svg" alt="Hexo"></a>
+    <a href="/"><img src="/images/ayer-side.svg" alt="耀民的博客"></a>
   </div>
   
   <ul class="nav nav-main">
@@ -331,14 +330,6 @@
     
     <li class="nav-item">
       <a class="nav-item-link" href="/archives">归档</a>
-    </li>
-    
-    <li class="nav-item">
-      <a class="nav-item-link" href="/categories">分类</a>
-    </li>
-    
-    <li class="nav-item">
-      <a class="nav-item-link" href="/tags">标签</a>
     </li>
     
   </ul>
@@ -380,6 +371,16 @@
   <p class="reward-p"><i class="ri-cup-line"></i>请我喝杯咖啡吧~</p>
   <div class="reward-box">
     
+    <div class="reward-item">
+      <img class="reward-img" src="https://cdn.jsdelivr.net/gh/Shen-Yu/cdn/img/alipay.jpg">
+      <span class="reward-type">支付宝</span>
+    </div>
+    
+    
+    <div class="reward-item">
+      <img class="reward-img" src="https://cdn.jsdelivr.net/gh/Shen-Yu/cdn/img/wechat.jpg">
+      <span class="reward-type">微信</span>
+    </div>
     
   </div>
 </div>
