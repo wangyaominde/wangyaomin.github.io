@@ -237,15 +237,6 @@
       </tags>
   </entry>
   <entry>
-    <title>我们为什么不保持高效的沟通？</title>
-    <url>/blog/2020/08/20/%E6%9C%AA%E5%91%BD%E5%90%8D/</url>
-    <content><![CDATA[<p>这次出差大部分时间都花在了，等待别人沟通的过程中。真正需要我做的事没有多少，但是由于沟通的原因导致进度迟迟不能推进。这太令人感到头疼了，在工作过程中，大家好像都不能很好地保持沟通，真正需要做的事情，但是由于沟通的不畅，导致了进度的拖慢。我们应该怎么样才能保持一个高效的沟通呢？我觉得主要还是在日常过程中沟通，也不是很顺畅，所以应该从日常就应该有一个很好的沟通渠道和沟通方式。而不是遇到事儿，以后才开始想办法去沟通。本来这一次很简单，介绍一下技术就OK了，由于对方的沟通问题，导致这次出差的时间延长了一周，刚刚过来的时候，他们信誓旦旦地讲这边已经沟通好了，你来就行了，但是真正的过来以后发现好多事情都没有沟通，施工项目的现场现在也发现有很多之前由于沟通导致的问题。本来预计全部走无线通路，但是现在发现无线通路有问题，所以可能要临时要改成有限，投入在改成有限通路的过程中，还需要改一些现场的补偿导线长度等具体细节问题。我觉得我们还是在整个过程中花费了大量的时间，这些时间本不应该在这个时间节点耗费。在这个即将交付的日期前，有这么大的技术架构改动，这实在是很不应该发生的事情。希望在之后的过程中能够保持一个良好的沟通吧，毕竟沟通成本永远是项目过程中比较大的成本(时间成本）。共勉吧。</p>
-]]></content>
-      <tags>
-        <tag>日常</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>正则表达式简单例程</title>
     <url>/blog/2018/10/19/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E7%AE%80%E5%8D%95%E4%BE%8B%E7%A8%8B/</url>
     <content><![CDATA[<p>从字符串 str 中提取数字部分的内容(匹配一次)：</p>
@@ -308,6 +299,39 @@
 ]]></content>
       <tags>
         <tag>情感</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>go get 代理设置</title>
+    <url>/blog/2021/02/23/go%20get%E4%BB%A3%E7%90%86%E8%AE%BE%E7%BD%AE/</url>
+    <content><![CDATA[<h1 id="go-get-代理设置"><a href="#go-get-代理设置" class="headerlink" title="go get 代理设置"></a>go get 代理设置</h1><p>在最近学习go的过程中发现go get命令总是会报错</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">The <span class="string">&quot;go-outline&quot;</span> <span class="built_in">command</span> is not available. Run <span class="string">&quot;go get -v github.com/ramya-rao-a/go-outline&quot;</span> to install.</span><br></pre></td></tr></table></figure>
+<p>这是在使用vscode 过程中安装go插件过程中提示的，我们需要执行</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">go get -v github.com/ramya-rao-a/go-outline</span><br></pre></td></tr></table></figure>
+<p>进行安装，但是这句总是报错，都是提示代理服务器错误，于是我又把git的代理设置了一下，发现还是不行，于是经过上网寻找，发现是在git之前有http行为，所以可能也会解析不出来，使用如下指令即可解决（MAC）：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">export</span> https_proxy=http://127.0.0.1:7890</span><br><span class="line"><span class="built_in">export</span> http_proxy=http://127.0.0.1:7890</span><br></pre></td></tr></table></figure>
+<p>这时在进行操作就不会报错了</p>
+]]></content>
+      <tags>
+        <tag>炼丹手册</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>我们为什么不保持高效的沟通？</title>
+    <url>/blog/2020/08/20/%E6%88%91%E4%BB%AC%E4%B8%BA%E4%BB%80%E4%B9%88%E4%B8%8D%E4%BF%9D%E6%8C%81%E9%AB%98%E6%95%88%E7%9A%84%E6%B2%9F%E9%80%9A%EF%BC%9F/</url>
+    <content><![CDATA[<p>这次出差大部分时间都花在了，等待别人沟通的过程中。真正需要我做的事没有多少，但是由于沟通的原因导致进度迟迟不能推进。这太令人感到头疼了，在工作过程中，大家好像都不能很好地保持沟通，真正需要做的事情，但是由于沟通的不畅，导致了进度的拖慢。我们应该怎么样才能保持一个高效的沟通呢？我觉得主要还是在日常过程中沟通，也不是很顺畅，所以应该从日常就应该有一个很好的沟通渠道和沟通方式。而不是遇到事儿，以后才开始想办法去沟通。本来这一次很简单，介绍一下技术就OK了，由于对方的沟通问题，导致这次出差的时间延长了一周，刚刚过来的时候，他们信誓旦旦地讲这边已经沟通好了，你来就行了，但是真正的过来以后发现好多事情都没有沟通，施工项目的现场现在也发现有很多之前由于沟通导致的问题。本来预计全部走无线通路，但是现在发现无线通路有问题，所以可能要临时要改成有限，投入在改成有限通路的过程中，还需要改一些现场的补偿导线长度等具体细节问题。我觉得我们还是在整个过程中花费了大量的时间，这些时间本不应该在这个时间节点耗费。在这个即将交付的日期前，有这么大的技术架构改动，这实在是很不应该发生的事情。希望在之后的过程中能够保持一个良好的沟通吧，毕竟沟通成本永远是项目过程中比较大的成本(时间成本）。共勉吧。</p>
+]]></content>
+      <tags>
+        <tag>日常</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>git 代理设置</title>
+    <url>/blog/2021/02/23/git%E4%BB%A3%E7%90%86%E8%AE%BE%E7%BD%AE/</url>
+    <content><![CDATA[<p>代码如下：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --global https.proxy <span class="string">&#x27;sock5://127.0.0.1:7890&#x27;</span></span><br><span class="line">git config --global http.proxy <span class="string">&#x27;sock5://127.0.0.1:7890&#x27;</span></span><br></pre></td></tr></table></figure>]]></content>
+      <tags>
+        <tag>炼丹手册</tag>
       </tags>
   </entry>
 </search>
