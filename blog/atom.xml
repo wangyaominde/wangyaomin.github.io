@@ -6,7 +6,7 @@
   <link href="https://wangyaomin.com/blog/atom.xml" rel="self"/>
   
   <link href="https://wangyaomin.com/blog/"/>
-  <updated>2021-02-23T09:34:12.228Z</updated>
+  <updated>2021-02-24T02:22:41.922Z</updated>
   <id>https://wangyaomin.com/blog/</id>
   
   <author>
@@ -17,11 +17,35 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>m1版本的homebrew每次运行提示No such file or directory的解决方法</title>
+    <link href="https://wangyaomin.com/blog/2021/02/24/m1%E7%89%88%E6%9C%AC%E7%9A%84homebrew%E6%AF%8F%E6%AC%A1%E6%8F%90%E7%A4%BAUsersakyHomebrewbinbrew-line-5-cd-usrlocalHomebrewbin-No-such-file-or-directory%E4%BF%AE/"/>
+    <id>https://wangyaomin.com/blog/2021/02/24/m1%E7%89%88%E6%9C%AC%E7%9A%84homebrew%E6%AF%8F%E6%AC%A1%E6%8F%90%E7%A4%BAUsersakyHomebrewbinbrew-line-5-cd-usrlocalHomebrewbin-No-such-file-or-directory%E4%BF%AE/</id>
+    <published>2021-02-24T02:16:20.000Z</published>
+    <updated>2021-02-24T02:22:41.922Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;当我安装完homebrew之后每次运行brew的时候都会有&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span</summary>
+        
+      
+    
+    
+    
+    
+    <category term="炼丹手册" scheme="https://wangyaomin.com/blog/tags/%E7%82%BC%E4%B8%B9%E6%89%8B%E5%86%8C/"/>
+    
+  </entry>
+  
+  <entry>
     <title>go get 代理设置</title>
     <link href="https://wangyaomin.com/blog/2021/02/23/go%20get%E4%BB%A3%E7%90%86%E8%AE%BE%E7%BD%AE/"/>
     <id>https://wangyaomin.com/blog/2021/02/23/go%20get%E4%BB%A3%E7%90%86%E8%AE%BE%E7%BD%AE/</id>
     <published>2021-02-23T09:11:00.000Z</published>
-    <updated>2021-02-23T09:34:12.228Z</updated>
+    <updated>2021-02-23T09:58:41.791Z</updated>
     
     
       
@@ -44,7 +68,7 @@
     <link href="https://wangyaomin.com/blog/2021/02/23/git%E4%BB%A3%E7%90%86%E8%AE%BE%E7%BD%AE/"/>
     <id>https://wangyaomin.com/blog/2021/02/23/git%E4%BB%A3%E7%90%86%E8%AE%BE%E7%BD%AE/</id>
     <published>2021-02-23T09:11:00.000Z</published>
-    <updated>2021-02-23T09:33:54.224Z</updated>
+    <updated>2021-02-24T02:15:35.820Z</updated>
     
     
       
@@ -458,30 +482,6 @@
     <summary type="html">&lt;p&gt;可以通过本程序获取好友的昵称，备注名，等信息，来自微信注册时的信息，采用itchat进行收集，使用xlwt进行保存，最终呈现为excel表格&lt;/p&gt;
 &lt;p&gt;使用时请先安装xlwt，itchat等包&lt;/p&gt;
 &lt;figure class=&quot;highlight</summary>
-        
-      
-    
-    
-    
-    
-    <category term="炼丹手册" scheme="https://wangyaomin.com/blog/tags/%E7%82%BC%E4%B8%B9%E6%89%8B%E5%86%8C/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>pip 更换国内源</title>
-    <link href="https://wangyaomin.com/blog/2018/10/29/pip-%E6%9B%B4%E6%8D%A2%E5%9B%BD%E5%86%85%E6%BA%90/"/>
-    <id>https://wangyaomin.com/blog/2018/10/29/pip-%E6%9B%B4%E6%8D%A2%E5%9B%BD%E5%86%85%E6%BA%90/</id>
-    <published>2018-10-29T03:01:46.000Z</published>
-    <updated>2019-10-14T03:26:05.000Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;在使用pip安装东西的过程中，会发现速度十分缓慢。这时，我们可以将pip的下载源变为国内的镜像源，这样会提升下载速度。&lt;/p&gt;
-&lt;p&gt;linux下，修改 ~/.pip/pip.conf</summary>
         
       
     

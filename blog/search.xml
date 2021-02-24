@@ -329,7 +329,22 @@
     <title>git 代理设置</title>
     <url>/blog/2021/02/23/git%E4%BB%A3%E7%90%86%E8%AE%BE%E7%BD%AE/</url>
     <content><![CDATA[<p>代码如下：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --global https.proxy <span class="string">&#x27;sock5://127.0.0.1:7890&#x27;</span></span><br><span class="line">git config --global http.proxy <span class="string">&#x27;sock5://127.0.0.1:7890&#x27;</span></span><br></pre></td></tr></table></figure>]]></content>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --global https.proxy <span class="string">&#x27;sock5://127.0.0.1:7890&#x27;</span></span><br><span class="line">git config --global http.proxy <span class="string">&#x27;sock5://127.0.0.1:7890&#x27;</span></span><br></pre></td></tr></table></figure>
+]]></content>
+      <tags>
+        <tag>炼丹手册</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>m1版本的homebrew每次运行提示No such file or directory的解决方法</title>
+    <url>/blog/2021/02/24/m1%E7%89%88%E6%9C%AC%E7%9A%84homebrew%E6%AF%8F%E6%AC%A1%E6%8F%90%E7%A4%BAUsersakyHomebrewbinbrew-line-5-cd-usrlocalHomebrewbin-No-such-file-or-directory%E4%BF%AE/</url>
+    <content><![CDATA[<p>当我安装完homebrew之后每次运行brew的时候都会有</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">/Users/aky/Homebrew/bin/brew: line 5: <span class="built_in">cd</span>: /usr/<span class="built_in">local</span>/Homebrew/bin: No such file or directory</span><br></pre></td></tr></table></figure>
+<p>这样的提示，后面经过查找发现，是之前的homebrew没有清理干净造成的，之前的homebrew是安装在/usr/local/Homebrew 中，卸载的时候该文件夹已经被我全部删除了，所以导致了它在</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">/usr/<span class="built_in">local</span>/bin/brew</span><br></pre></td></tr></table></figure>
+<p>的链接失效，所以我们只要删除这个链接即可，指令如下：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">rm /usr/<span class="built_in">local</span>/bin/brew</span><br></pre></td></tr></table></figure>
+]]></content>
       <tags>
         <tag>炼丹手册</tag>
       </tags>
