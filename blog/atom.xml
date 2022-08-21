@@ -1,0 +1,495 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>耀民的博客</title>
+  
+  
+  <link href="https://wangyaomin.com/blog/atom.xml" rel="self"/>
+  
+  <link href="https://wangyaomin.com/blog/"/>
+  <updated>2022-01-10T03:25:53.024Z</updated>
+  <id>https://wangyaomin.com/blog/</id>
+  
+  <author>
+    <name>wangyaomin</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>又到了新的一年</title>
+    <link href="https://wangyaomin.com/blog/2022/01/10/%E5%8F%88%E5%88%B0%E6%96%B0%E7%9A%84%E4%B8%80%E5%B9%B4%E4%BA%86/"/>
+    <id>https://wangyaomin.com/blog/2022/01/10/%E5%8F%88%E5%88%B0%E6%96%B0%E7%9A%84%E4%B8%80%E5%B9%B4%E4%BA%86/</id>
+    <published>2022-01-10T03:23:27.000Z</published>
+    <updated>2022-01-10T03:25:53.024Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;总结一下去年&quot;&gt;&lt;a href=&quot;#总结一下去年&quot; class=&quot;headerlink&quot; title=&quot;总结一下去年&quot;&gt;&lt;/a&gt;总结一下去年&lt;/h1&gt;&lt;h1 id=&quot;展望一下今年&quot;&gt;&lt;a href=&quot;#展望一下今年&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="感慨" scheme="https://wangyaomin.com/blog/tags/%E6%84%9F%E6%85%A8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>m1版本的homebrew每次运行提示No such file or directory的解决方法</title>
+    <link href="https://wangyaomin.com/blog/2021/02/24/m1%E7%89%88%E6%9C%AC%E7%9A%84homebrew%E6%AF%8F%E6%AC%A1%E6%8F%90%E7%A4%BAUsersakyHomebrewbinbrew-line-5-cd-usrlocalHomebrewbin-No-such-file-or-directory%E4%BF%AE/"/>
+    <id>https://wangyaomin.com/blog/2021/02/24/m1%E7%89%88%E6%9C%AC%E7%9A%84homebrew%E6%AF%8F%E6%AC%A1%E6%8F%90%E7%A4%BAUsersakyHomebrewbinbrew-line-5-cd-usrlocalHomebrewbin-No-such-file-or-directory%E4%BF%AE/</id>
+    <published>2021-02-24T02:16:20.000Z</published>
+    <updated>2022-08-21T15:15:09.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;当我安装完homebrew之后每次运行brew的时候都会有&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span</summary>
+        
+      
+    
+    
+    
+    
+    <category term="技术手册" scheme="https://wangyaomin.com/blog/tags/%E6%8A%80%E6%9C%AF%E6%89%8B%E5%86%8C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>go get 代理设置</title>
+    <link href="https://wangyaomin.com/blog/2021/02/23/go%20get%E4%BB%A3%E7%90%86%E8%AE%BE%E7%BD%AE/"/>
+    <id>https://wangyaomin.com/blog/2021/02/23/go%20get%E4%BB%A3%E7%90%86%E8%AE%BE%E7%BD%AE/</id>
+    <published>2021-02-23T09:11:00.000Z</published>
+    <updated>2022-08-21T15:15:26.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;go-get-代理设置&quot;&gt;&lt;a href=&quot;#go-get-代理设置&quot; class=&quot;headerlink&quot; title=&quot;go get 代理设置&quot;&gt;&lt;/a&gt;go get 代理设置&lt;/h1&gt;&lt;p&gt;在最近学习go的过程中发现go</summary>
+        
+      
+    
+    
+    
+    
+    <category term="技术手册" scheme="https://wangyaomin.com/blog/tags/%E6%8A%80%E6%9C%AF%E6%89%8B%E5%86%8C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>git 代理设置</title>
+    <link href="https://wangyaomin.com/blog/2021/02/23/git%E4%BB%A3%E7%90%86%E8%AE%BE%E7%BD%AE/"/>
+    <id>https://wangyaomin.com/blog/2021/02/23/git%E4%BB%A3%E7%90%86%E8%AE%BE%E7%BD%AE/</id>
+    <published>2021-02-23T09:11:00.000Z</published>
+    <updated>2022-08-21T15:15:19.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;代码如下：&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span</summary>
+        
+      
+    
+    
+    
+    
+    <category term="技术手册" scheme="https://wangyaomin.com/blog/tags/%E6%8A%80%E6%9C%AF%E6%89%8B%E5%86%8C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>我们为什么不保持高效的沟通？</title>
+    <link href="https://wangyaomin.com/blog/2020/08/20/%E6%88%91%E4%BB%AC%E4%B8%BA%E4%BB%80%E4%B9%88%E4%B8%8D%E4%BF%9D%E6%8C%81%E9%AB%98%E6%95%88%E7%9A%84%E6%B2%9F%E9%80%9A%EF%BC%9F/"/>
+    <id>https://wangyaomin.com/blog/2020/08/20/%E6%88%91%E4%BB%AC%E4%B8%BA%E4%BB%80%E4%B9%88%E4%B8%8D%E4%BF%9D%E6%8C%81%E9%AB%98%E6%95%88%E7%9A%84%E6%B2%9F%E9%80%9A%EF%BC%9F/</id>
+    <published>2020-08-20T04:07:27.000Z</published>
+    <updated>2020-08-20T04:16:41.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;这次出差大部分时间都花在了，等待别人沟通的过程中。真正需要我做的事没有多少，但是由于沟通的原因导致进度迟迟不能推进。这太令人感到头疼了，在工作过程中，大家好像都不能很好地保持沟通，真正需要做的事情，但是由于沟通的不畅，导致了进度的拖慢。我们应该怎么样才能保持一个高效的沟通呢</summary>
+        
+      
+    
+    
+    
+    
+    <category term="日常" scheme="https://wangyaomin.com/blog/tags/%E6%97%A5%E5%B8%B8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>出差有感</title>
+    <link href="https://wangyaomin.com/blog/2019/12/27/%E5%87%BA%E5%B7%AE%E6%9C%89%E6%84%9F/"/>
+    <id>https://wangyaomin.com/blog/2019/12/27/%E5%87%BA%E5%B7%AE%E6%9C%89%E6%84%9F/</id>
+    <published>2019-12-27T03:36:43.000Z</published>
+    <updated>2019-12-27T03:41:16.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;这个月出了好几趟差了，从安徽到山东，从山东到陕西，虽然是离家近了，但是事情忙，又没空回家，总是觉得自己应该在出差过程中有些提升，但是从硬件安装到软件调试，所有的问题都出现在对接的人的身上，没有标准，或者是有标准都不遵守。&lt;br&gt;其实大家按照一套标准来做东西完全可以减少很多返</summary>
+        
+      
+    
+    
+    
+    
+    <category term="日常" scheme="https://wangyaomin.com/blog/tags/%E6%97%A5%E5%B8%B8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>python3将字符串转为字典</title>
+    <link href="https://wangyaomin.com/blog/2019/12/07/python3%E5%B0%86%E5%AD%97%E7%AC%A6%E4%B8%B2%E8%BD%AC%E4%B8%BA%E5%AD%97%E5%85%B8/"/>
+    <id>https://wangyaomin.com/blog/2019/12/07/python3%E5%B0%86%E5%AD%97%E7%AC%A6%E4%B8%B2%E8%BD%AC%E4%B8%BA%E5%AD%97%E5%85%B8/</id>
+    <published>2019-12-07T11:30:32.000Z</published>
+    <updated>2022-08-21T15:15:37.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;在工作中需要从config中读取字典，读取到的字典是字符串：&lt;br&gt;`userinfo = ‘{“name” : “john”, “gender” : “male”, “age”: 28}’&lt;br&gt;`需要将上面的变为：&lt;br&gt;`userdict = {“name” :</summary>
+        
+      
+    
+    
+    
+    
+    <category term="技术手册" scheme="https://wangyaomin.com/blog/tags/%E6%8A%80%E6%9C%AF%E6%89%8B%E5%86%8C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>manjaro 签名无效解决方案</title>
+    <link href="https://wangyaomin.com/blog/2019/08/20/manjaro-%E7%AD%BE%E5%90%8D%E6%97%A0%E6%95%88%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
+    <id>https://wangyaomin.com/blog/2019/08/20/manjaro-%E7%AD%BE%E5%90%8D%E6%97%A0%E6%95%88%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</id>
+    <published>2019-08-20T12:18:58.000Z</published>
+    <updated>2022-08-21T15:16:00.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;安装软件及更新的时候遇到签名无效，这是一种安全策略，我们可以修改&lt;br&gt;&lt;code&gt;/etc/pacman.conf&lt;/code&gt;&lt;br&gt;文件将所有原来&lt;br&gt;&lt;code&gt;SigLevel=xxxxx&lt;/code&gt;&lt;br&gt;注释掉，并且添加&lt;br&gt;&lt;code&gt;SigLevel</summary>
+        
+      
+    
+    
+    
+    
+    <category term="技术手册" scheme="https://wangyaomin.com/blog/tags/%E6%8A%80%E6%9C%AF%E6%89%8B%E5%86%8C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>python装饰器 </title>
+    <link href="https://wangyaomin.com/blog/2019/05/31/python%E8%A3%85%E9%A5%B0%E5%99%A8/"/>
+    <id>https://wangyaomin.com/blog/2019/05/31/python%E8%A3%85%E9%A5%B0%E5%99%A8/</id>
+    <published>2019-05-31T12:16:16.000Z</published>
+    <updated>2022-08-21T15:16:06.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;最近在使用python编程的时候发现了装饰器这个神奇的东西，在不破坏整个代码的结构和用法的同时将新功能套在旧的代码上，不影响原来代码的结构性和功能性，需要的时候加上，不需要的时候删掉即可。但是这玩意儿到底是啥呢？&lt;/p&gt;
+&lt;p&gt;先来看一段代码&lt;/p&gt;
+&lt;figure</summary>
+        
+      
+    
+    
+    
+    
+    <category term="技术手册" scheme="https://wangyaomin.com/blog/tags/%E6%8A%80%E6%9C%AF%E6%89%8B%E5%86%8C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>解决mysql/mariaDB “ERROR 2002 (HY000):Can’t connect to local MySQL server through socket ‘/tmp/mysql.sock’ (111)”</title>
+    <link href="https://wangyaomin.com/blog/2019/01/15/%E8%A7%A3%E5%86%B3mysql-mariaDB-%E2%80%9CERROR-2002-HY000-Can%E2%80%99t-connect-to-local-MySQL-server-through/"/>
+    <id>https://wangyaomin.com/blog/2019/01/15/%E8%A7%A3%E5%86%B3mysql-mariaDB-%E2%80%9CERROR-2002-HY000-Can%E2%80%99t-connect-to-local-MySQL-server-through/</id>
+    <published>2019-01-15T12:11:51.000Z</published>
+    <updated>2022-08-21T15:15:54.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;搬运&amp;amp;汉化自stackoverflow&lt;/p&gt;
+&lt;p&gt;解决这个问题需要重启mysql重置密码&lt;/p&gt;
+&lt;p&gt;1.停止mysql&lt;br&gt;&lt;code&gt;sudo /etc/init.d/mysql stop&lt;/code&gt;&lt;br&gt;其他版本：&lt;br&gt;&lt;code&gt;sudo</summary>
+        
+      
+    
+    
+    
+    
+    <category term="技术手册" scheme="https://wangyaomin.com/blog/tags/%E6%8A%80%E6%9C%AF%E6%89%8B%E5%86%8C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>docker 运行一个容器</title>
+    <link href="https://wangyaomin.com/blog/2019/01/15/docker-%E8%BF%90%E8%A1%8C%E4%B8%80%E4%B8%AA%E5%AE%B9%E5%99%A8/"/>
+    <id>https://wangyaomin.com/blog/2019/01/15/docker-%E8%BF%90%E8%A1%8C%E4%B8%80%E4%B8%AA%E5%AE%B9%E5%99%A8/</id>
+    <published>2019-01-15T12:09:56.000Z</published>
+    <updated>2022-08-21T15:16:17.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;code&gt;docker run [参数] [参数]&lt;/code&gt;&lt;br&gt;参数及使用说明：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;-a stdin: 指定标准输入输出内容类型，可选 STDIN/STDOUT/STDERR 三项；&lt;/li&gt;
+&lt;li&gt;-d:</summary>
+        
+      
+    
+    
+    
+    
+    <category term="技术手册" scheme="https://wangyaomin.com/blog/tags/%E6%8A%80%E6%9C%AF%E6%89%8B%E5%86%8C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>docker 国内镜像更换</title>
+    <link href="https://wangyaomin.com/blog/2019/01/15/docker-%E5%9B%BD%E5%86%85%E9%95%9C%E5%83%8F%E6%9B%B4%E6%8D%A2/"/>
+    <id>https://wangyaomin.com/blog/2019/01/15/docker-%E5%9B%BD%E5%86%85%E9%95%9C%E5%83%8F%E6%9B%B4%E6%8D%A2/</id>
+    <published>2019-01-15T12:09:09.000Z</published>
+    <updated>2022-08-21T15:16:23.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;今天下载时候发现下载速度太慢，发现有国内镜像&lt;br&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    
+    <category term="技术手册" scheme="https://wangyaomin.com/blog/tags/%E6%8A%80%E6%9C%AF%E6%89%8B%E5%86%8C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>停止、删除所有的docker容器和镜像</title>
+    <link href="https://wangyaomin.com/blog/2019/01/07/%E5%81%9C%E6%AD%A2%E3%80%81%E5%88%A0%E9%99%A4%E6%89%80%E6%9C%89%E7%9A%84docker%E5%AE%B9%E5%99%A8%E5%92%8C%E9%95%9C%E5%83%8F/"/>
+    <id>https://wangyaomin.com/blog/2019/01/07/%E5%81%9C%E6%AD%A2%E3%80%81%E5%88%A0%E9%99%A4%E6%89%80%E6%9C%89%E7%9A%84docker%E5%AE%B9%E5%99%A8%E5%92%8C%E9%95%9C%E5%83%8F/</id>
+    <published>2019-01-07T12:04:56.000Z</published>
+    <updated>2022-08-21T15:16:29.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;列出所有的容器 ID&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td</summary>
+        
+      
+    
+    
+    
+    
+    <category term="技术手册" scheme="https://wangyaomin.com/blog/tags/%E6%8A%80%E6%9C%AF%E6%89%8B%E5%86%8C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>报错 Error: rpmdb open failed 的解决</title>
+    <link href="https://wangyaomin.com/blog/2018/12/19/%E6%8A%A5%E9%94%99-Error-rpmdb-open-failed-%E7%9A%84%E8%A7%A3%E5%86%B3/"/>
+    <id>https://wangyaomin.com/blog/2018/12/19/%E6%8A%A5%E9%94%99-Error-rpmdb-open-failed-%E7%9A%84%E8%A7%A3%E5%86%B3/</id>
+    <published>2018-12-19T12:02:57.000Z</published>
+    <updated>2022-08-21T15:15:45.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;在使用yum安装软件的时候发现如下错误：&lt;/p&gt;
+&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span</summary>
+        
+      
+    
+    
+    
+    
+    <category term="技术手册" scheme="https://wangyaomin.com/blog/tags/%E6%8A%80%E6%9C%AF%E6%89%8B%E5%86%8C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>atom简单配置</title>
+    <link href="https://wangyaomin.com/blog/2018/12/10/atom%E7%AE%80%E5%8D%95%E9%85%8D%E7%BD%AE/"/>
+    <id>https://wangyaomin.com/blog/2018/12/10/atom%E7%AE%80%E5%8D%95%E9%85%8D%E7%BD%AE/</id>
+    <published>2018-12-10T03:16:36.000Z</published>
+    <updated>2022-08-21T15:16:49.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;apm换成国源：&quot;&gt;&lt;a href=&quot;#apm换成国源：&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="技术手册" scheme="https://wangyaomin.com/blog/tags/%E6%8A%80%E6%9C%AF%E6%89%8B%E5%86%8C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>python子线程中WMI报错-2147221020解决</title>
+    <link href="https://wangyaomin.com/blog/2018/11/29/python%E5%AD%90%E7%BA%BF%E7%A8%8B%E4%B8%ADWMI%E6%8A%A5%E9%94%99-2147221020%E8%A7%A3%E5%86%B3/"/>
+    <id>https://wangyaomin.com/blog/2018/11/29/python%E5%AD%90%E7%BA%BF%E7%A8%8B%E4%B8%ADWMI%E6%8A%A5%E9%94%99-2147221020%E8%A7%A3%E5%86%B3/</id>
+    <published>2018-11-29T03:16:36.000Z</published>
+    <updated>2022-08-21T15:16:36.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;在编写检测进程的程序的时候发现如下错误：&lt;br&gt;&lt;img src=&quot;https://i.loli.net/2019/10/14/H6gocumbyitMFeQ.jpg&quot; alt=&quot;error&quot;&gt;&lt;/p&gt;
+&lt;figure class=&quot;highlight</summary>
+        
+      
+    
+    
+    
+    
+    <category term="技术手册" scheme="https://wangyaomin.com/blog/tags/%E6%8A%80%E6%9C%AF%E6%89%8B%E5%86%8C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>解决树莓派kali更换国内源后更新报错</title>
+    <link href="https://wangyaomin.com/blog/2018/11/27/%E8%A7%A3%E5%86%B3%E6%A0%91%E8%8E%93%E6%B4%BEkali%E6%9B%B4%E6%8D%A2%E5%9B%BD%E5%86%85%E6%BA%90%E5%90%8E%E6%9B%B4%E6%96%B0%E6%8A%A5%E9%94%99/"/>
+    <id>https://wangyaomin.com/blog/2018/11/27/%E8%A7%A3%E5%86%B3%E6%A0%91%E8%8E%93%E6%B4%BEkali%E6%9B%B4%E6%8D%A2%E5%9B%BD%E5%86%85%E6%BA%90%E5%90%8E%E6%9B%B4%E6%96%B0%E6%8A%A5%E9%94%99/</id>
+    <published>2018-11-27T03:16:36.000Z</published>
+    <updated>2022-08-21T15:17:13.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;在更新时发现报错如下：&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span</summary>
+        
+      
+    
+    
+    
+    
+    <category term="技术手册" scheme="https://wangyaomin.com/blog/tags/%E6%8A%80%E6%9C%AF%E6%89%8B%E5%86%8C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>PyQt5 简单教程</title>
+    <link href="https://wangyaomin.com/blog/2018/11/12/PyQt5-%E7%AE%80%E5%8D%95%E6%95%99%E7%A8%8B/"/>
+    <id>https://wangyaomin.com/blog/2018/11/12/PyQt5-%E7%AE%80%E5%8D%95%E6%95%99%E7%A8%8B/</id>
+    <published>2018-11-12T03:07:27.000Z</published>
+    <updated>2022-08-21T15:17:20.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;最近在公司开发一套自动化测试系统，要做一个带GUI的软件，采用了python</summary>
+        
+      
+    
+    
+    
+    
+    <category term="技术手册" scheme="https://wangyaomin.com/blog/tags/%E6%8A%80%E6%9C%AF%E6%89%8B%E5%86%8C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>微信python获取好友的信息</title>
+    <link href="https://wangyaomin.com/blog/2018/10/29/%E5%BE%AE%E4%BF%A1python%E8%8E%B7%E5%8F%96%E5%A5%BD%E5%8F%8B%E7%9A%84%E4%BF%A1%E6%81%AF/"/>
+    <id>https://wangyaomin.com/blog/2018/10/29/%E5%BE%AE%E4%BF%A1python%E8%8E%B7%E5%8F%96%E5%A5%BD%E5%8F%8B%E7%9A%84%E4%BF%A1%E6%81%AF/</id>
+    <published>2018-10-29T03:05:23.000Z</published>
+    <updated>2022-08-21T15:17:08.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;可以通过本程序获取好友的昵称，备注名，等信息，来自微信注册时的信息，采用itchat进行收集，使用xlwt进行保存，最终呈现为excel表格&lt;/p&gt;
+&lt;p&gt;使用时请先安装xlwt，itchat等包&lt;/p&gt;
+&lt;figure class=&quot;highlight</summary>
+        
+      
+    
+    
+    
+    
+    <category term="技术手册" scheme="https://wangyaomin.com/blog/tags/%E6%8A%80%E6%9C%AF%E6%89%8B%E5%86%8C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>pip 更换国内源</title>
+    <link href="https://wangyaomin.com/blog/2018/10/29/pip-%E6%9B%B4%E6%8D%A2%E5%9B%BD%E5%86%85%E6%BA%90/"/>
+    <id>https://wangyaomin.com/blog/2018/10/29/pip-%E6%9B%B4%E6%8D%A2%E5%9B%BD%E5%86%85%E6%BA%90/</id>
+    <published>2018-10-29T03:01:46.000Z</published>
+    <updated>2022-08-21T15:17:02.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;在使用pip安装东西的过程中，会发现速度十分缓慢。这时，我们可以将pip的下载源变为国内的镜像源，这样会提升下载速度。&lt;/p&gt;
+&lt;p&gt;linux下，修改 ~/.pip/pip.conf</summary>
+        
+      
+    
+    
+    
+    
+    <category term="技术手册" scheme="https://wangyaomin.com/blog/tags/%E6%8A%80%E6%9C%AF%E6%89%8B%E5%86%8C/"/>
+    
+  </entry>
+  
+</feed>

@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>PyQt5 简单教程</title>
+    <url>/blog/2018/11/12/PyQt5-%E7%AE%80%E5%8D%95%E6%95%99%E7%A8%8B/</url>
+    <content><![CDATA[<p>最近在公司开发一套自动化测试系统，要做一个带GUI的软件，采用了python 进行开发所以在GUI上使用了pyqt5进行开发</p>
+<ol>
+<li><ul>
+<li>软件环境</li>
+</ul>
+</li>
+<li><ul>
+<li>实现功能</li>
+</ul>
+</li>
+<li><ul>
+<li>实现过程</li>
+</ul>
+</li>
+</ol>
+<h1 id="一、软件环境"><a href="#一、软件环境" class="headerlink" title="一、软件环境"></a>一、软件环境</h1><ol>
+<li>Python 版本 3.7.1</li>
+<li>Pyqt5</li>
+<li>atom 编译器</li>
+<li>qtdesigner</li>
+</ol>
+<h1 id="二、实现功能"><a href="#二、实现功能" class="headerlink" title="二、实现功能"></a>二、实现功能</h1><p>简单的选择和与后台数据的交互，通过信号与槽机制进行数据交互。如，获取串口，设定时间等。</p>
+<h1 id="三、实现过程"><a href="#三、实现过程" class="headerlink" title="三、实现过程"></a>三、实现过程</h1><p>先打开pyqt5-tools（C:\Users\username\AppData\Local\Programs\Python\Python37\Lib\site-packages\pyqt5_tools）目录，并且在目录中打开qtdesigner<br>这里我们选择Main Windows并创建</p>
+<p>创建成功后将需要用到的构件（左侧）拖入你想要的位置，并且在右侧的属性栏对其进行属性的调整</p>
+<p>将创建完成好的文件保存至桌面或者其他工作路径并且按住shift点击鼠标右键选择“在此处打开powershell窗口”，或者“在此处打开cmd窗口”</p>
+<p>输入以下指令,将.ui文件变为.py文件<br><code>pyuic5 filename.ui -o filename.py</code><br>这时，我们打开这个新建的.py文件可以看到如下代码：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># -*- coding: utf-8 -*-</span></span><br><span class="line"> </span><br><span class="line"><span class="comment"># Form implementation generated from reading ui file &#x27;auto.ui&#x27;</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># Created by: PyQt5 UI code generator 5.11.3</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># WARNING! All changes made in this file will be lost!</span></span><br><span class="line"> </span><br><span class="line"><span class="keyword">from</span> PyQt5 <span class="keyword">import</span> QtCore, QtGui, QtWidgets</span><br><span class="line"> </span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Ui_autotestwd</span>(<span class="params"><span class="built_in">object</span></span>):</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">setupUi</span>(<span class="params">self, autotestwd</span>):</span></span><br><span class="line">        autotestwd.setObjectName(<span class="string">&quot;autotestwd&quot;</span>)</span><br><span class="line">        autotestwd.setEnabled(<span class="literal">True</span>)</span><br><span class="line">        autotestwd.resize(<span class="number">376</span>, <span class="number">211</span>)</span><br><span class="line">        autotestwd.setToolTip(<span class="string">&quot;&quot;</span>)</span><br><span class="line">        autotestwd.setAutoFillBackground(<span class="literal">False</span>)</span><br><span class="line">        self.label_5 = QtWidgets.QLabel(autotestwd)</span><br><span class="line">        self.label_5.setGeometry(QtCore.QRect(<span class="number">20</span>, <span class="number">20</span>, <span class="number">101</span>, <span class="number">16</span>))</span><br><span class="line">        self.label_5.setObjectName(<span class="string">&quot;label_5&quot;</span>)</span><br><span class="line">        self.sensornum = QtWidgets.QSpinBox(autotestwd)</span><br><span class="line">        self.sensornum.setGeometry(QtCore.QRect(<span class="number">20</span>, <span class="number">90</span>, <span class="number">111</span>, <span class="number">22</span>))</span><br><span class="line">        self.sensornum.setMaximum(<span class="number">100</span>)</span><br><span class="line">        self.sensornum.setProperty(<span class="string">&quot;value&quot;</span>, <span class="number">100</span>)</span><br><span class="line">        self.sensornum.setObjectName(<span class="string">&quot;sensornum&quot;</span>)</span><br><span class="line">        self.label_6 = QtWidgets.QLabel(autotestwd)</span><br><span class="line">        self.label_6.setGeometry(QtCore.QRect(<span class="number">20</span>, <span class="number">70</span>, <span class="number">71</span>, <span class="number">16</span>))</span><br><span class="line">        self.label_6.setObjectName(<span class="string">&quot;label_6&quot;</span>)</span><br><span class="line">        self.bgtempe = QtWidgets.QSpinBox(autotestwd)</span><br><span class="line">        self.bgtempe.setGeometry(QtCore.QRect(<span class="number">20</span>, <span class="number">40</span>, <span class="number">111</span>, <span class="number">22</span>))</span><br><span class="line">        self.bgtempe.setMinimum(<span class="number">0</span>)</span><br><span class="line">        self.bgtempe.setMaximum(<span class="number">20</span>)</span><br><span class="line">        self.bgtempe.setProperty(<span class="string">&quot;value&quot;</span>, <span class="number">0</span>)</span><br><span class="line">        self.bgtempe.setObjectName(<span class="string">&quot;bgtempe&quot;</span>)</span><br><span class="line">        self.submitval = QtWidgets.QPushButton(autotestwd)</span><br><span class="line">        self.submitval.setGeometry(QtCore.QRect(<span class="number">270</span>, <span class="number">170</span>, <span class="number">81</span>, <span class="number">23</span>))</span><br><span class="line">        self.submitval.setObjectName(<span class="string">&quot;submitval&quot;</span>)</span><br><span class="line">        self.x100ser = QtWidgets.QComboBox(autotestwd)</span><br><span class="line">        self.x100ser.setGeometry(QtCore.QRect(<span class="number">230</span>, <span class="number">40</span>, <span class="number">91</span>, <span class="number">22</span>))</span><br><span class="line">        self.x100ser.setObjectName(<span class="string">&quot;x100ser&quot;</span>)</span><br><span class="line">        self.label = QtWidgets.QLabel(autotestwd)</span><br><span class="line">        self.label.setGeometry(QtCore.QRect(<span class="number">230</span>, <span class="number">20</span>, <span class="number">91</span>, <span class="number">16</span>))</span><br><span class="line">        self.label.setObjectName(<span class="string">&quot;label&quot;</span>)</span><br><span class="line">        self.label_2 = QtWidgets.QLabel(autotestwd)</span><br><span class="line">        self.label_2.setGeometry(QtCore.QRect(<span class="number">230</span>, <span class="number">70</span>, <span class="number">91</span>, <span class="number">16</span>))</span><br><span class="line">        self.label_2.setObjectName(<span class="string">&quot;label_2&quot;</span>)</span><br><span class="line">        self.tempser = QtWidgets.QComboBox(autotestwd)</span><br><span class="line">        self.tempser.setGeometry(QtCore.QRect(<span class="number">230</span>, <span class="number">100</span>, <span class="number">91</span>, <span class="number">22</span>))</span><br><span class="line">        self.tempser.setObjectName(<span class="string">&quot;tempser&quot;</span>)</span><br><span class="line">        self.sentype = QtWidgets.QComboBox(autotestwd)</span><br><span class="line">        self.sentype.setGeometry(QtCore.QRect(<span class="number">20</span>, <span class="number">140</span>, <span class="number">91</span>, <span class="number">22</span>))</span><br><span class="line">        self.sentype.setObjectName(<span class="string">&quot;sentype&quot;</span>)</span><br><span class="line">        self.label_3 = QtWidgets.QLabel(autotestwd)</span><br><span class="line">        self.label_3.setGeometry(QtCore.QRect(<span class="number">20</span>, <span class="number">120</span>, <span class="number">91</span>, <span class="number">16</span>))</span><br><span class="line">        self.label_3.setObjectName(<span class="string">&quot;label_3&quot;</span>)</span><br><span class="line">        self.label_4 = QtWidgets.QLabel(autotestwd)</span><br><span class="line">        self.label_4.setGeometry(QtCore.QRect(<span class="number">230</span>, <span class="number">130</span>, <span class="number">81</span>, <span class="number">16</span>))</span><br><span class="line">        self.label_4.setObjectName(<span class="string">&quot;label_4&quot;</span>)</span><br><span class="line">        self.time = QtWidgets.QLabel(autotestwd)</span><br><span class="line">        self.time.setGeometry(QtCore.QRect(<span class="number">230</span>, <span class="number">150</span>, <span class="number">54</span>, <span class="number">12</span>))</span><br><span class="line">        self.time.setText(<span class="string">&quot;&quot;</span>)</span><br><span class="line">        self.time.setObjectName(<span class="string">&quot;time&quot;</span>)</span><br><span class="line"> </span><br><span class="line">        self.retranslateUi(autotestwd)</span><br><span class="line">        self.bgtempe.valueChanged[<span class="string">&#x27;int&#x27;</span>].connect(autotestwd.update)</span><br><span class="line">        self.sensornum.valueChanged[<span class="string">&#x27;int&#x27;</span>].connect(autotestwd.update)</span><br><span class="line">        QtCore.QMetaObject.connectSlotsByName(autotestwd)</span><br><span class="line"> </span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">retranslateUi</span>(<span class="params">self, autotestwd</span>):</span></span><br><span class="line">        _translate = QtCore.QCoreApplication.translate</span><br><span class="line">        autotestwd.setWindowTitle(_translate(<span class="string">&quot;autotestwd&quot;</span>, <span class="string">&quot;title&quot;</span>))  <span class="comment">#标题名字（窗口标题）</span></span><br><span class="line">        self.label_5.setText(_translate(<span class="string">&quot;autotestwd&quot;</span>, <span class="string">&quot;温度点个数：&quot;</span>))</span><br><span class="line">        self.label_6.setText(_translate(<span class="string">&quot;autotestwd&quot;</span>, <span class="string">&quot;传感器个数：&quot;</span>))</span><br><span class="line">        self.submitval.setText(_translate(<span class="string">&quot;autotestwd&quot;</span>, <span class="string">&quot;ok&quot;</span>))</span><br><span class="line">        self.label.setText(_translate(<span class="string">&quot;autotestwd&quot;</span>, <span class="string">&quot;选择100选1串口&quot;</span>))</span><br><span class="line">        self.label_2.setText(_translate(<span class="string">&quot;autotestwd&quot;</span>, <span class="string">&quot;选择温度串口&quot;</span>))</span><br><span class="line">        self.label_3.setText(_translate(<span class="string">&quot;autotestwd&quot;</span>, <span class="string">&quot;选择传感器类型&quot;</span>))</span><br><span class="line">        self.label_4.setText(_translate(<span class="string">&quot;autotestwd&quot;</span>, <span class="string">&quot;已运行时间：&quot;</span>))</span><br></pre></td></tr></table></figure>
+<p>所有的参数和属性都可在这个界面进行编写和处理更改。</p>
+<p>这时，运行该文件不会打开窗体，这时我们需要在结尾处加入如下语句</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    app = QtWidgets.QApplication(sys.argv)</span><br><span class="line">    From = QtWidgets.QMainWindow()</span><br><span class="line">    ui = Ui_autotestwd()</span><br><span class="line">    ui.setupUi(From)</span><br><span class="line">    From.show()</span><br><span class="line">    sys.exit(app.exec_())</span><br></pre></td></tr></table></figure>
+<p>这时我们可以得到如下代码：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># -*- coding: utf-8 -*-</span></span><br><span class="line">  </span><br><span class="line"><span class="comment"># Form implementation generated from reading ui file &#x27;auto.ui&#x27;</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># Created by: PyQt5 UI code generator 5.11.3</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># WARNING! All changes made in this file will be lost!</span></span><br><span class="line"><span class="keyword">import</span> sys  </span><br><span class="line"><span class="keyword">from</span> PyQt5 <span class="keyword">import</span> QtCore, QtGui, QtWidgets</span><br><span class="line">  </span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Ui_autotestwd</span>(<span class="params"><span class="built_in">object</span></span>):</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">setupUi</span>(<span class="params">self, autotestwd</span>):</span></span><br><span class="line">        autotestwd.setObjectName(<span class="string">&quot;autotestwd&quot;</span>)</span><br><span class="line">        autotestwd.setEnabled(<span class="literal">True</span>)</span><br><span class="line">        autotestwd.resize(<span class="number">376</span>, <span class="number">211</span>)</span><br><span class="line">        autotestwd.setToolTip(<span class="string">&quot;&quot;</span>)</span><br><span class="line">        autotestwd.setAutoFillBackground(<span class="literal">False</span>)</span><br><span class="line">        self.label_5 = QtWidgets.QLabel(autotestwd)</span><br><span class="line">        self.label_5.setGeometry(QtCore.QRect(<span class="number">20</span>, <span class="number">20</span>, <span class="number">101</span>, <span class="number">16</span>))</span><br><span class="line">        self.label_5.setObjectName(<span class="string">&quot;label_5&quot;</span>)</span><br><span class="line">        self.sensornum = QtWidgets.QSpinBox(autotestwd)</span><br><span class="line">        self.sensornum.setGeometry(QtCore.QRect(<span class="number">20</span>, <span class="number">90</span>, <span class="number">111</span>, <span class="number">22</span>))</span><br><span class="line">        self.sensornum.setMaximum(<span class="number">100</span>)</span><br><span class="line">        self.sensornum.setProperty(<span class="string">&quot;value&quot;</span>, <span class="number">100</span>)</span><br><span class="line">        self.sensornum.setObjectName(<span class="string">&quot;sensornum&quot;</span>)</span><br><span class="line">        self.label_6 = QtWidgets.QLabel(autotestwd)</span><br><span class="line">        self.label_6.setGeometry(QtCore.QRect(<span class="number">20</span>, <span class="number">70</span>, <span class="number">71</span>, <span class="number">16</span>))</span><br><span class="line">        self.label_6.setObjectName(<span class="string">&quot;label_6&quot;</span>)</span><br><span class="line">        self.bgtempe = QtWidgets.QSpinBox(autotestwd)</span><br><span class="line">        self.bgtempe.setGeometry(QtCore.QRect(<span class="number">20</span>, <span class="number">40</span>, <span class="number">111</span>, <span class="number">22</span>))</span><br><span class="line">        self.bgtempe.setMinimum(<span class="number">0</span>)</span><br><span class="line">        self.bgtempe.setMaximum(<span class="number">20</span>)</span><br><span class="line">        self.bgtempe.setProperty(<span class="string">&quot;value&quot;</span>, <span class="number">0</span>)</span><br><span class="line">        self.bgtempe.setObjectName(<span class="string">&quot;bgtempe&quot;</span>)</span><br><span class="line">        self.submitval = QtWidgets.QPushButton(autotestwd)</span><br><span class="line">        self.submitval.setGeometry(QtCore.QRect(<span class="number">270</span>, <span class="number">170</span>, <span class="number">81</span>, <span class="number">23</span>))</span><br><span class="line">        self.submitval.setObjectName(<span class="string">&quot;submitval&quot;</span>)</span><br><span class="line">        self.x100ser = QtWidgets.QComboBox(autotestwd)</span><br><span class="line">        self.x100ser.setGeometry(QtCore.QRect(<span class="number">230</span>, <span class="number">40</span>, <span class="number">91</span>, <span class="number">22</span>))</span><br><span class="line">        self.x100ser.setObjectName(<span class="string">&quot;x100ser&quot;</span>)</span><br><span class="line">        self.label = QtWidgets.QLabel(autotestwd)</span><br><span class="line">        self.label.setGeometry(QtCore.QRect(<span class="number">230</span>, <span class="number">20</span>, <span class="number">91</span>, <span class="number">16</span>))</span><br><span class="line">        self.label.setObjectName(<span class="string">&quot;label&quot;</span>)</span><br><span class="line">        self.label_2 = QtWidgets.QLabel(autotestwd)</span><br><span class="line">        self.label_2.setGeometry(QtCore.QRect(<span class="number">230</span>, <span class="number">70</span>, <span class="number">91</span>, <span class="number">16</span>))</span><br><span class="line">        self.label_2.setObjectName(<span class="string">&quot;label_2&quot;</span>)</span><br><span class="line">        self.tempser = QtWidgets.QComboBox(autotestwd)</span><br><span class="line">        self.tempser.setGeometry(QtCore.QRect(<span class="number">230</span>, <span class="number">100</span>, <span class="number">91</span>, <span class="number">22</span>))</span><br><span class="line">        self.tempser.setObjectName(<span class="string">&quot;tempser&quot;</span>)</span><br><span class="line">        self.sentype = QtWidgets.QComboBox(autotestwd)</span><br><span class="line">        self.sentype.setGeometry(QtCore.QRect(<span class="number">20</span>, <span class="number">140</span>, <span class="number">91</span>, <span class="number">22</span>))</span><br><span class="line">        self.sentype.setObjectName(<span class="string">&quot;sentype&quot;</span>)</span><br><span class="line">        self.label_3 = QtWidgets.QLabel(autotestwd)</span><br><span class="line">        self.label_3.setGeometry(QtCore.QRect(<span class="number">20</span>, <span class="number">120</span>, <span class="number">91</span>, <span class="number">16</span>))</span><br><span class="line">        self.label_3.setObjectName(<span class="string">&quot;label_3&quot;</span>)</span><br><span class="line">        self.label_4 = QtWidgets.QLabel(autotestwd)</span><br><span class="line">        self.label_4.setGeometry(QtCore.QRect(<span class="number">230</span>, <span class="number">130</span>, <span class="number">81</span>, <span class="number">16</span>))</span><br><span class="line">        self.label_4.setObjectName(<span class="string">&quot;label_4&quot;</span>)</span><br><span class="line">        self.time = QtWidgets.QLabel(autotestwd)</span><br><span class="line">        self.time.setGeometry(QtCore.QRect(<span class="number">230</span>, <span class="number">150</span>, <span class="number">54</span>, <span class="number">12</span>))</span><br><span class="line">        self.time.setText(<span class="string">&quot;&quot;</span>)</span><br><span class="line">        self.time.setObjectName(<span class="string">&quot;time&quot;</span>)</span><br><span class="line">  </span><br><span class="line">        self.retranslateUi(autotestwd)</span><br><span class="line">        self.bgtempe.valueChanged[<span class="string">&#x27;int&#x27;</span>].connect(autotestwd.update)</span><br><span class="line">        self.sensornum.valueChanged[<span class="string">&#x27;int&#x27;</span>].connect(autotestwd.update)</span><br><span class="line">        QtCore.QMetaObject.connectSlotsByName(autotestwd)</span><br><span class="line">  </span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">retranslateUi</span>(<span class="params">self, autotestwd</span>):</span></span><br><span class="line">        _translate = QtCore.QCoreApplication.translate</span><br><span class="line">        autotestwd.setWindowTitle(_translate(<span class="string">&quot;autotestwd&quot;</span>, <span class="string">&quot;title&quot;</span>))  <span class="comment">#标题名字（窗口标题）</span></span><br><span class="line">        self.label_5.setText(_translate(<span class="string">&quot;autotestwd&quot;</span>, <span class="string">&quot;温度点个数：&quot;</span>))</span><br><span class="line">        self.label_6.setText(_translate(<span class="string">&quot;autotestwd&quot;</span>, <span class="string">&quot;传感器个数：&quot;</span>))</span><br><span class="line">        self.submitval.setText(_translate(<span class="string">&quot;autotestwd&quot;</span>, <span class="string">&quot;ok&quot;</span>))</span><br><span class="line">        self.label.setText(_translate(<span class="string">&quot;autotestwd&quot;</span>, <span class="string">&quot;选择100选1串口&quot;</span>))</span><br><span class="line">        self.label_2.setText(_translate(<span class="string">&quot;autotestwd&quot;</span>, <span class="string">&quot;选择温度串口&quot;</span>))</span><br><span class="line">        self.label_3.setText(_translate(<span class="string">&quot;autotestwd&quot;</span>, <span class="string">&quot;选择传感器类型&quot;</span>))</span><br><span class="line">        self.label_4.setText(_translate(<span class="string">&quot;autotestwd&quot;</span>, <span class="string">&quot;已运行时间：&quot;</span>))</span><br><span class="line"> </span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    app = QtWidgets.QApplication(sys.argv)</span><br><span class="line">    From = QtWidgets.QMainWindow()</span><br><span class="line">    ui = Ui_autotestwd()</span><br><span class="line">    ui.setupUi(From)</span><br><span class="line">    From.show()</span><br><span class="line">    sys.exit(app.exec_())</span><br></pre></td></tr></table></figure>
+<p>在这个实例中可以直接运行并且做出测试窗体</p>
+<p>做出窗体后我们将要进行数据与后端程序的对接，这时我们就需要用到一个pyqt的信号与槽的概念，我们可以理解为是一个管道，或者是一根电线，当我们向管道（电线）中注入不同颜色（电压）的水（电）的时候，整个的管道（电线）全部变成了一个统一的颜色（电压），在任何地方测量都可以得到这个颜色（电压）而我们得到的这个值就是信号与槽传过来的值。</p>
+<p>由于后端代码涉及到公司的保密，故不能放出，见谅。</p>
+<p>我们可以使用connect将信号与槽进行连接，每一种构件有不一样的信号与槽机制。</p>
+<p>例如，将点击按钮与传递函数进行匹配</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    app = QtWidgets.QApplication(sys.argv)</span><br><span class="line">    From = QtWidgets.QMainWindow()</span><br><span class="line">    ui = Ui_autotestwd()</span><br><span class="line">    timer = QtCore.QTimer()</span><br><span class="line">    ui.setupUi(From)</span><br><span class="line">    From.show()</span><br><span class="line">    workThread = WorkThread()</span><br><span class="line">    ui.port_check()</span><br><span class="line">    ui.sentypeadd()</span><br><span class="line">    ui.submit.clicked.connect(ui.timestart)</span><br><span class="line">    timer.timeout.connect(ui.addtime)</span><br><span class="line"><span class="comment">#    workThread.trigger.connect(ui.timestop)</span></span><br><span class="line">    ui.submit.clicked.connect(work)</span><br><span class="line">    sys.exit(app.exec_())</span><br></pre></td></tr></table></figure>
+<p>其中，ui.submit,clicked.connect(work)为点击后运行work进程，这样可以将检测函数放置在子进程进行运行，使主界面不会被卡死，这样保证用户正常使用，后台进行数据处理和刷新。</p>
+]]></content>
+      <tags>
+        <tag>技术手册</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>docker 国内镜像更换</title>
+    <url>/blog/2019/01/15/docker-%E5%9B%BD%E5%86%85%E9%95%9C%E5%83%8F%E6%9B%B4%E6%8D%A2/</url>
+    <content><![CDATA[<p>今天下载时候发现下载速度太慢，发现有国内镜像<br><a href="https://cr.console.aliyun.com/#/accelerator">https://cr.console.aliyun.com/#/accelerator</a><br>在上面的连接中有阿里云的镜像更改方法及镜像地址需要登录阿里云。</p>
+]]></content>
+      <tags>
+        <tag>技术手册</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>atom简单配置</title>
+    <url>/blog/2018/12/10/atom%E7%AE%80%E5%8D%95%E9%85%8D%E7%BD%AE/</url>
+    <content><![CDATA[<h1 id="apm换成国源："><a href="#apm换成国源：" class="headerlink" title="apm换成国源："></a>apm换成国源：</h1><p>刚刚在新电脑上安装了atom，下载插件速度太慢了，从网上找到了解决方法，就是换源，国内有淘宝的源</p>
+<p>新建或编辑 ~/.atom/.apmrc 文件，加入以下两行：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">registry=https://registry.npm.taobao.org/</span><br><span class="line">strict-ssl=fals</span><br></pre></td></tr></table></figure>
+<p>保存，退出，使用如下命令检测是否成功<br><code>apm install --check</code></p>
+<h1 id="Hydrogen配置："><a href="#Hydrogen配置：" class="headerlink" title="Hydrogen配置："></a>Hydrogen配置：</h1><p>在使用过程中发现不断有错误出现:<br>这个问题是因为Hydrogen没有调用python3，遇到内核有问题则对应弹出的提示进行安装<br>当弹出：<br><code>/usr/bin/python: No module named ipykernel_launcher</code><br>这时我们需要编辑/usr/local/share/jupyter/kernels/python3/kernel.json文件</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line"> <span class="string">&quot;argv&quot;</span>: [</span><br><span class="line">  <span class="string">&quot;python3&quot;</span>,</span><br><span class="line">  <span class="string">&quot;-m&quot;</span>,</span><br><span class="line">  <span class="string">&quot;ipykernel_launcher&quot;</span>,</span><br><span class="line">  <span class="string">&quot;-f&quot;</span>,</span><br><span class="line">  <span class="string">&quot;&#123;connection_file&#125;&quot;</span></span><br><span class="line"> ],</span><br><span class="line"> <span class="string">&quot;display_name&quot;</span>: <span class="string">&quot;Python 3&quot;</span>,</span><br><span class="line"> <span class="string">&quot;language&quot;</span>: <span class="string">&quot;python&quot;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      <tags>
+        <tag>技术手册</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>docker 运行一个容器</title>
+    <url>/blog/2019/01/15/docker-%E8%BF%90%E8%A1%8C%E4%B8%80%E4%B8%AA%E5%AE%B9%E5%99%A8/</url>
+    <content><![CDATA[<p><code>docker run [参数] [参数]</code><br>参数及使用说明：</p>
+<ul>
+<li>-a stdin: 指定标准输入输出内容类型，可选 STDIN/STDOUT/STDERR 三项；</li>
+<li>-d: 后台运行容器，并返回容器ID；</li>
+<li>-i: 以交互模式运行容器，通常与 -t 同时使用；</li>
+<li>-p: 端口映射，格式为：主机(宿主)端口:容器端口</li>
+<li>-t: 为容器重新分配一个伪输入终端，通常与 -i 同时使用；</li>
+<li>–name=”nginx-lb”: 为容器指定一个名称；</li>
+<li>–dns 8.8.8.8: 指定容器使用的DNS服务器，默认和宿主一致；</li>
+<li>–dns-search example.com: 指定容器DNS搜索域名，默认和宿主一致；</li>
+<li>-h “mars”: 指定容器的hostname；</li>
+<li>-e username=”ritchie”: 设置环境变量；</li>
+<li>–env-file=<a href=""></a>: 从指定文件读入环境变量；</li>
+<li>–cpuset=”0-2″ or –cpuset=”0,1,2″: 绑定容器到指定CPU运行；</li>
+<li>-m :设置容器使用内存最大值；</li>
+<li>–net=”bridge”: 指定容器的网络连接类型，支持 bridge/host/none/container: 四种类型；</li>
+<li>–link=<a href=""></a>: 添加链接到另一个容器；</li>
+<li>–expose=<a href=""></a>: 开放一个端口或一组端口；</li>
+</ul>
+<p>查看docker镜像：<br><code>docker images</code></p>
+]]></content>
+      <tags>
+        <tag>技术手册</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>manjaro 签名无效解决方案</title>
+    <url>/blog/2019/08/20/manjaro-%E7%AD%BE%E5%90%8D%E6%97%A0%E6%95%88%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</url>
+    <content><![CDATA[<p>安装软件及更新的时候遇到签名无效，这是一种安全策略，我们可以修改<br><code>/etc/pacman.conf</code><br>文件将所有原来<br><code>SigLevel=xxxxx</code><br>注释掉，并且添加<br><code>SigLevel=Never</code><br>即可解决此类问题（会带来安全隐患，可以更新完再将其改回）</p>
+]]></content>
+      <tags>
+        <tag>技术手册</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>pip 更换国内源</title>
+    <url>/blog/2018/10/29/pip-%E6%9B%B4%E6%8D%A2%E5%9B%BD%E5%86%85%E6%BA%90/</url>
+    <content><![CDATA[<p>在使用pip安装东西的过程中，会发现速度十分缓慢。这时，我们可以将pip的下载源变为国内的镜像源，这样会提升下载速度。</p>
+<p>linux下，修改 ~/.pip/pip.conf (没有就创建一个)，windows下，直接在user目录中创建一个pip目录，如：C:\Users\xx\pip，新建文件pip.ini，内容如下（清华源）</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">[<span class="keyword">global</span>]</span><br><span class="line">index-url = https://pypi.tuna.tsinghua.edu.cn/simple</span><br><span class="line">[install]</span><br><span class="line">trusted-host=pypi.tuna.tsinghua.edu.cn</span><br></pre></td></tr></table></figure>
+<p>或使用阿里的源：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">[<span class="keyword">global</span>]</span><br><span class="line">index-url=http://mirrors.aliyun.com/pypi/simple/</span><br><span class="line">[install]</span><br><span class="line">trusted-host=mirrors.aliyun.com</span><br></pre></td></tr></table></figure>]]></content>
+      <tags>
+        <tag>技术手册</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>python serial获取所有串口</title>
+    <url>/blog/2018/10/29/python-serial%E8%8E%B7%E5%8F%96%E6%89%80%E6%9C%89%E4%B8%B2%E5%8F%A3/</url>
+    <content><![CDATA[<p>在写gui的时候发现如果自动选择串口号可能会有原主机和新装软件的主机存在串口号不一致的情况，这时，就需要手动的选择串口号了，我们在这里使用了pyserial的包，如果在<br><code>import serial.tools.list_ports</code><br>的时候发现报错，我们可以使用pip进行安装，如果pip速度太慢的话我们可以使用更换源来进行加速，安装完成后可以进行逐条输入语句验证是否可以正常输出。 </p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> serial</span><br><span class="line"><span class="keyword">import</span> serial.tools.list_ports</span><br><span class="line"><span class="keyword">from</span> easygui <span class="keyword">import</span> *</span><br><span class="line">  </span><br><span class="line">port_list = <span class="built_in">list</span>(serial.tools.list_ports.comports())</span><br><span class="line"><span class="keyword">if</span> <span class="built_in">len</span>(port_list) &amp;amp;lt;= <span class="number">0</span>:</span><br><span class="line">    <span class="built_in">print</span> (&amp;quot;The Serial port can<span class="string">&#x27;t find!&amp;quot;)</span></span><br><span class="line"><span class="string">  </span></span><br><span class="line"><span class="string">else:</span></span><br><span class="line"><span class="string">    for i in list(port_list):</span></span><br><span class="line"><span class="string">        print (i[0])</span></span><br></pre></td></tr></table></figure>]]></content>
+      <tags>
+        <tag>技术手册</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>python 二维字典的使用</title>
+    <url>/blog/2018/10/29/python-%E4%BA%8C%E7%BB%B4%E5%AD%97%E5%85%B8%E7%9A%84%E4%BD%BF%E7%94%A8/</url>
+    <content><![CDATA[<p>今天在做项目的过程中需要用到一组三维的结构，eg.‘序号’，‘频率1，频率2’，‘温度’</p>
+<p>这时我们可以使用这样的格式：</p>
+<p>dict = {‘序号’:{‘温度’:(频率1，频率2)}}<br><code>dict=&#123;&#39;5&#39;:&#123;&#39;30&#39;:(10,10)&#125;&#125;</code><br>可以得到：<br><code>&#123;’30&#39;:(10,10)&#125;</code><br>查询某一号传感器的某温度的频率信息：<br><code>dict[&#39;5&#39;][&#39;30&#39;]</code><br>可以得到：<br><code>（10，10）</code></p>
+]]></content>
+      <tags>
+        <tag>技术手册</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>python子线程中WMI报错-2147221020解决</title>
+    <url>/blog/2018/11/29/python%E5%AD%90%E7%BA%BF%E7%A8%8B%E4%B8%ADWMI%E6%8A%A5%E9%94%99-2147221020%E8%A7%A3%E5%86%B3/</url>
+    <content><![CDATA[<p>在编写检测进程的程序的时候发现如下错误：<br><img src="https://i.loli.net/2019/10/14/H6gocumbyitMFeQ.jpg" alt="error"></p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">check_exsit</span>(<span class="params">process_name</span>):</span></span><br><span class="line">    WMI = win32com.client.GetObject(<span class="string">&#x27;winmgmts:&#x27;</span>)</span><br><span class="line">    processCodeCov = WMI.ExecQuery(<span class="string">&#x27;select * from Win32_Process where Name=&quot;%s&quot;&#x27;</span> % process_name)</span><br><span class="line">    <span class="keyword">if</span> <span class="built_in">len</span>(processCodeCov) &gt; <span class="number">0</span>:</span><br><span class="line">        <span class="built_in">print</span> (<span class="string">&#x27;%s is exists&#x27;</span> % process_name)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        win32process.CreateProcess(<span class="string">&#x27;C:\Program Files (x86)\Tektronix\VectorVuPC\VectorVu-PC.exe&#x27;</span>, <span class="string">&#x27;&#x27;</span>, <span class="literal">None</span>, <span class="literal">None</span>, <span class="number">0</span>, win32process.CREATE_NO_WINDOW,<span class="literal">None</span>,<span class="literal">None</span>,win32process.STARTUPINFO())</span><br><span class="line">        <span class="built_in">print</span> (<span class="string">&#x27;%s is not exists&#x27;</span> % process_name)</span><br></pre></td></tr></table></figure>
+<p>这个程序是在子线程中运行的，经过查询得知在子线程中运行WMI需要进行初始化,改为如下程序：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">check_exsit</span>(<span class="params">process_name</span>):</span></span><br><span class="line">    pythoncom.CoInitialize()</span><br><span class="line">    WMI = win32com.client.GetObject(<span class="string">&#x27;winmgmts:&#x27;</span>)</span><br><span class="line">    processCodeCov = WMI.ExecQuery(<span class="string">&#x27;select * from Win32_Process where Name=&quot;%s&quot;&#x27;</span> % process_name)</span><br><span class="line">    <span class="keyword">if</span> <span class="built_in">len</span>(processCodeCov) &gt; <span class="number">0</span>:</span><br><span class="line">        <span class="built_in">print</span> (<span class="string">&#x27;%s is exists&#x27;</span> % process_name)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        win32process.CreateProcess(<span class="string">&#x27;C:\Program Files (x86)\Tektronix\VectorVuPC\VectorVu-PC.exe&#x27;</span>, <span class="string">&#x27;&#x27;</span>, <span class="literal">None</span>, <span class="literal">None</span>, <span class="number">0</span>, win32process.CREATE_NO_WINDOW,<span class="literal">None</span>,<span class="literal">None</span>,win32process.STARTUPINFO())</span><br><span class="line">        <span class="built_in">print</span> (<span class="string">&#x27;%s is not exists&#x27;</span> % process_name)</span><br></pre></td></tr></table></figure>
+<p>加入初始化pythoncom.CoInitialize()即可</p>
+]]></content>
+      <tags>
+        <tag>技术手册</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>python3将字符串转为字典</title>
+    <url>/blog/2019/12/07/python3%E5%B0%86%E5%AD%97%E7%AC%A6%E4%B8%B2%E8%BD%AC%E4%B8%BA%E5%AD%97%E5%85%B8/</url>
+    <content><![CDATA[<p>在工作中需要从config中读取字典，读取到的字典是字符串：<br>`userinfo = ‘{“name” : “john”, “gender” : “male”, “age”: 28}’<br>`需要将上面的变为：<br>`userdict = {“name” : “john”, “gender” : “male”, “age”: 28}<br>`<br>有以下几种方法：</p>
+<h1 id="通过-json-来转换"><a href="#通过-json-来转换" class="headerlink" title="通过 json 来转换"></a>通过 json 来转换</h1><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">import</span> json</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>user_info= <span class="string">&#x27;&#123;&quot;name&quot; : &quot;john&quot;, &quot;gender&quot; : &quot;male&quot;, &quot;age&quot;: 28&#125;&#x27;</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>user_dict = json.loads(user_info)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>user_dict</span><br><span class="line">&#123;<span class="string">u&#x27;gender&#x27;</span>: <span class="string">u&#x27;male&#x27;</span>, <span class="string">u&#x27;age&#x27;</span>: <span class="number">28</span>, <span class="string">u&#x27;name&#x27;</span>: <span class="string">u&#x27;john&#x27;</span>&#125;</span><br></pre></td></tr></table></figure>
+<p>这里有个问题：**数组或对象之中的字符串必须使用双引号，不能使用单引号 **</p>
+<h1 id="通过-eval"><a href="#通过-eval" class="headerlink" title="通过 eval"></a>通过 eval</h1><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>user_info = <span class="string">&#x27;&#123;&quot;name&quot; : &quot;john&quot;, &quot;gender&quot; : &quot;male&quot;, &quot;age&quot;: 28&#125;&#x27;</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>user_dict = <span class="built_in">eval</span>(user_info)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>user_dict</span><br><span class="line">&#123;<span class="string">&#x27;gender&#x27;</span>: <span class="string">&#x27;male&#x27;</span>, <span class="string">&#x27;age&#x27;</span>: <span class="number">28</span>, <span class="string">&#x27;name&#x27;</span>: <span class="string">&#x27;john&#x27;</span>&#125;</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>user_info = <span class="string">&quot;&#123;&#x27;name&#x27; : &#x27;john&#x27;, &#x27;gender&#x27; : &#x27;male&#x27;, &#x27;age&#x27;: 28&#125;&quot;</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>user_dict = <span class="built_in">eval</span>(user_info)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>user_dict</span><br><span class="line">&#123;<span class="string">&#x27;gender&#x27;</span>: <span class="string">&#x27;male&#x27;</span>, <span class="string">&#x27;age&#x27;</span>: <span class="number">28</span>, <span class="string">&#x27;name&#x27;</span>: <span class="string">&#x27;john&#x27;</span>&#125;</span><br></pre></td></tr></table></figure>
+<p>这个有很严重的安全问题，当用户从config中输入破坏性的代码则会对整个系统存在安全性的威胁</p>
+<h1 id="通过-literal-eval"><a href="#通过-literal-eval" class="headerlink" title="通过 literal_eval_"></a>通过 literal_eval_</h1><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">import</span> ast</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>user = <span class="string">&#x27;&#123;&quot;name&quot; : &quot;john&quot;, &quot;gender&quot; : &quot;male&quot;, &quot;age&quot;: 28&#125;&#x27;</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>user_dict = ast.literal_eval(user)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>user_dict</span><br><span class="line">&#123;<span class="string">&#x27;gender&#x27;</span>: <span class="string">&#x27;male&#x27;</span>, <span class="string">&#x27;age&#x27;</span>: <span class="number">28</span>, <span class="string">&#x27;name&#x27;</span>: <span class="string">&#x27;john&#x27;</span>&#125;</span><br><span class="line">user_info = <span class="string">&quot;&#123;&#x27;name&#x27; : &#x27;john&#x27;, &#x27;gender&#x27; : &#x27;male&#x27;, &#x27;age&#x27;: 28&#125;&quot;</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>user_dict = ast.literal_eval(user)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>user_dict</span><br><span class="line">&#123;<span class="string">&#x27;gender&#x27;</span>: <span class="string">&#x27;male&#x27;</span>, <span class="string">&#x27;age&#x27;</span>: <span class="number">28</span>, <span class="string">&#x27;name&#x27;</span>: <span class="string">&#x27;john&#x27;</span>&#125;</span><br></pre></td></tr></table></figure>
+<p>用这个是比较好的解决方法</p>
+]]></content>
+      <tags>
+        <tag>技术手册</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>停止、删除所有的docker容器和镜像</title>
+    <url>/blog/2019/01/07/%E5%81%9C%E6%AD%A2%E3%80%81%E5%88%A0%E9%99%A4%E6%89%80%E6%9C%89%E7%9A%84docker%E5%AE%B9%E5%99%A8%E5%92%8C%E9%95%9C%E5%83%8F/</url>
+    <content><![CDATA[<p>列出所有的容器 ID</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker ps -aq</span><br></pre></td></tr></table></figure>
+<p>停止所有的容器</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker stop $(docker ps -aq)</span><br></pre></td></tr></table></figure>
+<p>删除所有的容器</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker rm $(docker ps -aq)</span><br></pre></td></tr></table></figure>
+<p>删除所有的镜像</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker rmi $(docker images -q)</span><br></pre></td></tr></table></figure>
+<p>复制文件</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker cp mycontainer:/opt/file.txt /opt/<span class="built_in">local</span>/</span><br><span class="line">docker cp /opt/<span class="built_in">local</span>/file.txt mycontainer:/opt/</span><br></pre></td></tr></table></figure>
+<p><code>docker image prune --force --all或者docker image prune -f -a</code> : 删除所有不使用的镜像<br><code>docker container prune -f</code>: 删除所有停止的容器</p>
+]]></content>
+      <tags>
+        <tag>技术手册</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>python装饰器 </title>
+    <url>/blog/2019/05/31/python%E8%A3%85%E9%A5%B0%E5%99%A8/</url>
+    <content><![CDATA[<p>最近在使用python编程的时候发现了装饰器这个神奇的东西，在不破坏整个代码的结构和用法的同时将新功能套在旧的代码上，不影响原来代码的结构性和功能性，需要的时候加上，不需要的时候删掉即可。但是这玩意儿到底是啥呢？</p>
+<p>先来看一段代码</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">a</span>(<span class="params">func</span>):</span></span><br><span class="line">    print(<span class="string">&quot;this is func one&quot;</span>)</span><br><span class="line">    func()</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">b</span>():</span></span><br><span class="line">    print(<span class="string">&quot;this is func two&quot;</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">a(b)</span><br></pre></td></tr></table></figure>
+<p><img src="https://i.loli.net/2019/10/14/mJ39wBl7DQzrdhu.jpg" alt="代码运行结果"><br>众所周知，python函数也是可以被当成一个参数传递的，所以在这里，我们是把b当为一个参数传递给了a，当我们需要调用b的时候呢？这也被破坏了，所以这里我们需要</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">a</span>(<span class="params">func</span>):</span></span><br><span class="line">    print(<span class="string">&quot;this is func one&quot;</span>)</span><br><span class="line">    func()</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">b</span>():</span></span><br><span class="line">    print(<span class="string">&quot;this is func two&quot;</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">b=a(b)</span><br><span class="line">b</span><br></pre></td></tr></table></figure>
+<p>在这里，我们的b=a(b)就解决了结构问题。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">a</span>(<span class="params">func</span>):</span></span><br><span class="line">    print(<span class="string">&quot;this is func one&quot;</span>)</span><br><span class="line">    func()</span><br><span class="line"></span><br><span class="line"><span class="meta">@a</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">b</span>():</span></span><br><span class="line">    print(<span class="string">&quot;this is func two&quot;</span>)</span><br><span class="line"></span><br><span class="line">b</span><br></pre></td></tr></table></figure>
+<p>当然，我们用@也可以等效<br>b=a(b )</p>
+<p>像这种@的可以传参数，也可以多次嵌套,但是这样就需要修改一下啦</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">a</span>(<span class="params">func</span>):</span></span><br><span class="line">    print(<span class="string">&quot;this is func one&quot;</span>)</span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">abc</span>():</span></span><br><span class="line">        func()</span><br><span class="line">    <span class="keyword">return</span> abc</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">c</span>(<span class="params">func</span>):</span></span><br><span class="line">    print(<span class="string">&quot;this is func three&quot;</span>)</span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">abc</span>():</span></span><br><span class="line">        func()</span><br><span class="line">    <span class="keyword">return</span> abc</span><br><span class="line"></span><br><span class="line"><span class="meta">@c</span></span><br><span class="line"><span class="meta">@a</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">b</span>():</span></span><br><span class="line">    print(<span class="string">&quot;this is func two&quot;</span>)</span><br><span class="line"></span><br><span class="line">b()</span><br></pre></td></tr></table></figure>
+<p>这样就将函数传递过去并且执行了，之前的直接传递的是函数变量</p>
+]]></content>
+      <tags>
+        <tag>技术手册</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>出差有感</title>
+    <url>/blog/2019/12/27/%E5%87%BA%E5%B7%AE%E6%9C%89%E6%84%9F/</url>
+    <content><![CDATA[<p>这个月出了好几趟差了，从安徽到山东，从山东到陕西，虽然是离家近了，但是事情忙，又没空回家，总是觉得自己应该在出差过程中有些提升，但是从硬件安装到软件调试，所有的问题都出现在对接的人的身上，没有标准，或者是有标准都不遵守。<br>其实大家按照一套标准来做东西完全可以减少很多返工的时间，同样的，牵头的人也没想明白整个项目的架构和技术层面的标准。<br>归根结底就是人<strong>不行</strong><br>年底了开始‘犯小人’，希望明年会好点吧，再这样下去真的挺累。<br>出差挺好的就是有点伤肝</p>
+]]></content>
+      <tags>
+        <tag>日常</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>微信python获取好友的信息</title>
+    <url>/blog/2018/10/29/%E5%BE%AE%E4%BF%A1python%E8%8E%B7%E5%8F%96%E5%A5%BD%E5%8F%8B%E7%9A%84%E4%BF%A1%E6%81%AF/</url>
+    <content><![CDATA[<p>可以通过本程序获取好友的昵称，备注名，等信息，来自微信注册时的信息，采用itchat进行收集，使用xlwt进行保存，最终呈现为excel表格</p>
+<p>使用时请先安装xlwt，itchat等包</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># coding:utf-8</span></span><br><span class="line"><span class="keyword">import</span> itchat,time,sys,xlwt</span><br><span class="line"> </span><br><span class="line">file = xlwt.Workbook()</span><br><span class="line">table = file.add_sheet(<span class="string">&#x27;info&#x27;</span>,cell_overwrite_ok=<span class="literal">True</span>)</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"><span class="comment"># 登录-持续</span></span><br><span class="line">itchat.auto_login(enableCmdQR=<span class="number">2</span>)</span><br><span class="line">print(<span class="string">u&quot;logged&quot;</span>)</span><br><span class="line"><span class="comment"># 获取好友列表</span></span><br><span class="line">friends = itchat.get_friends(update=<span class="literal">True</span>)[<span class="number">0</span>:]</span><br><span class="line"> </span><br><span class="line">male = female = other = <span class="number">0</span></span><br><span class="line"> </span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> friends[<span class="number">1</span>:]:</span><br><span class="line">    sex = i[<span class="string">&quot;Sex&quot;</span>]</span><br><span class="line">    <span class="keyword">if</span> sex == <span class="number">1</span>:</span><br><span class="line">        male += <span class="number">1</span></span><br><span class="line">    <span class="keyword">elif</span> sex == <span class="number">2</span>:</span><br><span class="line">        female += <span class="number">1</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        other += <span class="number">1</span></span><br><span class="line">total = <span class="built_in">len</span>(friends[<span class="number">1</span>:])</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line">table.write(<span class="number">0</span>,<span class="number">7</span>,<span class="string">u&#x27;【共&#x27;</span>+<span class="built_in">str</span>(<span class="built_in">len</span>(friends)-<span class="number">1</span>)+<span class="string">u&#x27;位朋友，&#x27;</span>+<span class="built_in">str</span>(male)+<span class="string">u&#x27;位男性朋友，&#x27;</span>+<span class="built_in">str</span>(female)+<span class="string">u&#x27;位女性朋友，另外&#x27;</span>+<span class="built_in">str</span>(other)+<span class="string">u&#x27;位不明性别】&#x27;</span>)</span><br><span class="line">table.write(<span class="number">0</span>,<span class="number">0</span>,<span class="string">u&#x27; 【昵称】&#x27;</span>)  </span><br><span class="line">table.write(<span class="number">0</span>,<span class="number">1</span>,<span class="string">u&#x27; 【备注名】&#x27;</span>)</span><br><span class="line">table.write(<span class="number">0</span>,<span class="number">2</span>,<span class="string">u&#x27; 【省份】&#x27;</span>)  </span><br><span class="line">table.write(<span class="number">0</span>,<span class="number">3</span>,<span class="string">u&#x27; 【城市】&#x27;</span>)  </span><br><span class="line">table.write(<span class="number">0</span>,<span class="number">4</span>,<span class="string">u&#x27; 【签名】&#x27;</span>)</span><br><span class="line"> </span><br><span class="line">a=<span class="number">0</span></span><br><span class="line"> </span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> friends:</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line">    table.write(a+<span class="number">1</span>,<span class="number">0</span>,i[<span class="string">&#x27;NickName&#x27;</span>])</span><br><span class="line">    table.write(a+<span class="number">1</span>,<span class="number">1</span>,i[<span class="string">&#x27;RemarkName&#x27;</span>])</span><br><span class="line">    table.write(a+<span class="number">1</span>,<span class="number">2</span>,i[<span class="string">&#x27;Province&#x27;</span>])</span><br><span class="line">    table.write(a+<span class="number">1</span>,<span class="number">3</span>,i[<span class="string">&#x27;City&#x27;</span>])</span><br><span class="line">    table.write(a+<span class="number">1</span>,<span class="number">4</span>,i[<span class="string">&#x27;Signature&#x27;</span>])</span><br><span class="line">    <span class="keyword">if</span> i[<span class="string">&#x27;RemarkName&#x27;</span>] == <span class="string">u&#x27;&#x27;</span>:</span><br><span class="line">        table.write(a+<span class="number">1</span>,<span class="number">1</span>,<span class="string">u&#x27;[ ]&#x27;</span>)</span><br><span class="line">    <span class="keyword">if</span> i[<span class="string">&#x27;Province&#x27;</span>] == <span class="string">u&#x27;&#x27;</span>:</span><br><span class="line">        table.write(a+<span class="number">1</span>,<span class="number">2</span>,<span class="string">u&#x27;[ ]&#x27;</span>)</span><br><span class="line">    <span class="keyword">if</span> i[<span class="string">&#x27;City&#x27;</span>] == <span class="string">u&#x27;&#x27;</span>:</span><br><span class="line">        table.write(a+<span class="number">1</span>,<span class="number">3</span>,<span class="string">u&#x27;[ ]&#x27;</span>)</span><br><span class="line">    <span class="keyword">if</span> i[<span class="string">&#x27;Signature&#x27;</span>] == <span class="string">u&#x27;&#x27;</span>:</span><br><span class="line">        table.write(a+<span class="number">1</span>,<span class="number">4</span>,<span class="string">u&#x27;[ ]&#x27;</span>)</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line">    a=a+<span class="number">1</span></span><br><span class="line">    print(a)</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"><span class="comment"># qm=raw_input(&quot;file name &gt;&gt;&gt;:&quot;)</span></span><br><span class="line">aaa=<span class="string">&#x27;weixin_&#x27;</span>+time.strftime(<span class="string">&quot;%Y%m%d&quot;</span>, time.localtime())+<span class="string">&#x27;.xls&#x27;</span></span><br><span class="line">file.save(aaa)</span><br><span class="line">itchat.send(<span class="string">&#x27;made by junzi&#x27;</span>,<span class="string">&#x27;filehelper&#x27;</span>)</span><br><span class="line">itchat.send(<span class="string">&#x27;@%s@%s&#x27;</span> % (<span class="string">&#x27;fil&#x27;</span>,aaa), <span class="string">&#x27;filehelper&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span> (<span class="string">&quot;over&quot;</span>)</span><br></pre></td></tr></table></figure>]]></content>
+      <tags>
+        <tag>技术手册</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>报错 Error: rpmdb open failed 的解决</title>
+    <url>/blog/2018/12/19/%E6%8A%A5%E9%94%99-Error-rpmdb-open-failed-%E7%9A%84%E8%A7%A3%E5%86%B3/</url>
+    <content><![CDATA[<p>在使用yum安装软件的时候发现如下错误：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">error: rpmdb: BDB0113 Thread/process <span class="number">20287</span>/<span class="number">139700001376064</span> failed: BDB1507 Thread died <span class="keyword">in</span> Berkeley DB library</span><br><span class="line">error: db5 error(-30973) from dbenv-&gt;failchk: BDB0087 DB_RUNRECOVERY: Fatal error, run database recovery</span><br><span class="line">error: cannot <span class="built_in">open</span> Packages index using db5 -  (-<span class="number">30973</span>)</span><br><span class="line">error: cannot <span class="built_in">open</span> Packages database <span class="keyword">in</span> /var/lib/rpm</span><br><span class="line">CRITICAL:yum.main:</span><br><span class="line"> </span><br><span class="line">Error: rpmdb <span class="built_in">open</span> failed</span><br></pre></td></tr></table></figure>
+<p>此时，通过：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">rm -f /var/lib/rpm/__db*</span><br><span class="line">rpm --rebuilddb</span><br></pre></td></tr></table></figure>
+<p>两条语句即可完成清楚缓存并且重建缓存，这时yum就不会报错了</p>
+]]></content>
+      <tags>
+        <tag>技术手册</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>正则表达式简单例程</title>
+    <url>/blog/2018/10/19/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E7%AE%80%E5%8D%95%E4%BE%8B%E7%A8%8B/</url>
+    <content><![CDATA[<p>从字符串 str 中提取数字部分的内容(匹配一次)：</p>
+<p>var str = “abc123def”;</p>
+<p>var patt1 = /<a href="">0-9</a>+/;</p>
+<p>document.write(str.match(patt1));</p>
+<p>^ 为匹配输入字符串的开始位置。<br><a href="">0-9</a>+匹配多个数字， <a href="">0-9</a> 匹配单个数字，+ 匹配一个或者多个。<br>abc$匹配字母 abc 并以 abc 结尾，$ 为匹配输入字符串的结束位置。<br>runoo+b，可以匹配 runoob、runooob、runoooooob 等，+ 号代表前面的字符必须至少出现一次（1次或多次）。<br>runoo<em>b，可以匹配 runob、runoob、runoooooob 等，</em> 号代表字符可以不出现，也可以出现一次或者多次（0次、或1次、或多次）。<br>colou?r 可以匹配 color 或者 colour，? 问号代表前面的字符最多只可以出现一次（0次、或1次）</p>
+]]></content>
+      <tags>
+        <tag>技术手册</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>解决mysql/mariaDB “ERROR 2002 (HY000):Can’t connect to local MySQL server through socket ‘/tmp/mysql.sock’ (111)”</title>
+    <url>/blog/2019/01/15/%E8%A7%A3%E5%86%B3mysql-mariaDB-%E2%80%9CERROR-2002-HY000-Can%E2%80%99t-connect-to-local-MySQL-server-through/</url>
+    <content><![CDATA[<p>搬运&amp;汉化自stackoverflow</p>
+<p>解决这个问题需要重启mysql重置密码</p>
+<p>1.停止mysql<br><code>sudo /etc/init.d/mysql stop</code><br>其他版本：<br><code>sudo /etc/init.d/mysqld stop</code></p>
+<p>2.进入mysql的安全模式<br><code>sudo mysqld_safe --skip-grant-tables &amp;amp;</code></p>
+<p>3.以root用户登录mysql<br><code>mysql -uroot</code></p>
+<p>4.选择mysql数据库<br><code>use mysql;</code></p>
+<p>5.重置密码<br><code>update user set authentication_string=password(&#39;mynewpassword&#39;) where user=&#39;root&#39;;</code></p>
+<p>mysql 5.7版本：<br> <code>update user set authentication_string=password(&#39;mynewpassword&#39;) where user=&#39;root&#39;;</code></p>
+<p>6.更新权限<br><code>flush privileges;</code></p>
+<p>7.退出<br><code>quit</code></p>
+<p>8.重启mysql服务</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo /etc/init.d/mysql stop</span><br><span class="line">...</span><br><span class="line">sudo /etc/init.d/mysql start</span><br></pre></td></tr></table></figure>
+<p>在CentOS，Fedora ，RHEL中：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo /etc/init.d/mysqld stop</span><br><span class="line">...</span><br><span class="line">sudo /etc/init.d/mysqld start</span><br></pre></td></tr></table></figure>
+<p>9.用新的密码登录<br><code>mysql -u root -p</code></p>
+]]></content>
+      <tags>
+        <tag>技术手册</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>解决树莓派kali更换国内源后更新报错</title>
+    <url>/blog/2018/11/27/%E8%A7%A3%E5%86%B3%E6%A0%91%E8%8E%93%E6%B4%BEkali%E6%9B%B4%E6%8D%A2%E5%9B%BD%E5%86%85%E6%BA%90%E5%90%8E%E6%9B%B4%E6%96%B0%E6%8A%A5%E9%94%99/</url>
+    <content><![CDATA[<p>在更新时发现报错如下：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">dpkg: error processing package raspi3-firmware (--configure):</span><br><span class="line"> installed raspi3-firmware package post-installation script subprocess returned error <span class="built_in">exit</span> status 1</span><br><span class="line">Errors were encountered <span class="keyword">while</span> processing:</span><br><span class="line"> raspi3-firmware</span><br><span class="line">E: Sub-process /usr/bin/dpkg returned an error code (1)</span><br></pre></td></tr></table></figure>
+<p>此时，进入/usr/bin/dpkg删除info文件夹后再新建一个即可，具体原因还在查 大家可以使用kali的64位arm包，这样不会报错<br><img src="https://i.loli.net/2019/10/14/Trsj7BZcSOkmp39.jpg" alt="64bit kali of raspberry"></p>
+]]></content>
+      <tags>
+        <tag>技术手册</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>go get 代理设置</title>
+    <url>/blog/2021/02/23/go%20get%E4%BB%A3%E7%90%86%E8%AE%BE%E7%BD%AE/</url>
+    <content><![CDATA[<h1 id="go-get-代理设置"><a href="#go-get-代理设置" class="headerlink" title="go get 代理设置"></a>go get 代理设置</h1><p>在最近学习go的过程中发现go get命令总是会报错</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">The <span class="string">&quot;go-outline&quot;</span> <span class="built_in">command</span> is not available. Run <span class="string">&quot;go get -v github.com/ramya-rao-a/go-outline&quot;</span> to install.</span><br></pre></td></tr></table></figure>
+<p>这是在使用vscode 过程中安装go插件过程中提示的，我们需要执行</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">go get -v github.com/ramya-rao-a/go-outline</span><br></pre></td></tr></table></figure>
+<p>进行安装，但是这句总是报错，都是提示代理服务器错误，于是我又把git的代理设置了一下，发现还是不行，于是经过上网寻找，发现是在git之前有http行为，所以可能也会解析不出来，使用如下指令即可解决（MAC）：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">export</span> https_proxy=http://127.0.0.1:7890</span><br><span class="line"><span class="built_in">export</span> http_proxy=http://127.0.0.1:7890</span><br></pre></td></tr></table></figure>
+<p>这时在进行操作就不会报错了</p>
+]]></content>
+      <tags>
+        <tag>技术手册</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>我们为什么不保持高效的沟通？</title>
+    <url>/blog/2020/08/20/%E6%88%91%E4%BB%AC%E4%B8%BA%E4%BB%80%E4%B9%88%E4%B8%8D%E4%BF%9D%E6%8C%81%E9%AB%98%E6%95%88%E7%9A%84%E6%B2%9F%E9%80%9A%EF%BC%9F/</url>
+    <content><![CDATA[<p>这次出差大部分时间都花在了，等待别人沟通的过程中。真正需要我做的事没有多少，但是由于沟通的原因导致进度迟迟不能推进。这太令人感到头疼了，在工作过程中，大家好像都不能很好地保持沟通，真正需要做的事情，但是由于沟通的不畅，导致了进度的拖慢。我们应该怎么样才能保持一个高效的沟通呢？我觉得主要还是在日常过程中沟通，也不是很顺畅，所以应该从日常就应该有一个很好的沟通渠道和沟通方式。而不是遇到事儿，以后才开始想办法去沟通。本来这一次很简单，介绍一下技术就OK了，由于对方的沟通问题，导致这次出差的时间延长了一周，刚刚过来的时候，他们信誓旦旦地讲这边已经沟通好了，你来就行了，但是真正的过来以后发现好多事情都没有沟通，施工项目的现场现在也发现有很多之前由于沟通导致的问题。本来预计全部走无线通路，但是现在发现无线通路有问题，所以可能要临时要改成有限，投入在改成有限通路的过程中，还需要改一些现场的补偿导线长度等具体细节问题。我觉得我们还是在整个过程中花费了大量的时间，这些时间本不应该在这个时间节点耗费。在这个即将交付的日期前，有这么大的技术架构改动，这实在是很不应该发生的事情。希望在之后的过程中能够保持一个良好的沟通吧，毕竟沟通成本永远是项目过程中比较大的成本(时间成本）。共勉吧。</p>
+]]></content>
+      <tags>
+        <tag>日常</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>git 代理设置</title>
+    <url>/blog/2021/02/23/git%E4%BB%A3%E7%90%86%E8%AE%BE%E7%BD%AE/</url>
+    <content><![CDATA[<p>代码如下：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --global https.proxy <span class="string">&#x27;sock5://127.0.0.1:7890&#x27;</span></span><br><span class="line">git config --global http.proxy <span class="string">&#x27;sock5://127.0.0.1:7890&#x27;</span></span><br></pre></td></tr></table></figure>
+]]></content>
+      <tags>
+        <tag>技术手册</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>m1版本的homebrew每次运行提示No such file or directory的解决方法</title>
+    <url>/blog/2021/02/24/m1%E7%89%88%E6%9C%AC%E7%9A%84homebrew%E6%AF%8F%E6%AC%A1%E6%8F%90%E7%A4%BAUsersakyHomebrewbinbrew-line-5-cd-usrlocalHomebrewbin-No-such-file-or-directory%E4%BF%AE/</url>
+    <content><![CDATA[<p>当我安装完homebrew之后每次运行brew的时候都会有</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">/Users/aky/Homebrew/bin/brew: line 5: <span class="built_in">cd</span>: /usr/<span class="built_in">local</span>/Homebrew/bin: No such file or directory</span><br></pre></td></tr></table></figure>
+<p>这样的提示，后面经过查找发现，是之前的homebrew没有清理干净造成的，之前的homebrew是安装在/usr/local/Homebrew 中，卸载的时候该文件夹已经被我全部删除了，所以导致了它在</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">/usr/<span class="built_in">local</span>/bin/brew</span><br></pre></td></tr></table></figure>
+<p>的链接失效，所以我们只要删除这个链接即可，指令如下：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">rm /usr/<span class="built_in">local</span>/bin/brew</span><br></pre></td></tr></table></figure>
+]]></content>
+      <tags>
+        <tag>技术手册</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>又到了新的一年</title>
+    <url>/blog/2022/01/10/%E5%8F%88%E5%88%B0%E6%96%B0%E7%9A%84%E4%B8%80%E5%B9%B4%E4%BA%86/</url>
+    <content><![CDATA[<h1 id="总结一下去年"><a href="#总结一下去年" class="headerlink" title="总结一下去年"></a>总结一下去年</h1><h1 id="展望一下今年"><a href="#展望一下今年" class="headerlink" title="展望一下今年"></a>展望一下今年</h1>]]></content>
+      <tags>
+        <tag>感慨</tag>
+      </tags>
+  </entry>
+</search>
