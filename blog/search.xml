@@ -44,7 +44,11 @@
 <p>其中，ui.submit,clicked.connect(work)为点击后运行work进程，这样可以将检测函数放置在子进程进行运行，使主界面不会被卡死，这样保证用户正常使用，后台进行数据处理和刷新。</p>
 ]]></content>
       <tags>
+<<<<<<< HEAD
         <tag>技术手册</tag>
+=======
+        <tag>炼丹手册</tag>
+>>>>>>> a196d450032481cb37cc7c49c6bdf8f80ad5f8be
       </tags>
   </entry>
   <entry>
@@ -53,7 +57,11 @@
     <content><![CDATA[<p>今天下载时候发现下载速度太慢，发现有国内镜像<br><a href="https://cr.console.aliyun.com/#/accelerator">https://cr.console.aliyun.com/#/accelerator</a><br>在上面的连接中有阿里云的镜像更改方法及镜像地址需要登录阿里云。</p>
 ]]></content>
       <tags>
+<<<<<<< HEAD
         <tag>技术手册</tag>
+=======
+        <tag>Docker</tag>
+>>>>>>> a196d450032481cb37cc7c49c6bdf8f80ad5f8be
       </tags>
   </entry>
   <entry>
@@ -66,7 +74,11 @@
 <h1 id="Hydrogen配置："><a href="#Hydrogen配置：" class="headerlink" title="Hydrogen配置："></a>Hydrogen配置：</h1><p>在使用过程中发现不断有错误出现:<br>这个问题是因为Hydrogen没有调用python3，遇到内核有问题则对应弹出的提示进行安装<br>当弹出：<br><code>/usr/bin/python: No module named ipykernel_launcher</code><br>这时我们需要编辑/usr/local/share/jupyter/kernels/python3/kernel.json文件</p>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line"> <span class="string">&quot;argv&quot;</span>: [</span><br><span class="line">  <span class="string">&quot;python3&quot;</span>,</span><br><span class="line">  <span class="string">&quot;-m&quot;</span>,</span><br><span class="line">  <span class="string">&quot;ipykernel_launcher&quot;</span>,</span><br><span class="line">  <span class="string">&quot;-f&quot;</span>,</span><br><span class="line">  <span class="string">&quot;&#123;connection_file&#125;&quot;</span></span><br><span class="line"> ],</span><br><span class="line"> <span class="string">&quot;display_name&quot;</span>: <span class="string">&quot;Python 3&quot;</span>,</span><br><span class="line"> <span class="string">&quot;language&quot;</span>: <span class="string">&quot;python&quot;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
       <tags>
+<<<<<<< HEAD
         <tag>技术手册</tag>
+=======
+        <tag>炼丹手册</tag>
+>>>>>>> a196d450032481cb37cc7c49c6bdf8f80ad5f8be
       </tags>
   </entry>
   <entry>
@@ -94,7 +106,11 @@
 <p>查看docker镜像：<br><code>docker images</code></p>
 ]]></content>
       <tags>
+<<<<<<< HEAD
         <tag>技术手册</tag>
+=======
+        <tag>Docker</tag>
+>>>>>>> a196d450032481cb37cc7c49c6bdf8f80ad5f8be
       </tags>
   </entry>
   <entry>
@@ -103,7 +119,11 @@
     <content><![CDATA[<p>安装软件及更新的时候遇到签名无效，这是一种安全策略，我们可以修改<br><code>/etc/pacman.conf</code><br>文件将所有原来<br><code>SigLevel=xxxxx</code><br>注释掉，并且添加<br><code>SigLevel=Never</code><br>即可解决此类问题（会带来安全隐患，可以更新完再将其改回）</p>
 ]]></content>
       <tags>
+<<<<<<< HEAD
         <tag>技术手册</tag>
+=======
+        <tag>炼丹手册</tag>
+>>>>>>> a196d450032481cb37cc7c49c6bdf8f80ad5f8be
       </tags>
   </entry>
   <entry>
@@ -115,7 +135,11 @@
 <p>或使用阿里的源：</p>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">[<span class="keyword">global</span>]</span><br><span class="line">index-url=http://mirrors.aliyun.com/pypi/simple/</span><br><span class="line">[install]</span><br><span class="line">trusted-host=mirrors.aliyun.com</span><br></pre></td></tr></table></figure>]]></content>
       <tags>
+<<<<<<< HEAD
         <tag>技术手册</tag>
+=======
+        <tag>炼丹手册</tag>
+>>>>>>> a196d450032481cb37cc7c49c6bdf8f80ad5f8be
       </tags>
   </entry>
   <entry>
@@ -124,7 +148,11 @@
     <content><![CDATA[<p>在写gui的时候发现如果自动选择串口号可能会有原主机和新装软件的主机存在串口号不一致的情况，这时，就需要手动的选择串口号了，我们在这里使用了pyserial的包，如果在<br><code>import serial.tools.list_ports</code><br>的时候发现报错，我们可以使用pip进行安装，如果pip速度太慢的话我们可以使用更换源来进行加速，安装完成后可以进行逐条输入语句验证是否可以正常输出。 </p>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> serial</span><br><span class="line"><span class="keyword">import</span> serial.tools.list_ports</span><br><span class="line"><span class="keyword">from</span> easygui <span class="keyword">import</span> *</span><br><span class="line">  </span><br><span class="line">port_list = <span class="built_in">list</span>(serial.tools.list_ports.comports())</span><br><span class="line"><span class="keyword">if</span> <span class="built_in">len</span>(port_list) &amp;amp;lt;= <span class="number">0</span>:</span><br><span class="line">    <span class="built_in">print</span> (&amp;quot;The Serial port can<span class="string">&#x27;t find!&amp;quot;)</span></span><br><span class="line"><span class="string">  </span></span><br><span class="line"><span class="string">else:</span></span><br><span class="line"><span class="string">    for i in list(port_list):</span></span><br><span class="line"><span class="string">        print (i[0])</span></span><br></pre></td></tr></table></figure>]]></content>
       <tags>
+<<<<<<< HEAD
         <tag>技术手册</tag>
+=======
+        <tag>炼丹手册</tag>
+>>>>>>> a196d450032481cb37cc7c49c6bdf8f80ad5f8be
       </tags>
   </entry>
   <entry>
@@ -135,7 +163,11 @@
 <p>dict = {‘序号’:{‘温度’:(频率1，频率2)}}<br><code>dict=&#123;&#39;5&#39;:&#123;&#39;30&#39;:(10,10)&#125;&#125;</code><br>可以得到：<br><code>&#123;’30&#39;:(10,10)&#125;</code><br>查询某一号传感器的某温度的频率信息：<br><code>dict[&#39;5&#39;][&#39;30&#39;]</code><br>可以得到：<br><code>（10，10）</code></p>
 ]]></content>
       <tags>
+<<<<<<< HEAD
         <tag>技术手册</tag>
+=======
+        <tag>炼丹手册</tag>
+>>>>>>> a196d450032481cb37cc7c49c6bdf8f80ad5f8be
       </tags>
   </entry>
   <entry>
@@ -148,7 +180,11 @@
 <p>加入初始化pythoncom.CoInitialize()即可</p>
 ]]></content>
       <tags>
+<<<<<<< HEAD
         <tag>技术手册</tag>
+=======
+        <tag>炼丹手册</tag>
+>>>>>>> a196d450032481cb37cc7c49c6bdf8f80ad5f8be
       </tags>
   </entry>
   <entry>
@@ -163,7 +199,11 @@
 <p>用这个是比较好的解决方法</p>
 ]]></content>
       <tags>
+<<<<<<< HEAD
         <tag>技术手册</tag>
+=======
+        <tag>炼丹手册</tag>
+>>>>>>> a196d450032481cb37cc7c49c6bdf8f80ad5f8be
       </tags>
   </entry>
   <entry>
@@ -182,7 +222,11 @@
 <p><code>docker image prune --force --all或者docker image prune -f -a</code> : 删除所有不使用的镜像<br><code>docker container prune -f</code>: 删除所有停止的容器</p>
 ]]></content>
       <tags>
+<<<<<<< HEAD
         <tag>技术手册</tag>
+=======
+        <tag>Docker</tag>
+>>>>>>> a196d450032481cb37cc7c49c6bdf8f80ad5f8be
       </tags>
   </entry>
   <entry>
@@ -201,7 +245,11 @@
 <p>这样就将函数传递过去并且执行了，之前的直接传递的是函数变量</p>
 ]]></content>
       <tags>
+<<<<<<< HEAD
         <tag>技术手册</tag>
+=======
+        <tag>炼丹手册</tag>
+>>>>>>> a196d450032481cb37cc7c49c6bdf8f80ad5f8be
       </tags>
   </entry>
   <entry>
@@ -220,7 +268,11 @@
 <p>使用时请先安装xlwt，itchat等包</p>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># coding:utf-8</span></span><br><span class="line"><span class="keyword">import</span> itchat,time,sys,xlwt</span><br><span class="line"> </span><br><span class="line">file = xlwt.Workbook()</span><br><span class="line">table = file.add_sheet(<span class="string">&#x27;info&#x27;</span>,cell_overwrite_ok=<span class="literal">True</span>)</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"><span class="comment"># 登录-持续</span></span><br><span class="line">itchat.auto_login(enableCmdQR=<span class="number">2</span>)</span><br><span class="line">print(<span class="string">u&quot;logged&quot;</span>)</span><br><span class="line"><span class="comment"># 获取好友列表</span></span><br><span class="line">friends = itchat.get_friends(update=<span class="literal">True</span>)[<span class="number">0</span>:]</span><br><span class="line"> </span><br><span class="line">male = female = other = <span class="number">0</span></span><br><span class="line"> </span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> friends[<span class="number">1</span>:]:</span><br><span class="line">    sex = i[<span class="string">&quot;Sex&quot;</span>]</span><br><span class="line">    <span class="keyword">if</span> sex == <span class="number">1</span>:</span><br><span class="line">        male += <span class="number">1</span></span><br><span class="line">    <span class="keyword">elif</span> sex == <span class="number">2</span>:</span><br><span class="line">        female += <span class="number">1</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        other += <span class="number">1</span></span><br><span class="line">total = <span class="built_in">len</span>(friends[<span class="number">1</span>:])</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line">table.write(<span class="number">0</span>,<span class="number">7</span>,<span class="string">u&#x27;【共&#x27;</span>+<span class="built_in">str</span>(<span class="built_in">len</span>(friends)-<span class="number">1</span>)+<span class="string">u&#x27;位朋友，&#x27;</span>+<span class="built_in">str</span>(male)+<span class="string">u&#x27;位男性朋友，&#x27;</span>+<span class="built_in">str</span>(female)+<span class="string">u&#x27;位女性朋友，另外&#x27;</span>+<span class="built_in">str</span>(other)+<span class="string">u&#x27;位不明性别】&#x27;</span>)</span><br><span class="line">table.write(<span class="number">0</span>,<span class="number">0</span>,<span class="string">u&#x27; 【昵称】&#x27;</span>)  </span><br><span class="line">table.write(<span class="number">0</span>,<span class="number">1</span>,<span class="string">u&#x27; 【备注名】&#x27;</span>)</span><br><span class="line">table.write(<span class="number">0</span>,<span class="number">2</span>,<span class="string">u&#x27; 【省份】&#x27;</span>)  </span><br><span class="line">table.write(<span class="number">0</span>,<span class="number">3</span>,<span class="string">u&#x27; 【城市】&#x27;</span>)  </span><br><span class="line">table.write(<span class="number">0</span>,<span class="number">4</span>,<span class="string">u&#x27; 【签名】&#x27;</span>)</span><br><span class="line"> </span><br><span class="line">a=<span class="number">0</span></span><br><span class="line"> </span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> friends:</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line">    table.write(a+<span class="number">1</span>,<span class="number">0</span>,i[<span class="string">&#x27;NickName&#x27;</span>])</span><br><span class="line">    table.write(a+<span class="number">1</span>,<span class="number">1</span>,i[<span class="string">&#x27;RemarkName&#x27;</span>])</span><br><span class="line">    table.write(a+<span class="number">1</span>,<span class="number">2</span>,i[<span class="string">&#x27;Province&#x27;</span>])</span><br><span class="line">    table.write(a+<span class="number">1</span>,<span class="number">3</span>,i[<span class="string">&#x27;City&#x27;</span>])</span><br><span class="line">    table.write(a+<span class="number">1</span>,<span class="number">4</span>,i[<span class="string">&#x27;Signature&#x27;</span>])</span><br><span class="line">    <span class="keyword">if</span> i[<span class="string">&#x27;RemarkName&#x27;</span>] == <span class="string">u&#x27;&#x27;</span>:</span><br><span class="line">        table.write(a+<span class="number">1</span>,<span class="number">1</span>,<span class="string">u&#x27;[ ]&#x27;</span>)</span><br><span class="line">    <span class="keyword">if</span> i[<span class="string">&#x27;Province&#x27;</span>] == <span class="string">u&#x27;&#x27;</span>:</span><br><span class="line">        table.write(a+<span class="number">1</span>,<span class="number">2</span>,<span class="string">u&#x27;[ ]&#x27;</span>)</span><br><span class="line">    <span class="keyword">if</span> i[<span class="string">&#x27;City&#x27;</span>] == <span class="string">u&#x27;&#x27;</span>:</span><br><span class="line">        table.write(a+<span class="number">1</span>,<span class="number">3</span>,<span class="string">u&#x27;[ ]&#x27;</span>)</span><br><span class="line">    <span class="keyword">if</span> i[<span class="string">&#x27;Signature&#x27;</span>] == <span class="string">u&#x27;&#x27;</span>:</span><br><span class="line">        table.write(a+<span class="number">1</span>,<span class="number">4</span>,<span class="string">u&#x27;[ ]&#x27;</span>)</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line">    a=a+<span class="number">1</span></span><br><span class="line">    print(a)</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"><span class="comment"># qm=raw_input(&quot;file name &gt;&gt;&gt;:&quot;)</span></span><br><span class="line">aaa=<span class="string">&#x27;weixin_&#x27;</span>+time.strftime(<span class="string">&quot;%Y%m%d&quot;</span>, time.localtime())+<span class="string">&#x27;.xls&#x27;</span></span><br><span class="line">file.save(aaa)</span><br><span class="line">itchat.send(<span class="string">&#x27;made by junzi&#x27;</span>,<span class="string">&#x27;filehelper&#x27;</span>)</span><br><span class="line">itchat.send(<span class="string">&#x27;@%s@%s&#x27;</span> % (<span class="string">&#x27;fil&#x27;</span>,aaa), <span class="string">&#x27;filehelper&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span> (<span class="string">&quot;over&quot;</span>)</span><br></pre></td></tr></table></figure>]]></content>
       <tags>
+<<<<<<< HEAD
         <tag>技术手册</tag>
+=======
+        <tag>炼丹手册</tag>
+>>>>>>> a196d450032481cb37cc7c49c6bdf8f80ad5f8be
       </tags>
   </entry>
   <entry>
@@ -233,7 +285,11 @@
 <p>两条语句即可完成清楚缓存并且重建缓存，这时yum就不会报错了</p>
 ]]></content>
       <tags>
+<<<<<<< HEAD
         <tag>技术手册</tag>
+=======
+        <tag>炼丹手册</tag>
+>>>>>>> a196d450032481cb37cc7c49c6bdf8f80ad5f8be
       </tags>
   </entry>
   <entry>
@@ -246,7 +302,20 @@
 <p>^ 为匹配输入字符串的开始位置。<br><a href="">0-9</a>+匹配多个数字， <a href="">0-9</a> 匹配单个数字，+ 匹配一个或者多个。<br>abc$匹配字母 abc 并以 abc 结尾，$ 为匹配输入字符串的结束位置。<br>runoo+b，可以匹配 runoob、runooob、runoooooob 等，+ 号代表前面的字符必须至少出现一次（1次或多次）。<br>runoo<em>b，可以匹配 runob、runoob、runoooooob 等，</em> 号代表字符可以不出现，也可以出现一次或者多次（0次、或1次、或多次）。<br>colou?r 可以匹配 color 或者 colour，? 问号代表前面的字符最多只可以出现一次（0次、或1次）</p>
 ]]></content>
       <tags>
+<<<<<<< HEAD
         <tag>技术手册</tag>
+=======
+        <tag>炼丹手册</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>终于去想起来写一篇博客了</title>
+    <url>/blog/2019/11/06/%E7%BB%88%E4%BA%8E%E5%8E%BB%E6%83%B3%E8%B5%B7%E6%9D%A5%E5%86%99%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E4%BA%86/</url>
+    <content><![CDATA[<p>准备把明年定位成考试年，考证开始啦！<br>在学校时候老师催着考证，考个鬼，自己都不知道自己的职业发展，还考证，现在有个清晰的认识以后应该考啥证其实自己心里都有“🌲”了，向自己想去的方向努力吧～</p>
+]]></content>
+      <tags>
+        <tag>日常</tag>
+>>>>>>> a196d450032481cb37cc7c49c6bdf8f80ad5f8be
       </tags>
   </entry>
   <entry>
@@ -269,7 +338,11 @@
 <p>9.用新的密码登录<br><code>mysql -u root -p</code></p>
 ]]></content>
       <tags>
+<<<<<<< HEAD
         <tag>技术手册</tag>
+=======
+        <tag>炼丹手册</tag>
+>>>>>>> a196d450032481cb37cc7c49c6bdf8f80ad5f8be
       </tags>
   </entry>
   <entry>
@@ -280,7 +353,11 @@
 <p>此时，进入/usr/bin/dpkg删除info文件夹后再新建一个即可，具体原因还在查 大家可以使用kali的64位arm包，这样不会报错<br><img src="https://i.loli.net/2019/10/14/Trsj7BZcSOkmp39.jpg" alt="64bit kali of raspberry"></p>
 ]]></content>
       <tags>
+<<<<<<< HEAD
         <tag>技术手册</tag>
+=======
+        <tag>炼丹手册</tag>
+>>>>>>> a196d450032481cb37cc7c49c6bdf8f80ad5f8be
       </tags>
   </entry>
   <entry>
@@ -295,7 +372,11 @@
 <p>这时在进行操作就不会报错了</p>
 ]]></content>
       <tags>
+<<<<<<< HEAD
         <tag>技术手册</tag>
+=======
+        <tag>炼丹手册</tag>
+>>>>>>> a196d450032481cb37cc7c49c6bdf8f80ad5f8be
       </tags>
   </entry>
   <entry>
@@ -314,7 +395,11 @@
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --global https.proxy <span class="string">&#x27;sock5://127.0.0.1:7890&#x27;</span></span><br><span class="line">git config --global http.proxy <span class="string">&#x27;sock5://127.0.0.1:7890&#x27;</span></span><br></pre></td></tr></table></figure>
 ]]></content>
       <tags>
+<<<<<<< HEAD
         <tag>技术手册</tag>
+=======
+        <tag>炼丹手册</tag>
+>>>>>>> a196d450032481cb37cc7c49c6bdf8f80ad5f8be
       </tags>
   </entry>
   <entry>
@@ -328,7 +413,11 @@
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">rm /usr/<span class="built_in">local</span>/bin/brew</span><br></pre></td></tr></table></figure>
 ]]></content>
       <tags>
+<<<<<<< HEAD
         <tag>技术手册</tag>
+=======
+        <tag>炼丹手册</tag>
+>>>>>>> a196d450032481cb37cc7c49c6bdf8f80ad5f8be
       </tags>
   </entry>
   <entry>
